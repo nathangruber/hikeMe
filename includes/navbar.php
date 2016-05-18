@@ -18,30 +18,6 @@
     <ul class="nav navbar-nav">
 
     <li><a href="index.php">hikeMe</a></li>
-
-
-    <?php
-$categories = new category();
-$cats = $categories->read();
-
-echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Products<span class="caret"></span></a>';
-echo '<ul class="dropdown-menu">';
-
-foreach ($cats as $category ) {
-	echo '<li id="' . $category['id'] . '">';
-	echo '<a href="category.php?id=' . $category['id'] . '">';
-	echo ' ' . $category['name'] . ' ';
-	echo '</a>';
-	echo '</li>';
-
-}
-echo '</ul>';
-echo '</li>';
-Database::disconnect();
-
-?>
-
-
     <li><a href="register.php">Register</a></li>
     <li><a href="loginpage.php">Login</a></li>
     <li><a href="about.php" >About</a></li>
