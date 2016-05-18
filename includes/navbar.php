@@ -17,7 +17,7 @@
 
     <ul class="nav navbar-nav">
 
-    <li><a href="index.php">Blake's Board Shop</a></li>
+    <li><a href="index.php">hikeMe</a></li>
 
 
     <?php
@@ -44,10 +44,9 @@ Database::disconnect();
 
     <li><a href="register.php">Register</a></li>
     <li><a href="loginpage.php">Login</a></li>
-   <!-- <li><a href="about.php" >About</a></li> -->
+    <li><a href="about.php" >About</a></li>
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="update.php">My Account</a></li>
-    <li><a href="cart.php">Cart</a></li>
             </ul>
       <div class="container">
 <div class="col-md-3 pull-right">
