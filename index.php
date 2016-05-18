@@ -18,7 +18,22 @@
         echo $_SESSION['name'];
     }
     ?>
-    
+ <?php
+// Because I don’t use PHP often enough to remember it instantly
+
+$opts = array(
+  'http'=>array(
+    'method'=>"GET",
+    'header'=>"X-Mashape-Key: F1piInHfmpmsh4V6tDTrAboircv8p1s3rgAjsnO6TthOVVt9rJ"               
+  )
+);
+$context = stream_context_create($opts);
+
+$file = file_get_contents("https://trailapi-trailapi.p.mashape.com/?q[city_cont]=Milwaukee", false, $context);
+$obj = json_decode($file);
+print_r(json_decode($res, true));
+
+?>   
     
 
 
