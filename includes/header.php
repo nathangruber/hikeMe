@@ -8,7 +8,6 @@
       <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
       <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="search_style.css">
      <!-- <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript">
 
