@@ -49,14 +49,14 @@
 			<input class="btn btn-default" value="Search" type="submit" style="margin-top: 20px">
 			
 		</form>-->
-		
-		<form method="post">
-		  <div class="form-group" style="max-width: 200px">
-		    <input type="search" class="form-control" id="" placeholder="Write location here...">
-		  </div>
-		  <button type="submit" class="btn btn-default">Search now!</button>
-		</form>
-		
+		<div class="text-cener" align="center">
+			<form method="post">
+			  <div class="form-group" style="max-width: 200px">
+			    <input type="search" class="form-control" id="" placeholder="Write location here...">
+			  </div>
+			  <button type="submit" class="btn btn-default">Search now!</button>
+			</form>
+		</div>
 		
 		
     </div>
