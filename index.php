@@ -33,18 +33,19 @@
     );
  $context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
  $file = file_get_contents($url, false, $context);  //read the contents of a file into a string
- $obj = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
+ $obj = json_decode($file,$true);    //Takes a JSON encoded string and converts it into a PHP variable.
+ //echo $obj[0]['id']; // Fetches the first ID
+ //echo $obj[0]['c_name']; // Fetches the first c_name
  
- $someObject = $obj; // Replace ... with your PHP Object
-  foreach($someObject as $key => $value) {
-    echo $value->weather . ", " . $value->main . "<br>";
-  }
- //print_r($obj);
+ print_r($obj);
 
  ?>
 
 
- 
+ $someObject = $obj; // Replace ... with your PHP Object
+  foreach($someObject as $key => $value) {
+    echo $value->weather . ", " . $value->main . "<br>";
+  }
 
     
 
