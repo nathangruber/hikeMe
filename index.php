@@ -35,6 +35,23 @@
 	    
 	    
 	    
+	    
+	    
+	    //Second API
+	    $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
+		$opts = array(
+		        'http' => array (
+		            'method' => 'GET',
+		            'header' =>  "Accept: plain/text\r\n". "X-Mashape-Key:F1piInHfmpmsh4V6tDTrAboircv8p1s3rgAjsnO6TthOVVt9rJ "   
+		        )   
+		    );
+		$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
+		$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
+		$obj2 = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
+	    
+	    
+	    
+	    
     }
     
     
@@ -66,11 +83,15 @@
 	    if(isset($_POST['search'])){
 	?>
 	
+	<h2 style="margin-top: 100px">Mmm let's see what's going on in <b><?php echo $_POST['search']; ?></b></h2>
 	
-	<div class="row">
+	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
 			<h2>Hiking information</h2>
-			Bla bla bla
+			<?php	    
+			    echo "<b>Name: </b>".$obj2->places[0]->name;
+				echo "<br>";
+	    	?>
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
@@ -98,17 +119,8 @@
 	?>
     
  <?php
- $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=Milwaukee";
- $opts = array(
-        'http' => array (
-            'method' => 'GET',
-            'header' =>  "Accept: plain/text\r\n". "X-Mashape-Key:F1piInHfmpmsh4V6tDTrAboircv8p1s3rgAjsnO6TthOVVt9rJ "   
-        )   
-    );
- $context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
- $file = file_get_contents($url, false, $context);  //read the contents of a file into a string
- $obj = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
- print_r($obj);
+
+ print_r($obj2);
 
  ?>
    
