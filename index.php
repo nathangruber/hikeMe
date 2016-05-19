@@ -103,9 +103,10 @@
 					echo "<br>";
 					echo "<b>Description: </b>".$place->activities[0]->description;
 					echo "<br>";
+					echo "<hr>";
 					
 				}
-				echo "<hr>";
+				
 				
 				
 				
