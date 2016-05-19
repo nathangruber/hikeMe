@@ -45,13 +45,15 @@
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>Where do you want to go?</h1>
 		
-		<div class="text-center" align="center">
-			<form method="post">
-			  <div class="form-group" style="max-width: 200px">
-			    <input type="search" class="form-control" name="search" placeholder="Write location here...">
-			  </div>
-			  <button type="submit" class="btn btn-default">Search now!</button>
-			</form>
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-md-offset-3">
+				<form method="post">
+				  <div class="form-group">
+				    <input type="search" class="form-control" name="search" placeholder="Write location here...">
+				  </div>
+				  <button type="submit" class="btn btn-default">Search now!</button>
+				</form>
+			</div>
 		</div>
 		
 		
