@@ -83,11 +83,11 @@
 	    if(isset($_POST['search'])){
 	?>
 	
-	<h2 style="margin-top: 100px">Mmm let's see what's going on in <b><?php echo $_POST['search']; ?></b></h2>
+	<h2 class="text-center" style="margin-top: 100px">Mmm let's see what's going on in <b><?php echo $_POST['search']; ?></b></h2>
 	
 	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
-			<h2>Hiking information</h2>
+			<h3>Hiking information</h3>
 			<?php	    
 			    echo "<b>Name: </b>".$obj2->places[0]->name;
 				echo "<br>";
@@ -95,7 +95,7 @@
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
-			<h2>Weather information</h2>
+			<h3>Weather information</h3>
 			<?php	    
 			    echo "<b>the Lon is: </b>".$obj->coord->lon;
 				echo "<br>";
