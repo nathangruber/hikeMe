@@ -35,7 +35,10 @@
  $file = file_get_contents($url, false, $context);  //read the contents of a file into a string
  $obj = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
  
-
+ $someObject = $obj; // Replace ... with your PHP Object
+  foreach($someObject as $key => $value) {
+    echo $value->main . ", " . $value->description . "<br>";
+  }
  print_r($obj);
 
  ?>
