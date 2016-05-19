@@ -63,27 +63,53 @@
     <?php
 	    if(isset($_POST['search'])){
 	?>
-	<div class="text-center" style="margin-top: 50px">
-		<h2>Mmmm in <b><?php echo $_POST['search']; ?></b> you have...</h2>
-	<?php	    
-		    echo "the Lon is: ".$obj->coord->lon;
-			echo "<br>";
-			echo "the Lon is: ".$obj->coord->lat;
-			echo "<br>";
-			echo "Weather description: ".$obj->weather[0]->description;
-			echo "<br>";
-			echo "Farenhei: ".$obj->main->temp;
-	    
 	
-	?>
+	
+	<div class="row">
+		<div class="col-xs-12 col-md-6 text-left">
+			<h2>Hiking information</h2>
+			Bla bla bla
+		</div>
+		
+		<div class="col-xs-12 col-md-6 text-left">
+			<h2>Weather information</h2>
+			<?php	    
+			    echo "<b>the Lon is: </b>".$obj->coord->lon;
+				echo "<br>";
+				echo "<b>the Lon is: </b>".$obj->coord->lat;
+				echo "<br>";
+				echo "<b>Weather description: </b>".$obj->weather[0]->description;
+				echo "<br>";
+				echo "<b>Farenhei: </b>".$obj->main->temp;
+	    	?>
+		</div>
+		
+	
 	
 	</div>
+	
+	
+	
 	
 	<?php  
 	    }
 	?>
     
-    
+ <?php
+ $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=Milwaukee";
+ $opts = array(
+        'http' => array (
+            'method' => 'GET',
+            'header' =>  "Accept: plain/text\r\n". "X-Mashape-Key:F1piInHfmpmsh4V6tDTrAboircv8p1s3rgAjsnO6TthOVVt9rJ "   
+        )   
+    );
+ $context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
+ $file = file_get_contents($url, false, $context);  //read the contents of a file into a string
+ $obj = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
+ print_r($obj);
+
+ ?>
+   
     
     
   
