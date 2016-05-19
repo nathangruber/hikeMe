@@ -38,10 +38,10 @@
  //var_dump($obj);
 
  //description
- echo $obj['weather'][0]['description'];
+ //echo $obj['weather'][0]['description'];
  //temperature
- echo $obj['main']['temp'];
- //print_r($obj);
+ //echo $obj['main']['temp'];
+ print_r($obj);
 
  ?>
 
