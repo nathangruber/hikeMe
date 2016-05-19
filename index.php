@@ -93,14 +93,14 @@
 			    
 			    echo "We found: $total <br>";
 			    
-			    for($i=0;$i<$total;$i++){
+			    /*for($i=0;$i<$total;$i++){
 					$place = $obj2->places[$i];
 					
 					echo "<b>Name: </b>".$place->name;
 					echo "<br>";
 					echo "<b>Directions: </b>".$place->directions;
 					
-				}
+				}*/
 				
 				
 				
