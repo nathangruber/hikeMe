@@ -88,9 +88,22 @@
 	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
 			<h3>Hiking information</h3>
-			<?php	    
-			    echo "<b>Name: </b>".$obj2->places[0]->name;
-				echo "<br>";
+			<?php
+				$total = $obj2->places;	    
+			    
+			    echo "We found: $total <br>";
+			    
+			    for($i=0;$i<$total;$i++){
+					$place = $obj2->places[$i];
+					
+					echo "<b>Name: </b>".$place->name;
+					echo "<br>";
+					echo "<b>Directions: </b>".$place->directions;
+					
+				}
+				
+				
+				
 	    	?>
 		</div>
 		
@@ -118,14 +131,7 @@
 	    }
 	?>
     
- <?php
-
- print_r($obj2);
-
- ?>
-   
-    
-    
+ 
   
     
 
