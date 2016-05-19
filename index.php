@@ -23,6 +23,10 @@
  <!-- http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=2bd428fa9cf856303ff450f01f4a97de  -->
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 <?php
  $url = "http://api.openweathermap.org/data/2.5/weather?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de";
  $opts = array(
