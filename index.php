@@ -66,7 +66,7 @@
 	
 	
 	<div class="row">
-		<div class="col-xs-12 col-md-4 col-offset-2 text-left">
+		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
 			<h2>Hiking information</h2>
 			Bla bla bla
 		</div>
