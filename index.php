@@ -44,15 +44,10 @@
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>Where do you want to go?</h1>
 		
-		<!--<form action="" method="post" class="form-search">
-			<input class="input" type="text" name="search"><br>
-			<input class="btn btn-default" value="Search" type="submit" style="margin-top: 20px">
-			
-		</form>-->
 		<div class="text-cener" align="center">
 			<form method="post">
 			  <div class="form-group" style="max-width: 200px">
-			    <input type="search" class="form-control" id="" placeholder="Write location here...">
+			    <input type="search" class="form-control" name="search" placeholder="Write location here...">
 			  </div>
 			  <button type="submit" class="btn btn-default">Search now!</button>
 			</form>
