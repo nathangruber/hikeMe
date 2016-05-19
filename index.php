@@ -34,9 +34,8 @@
  $context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
  $file = file_get_contents($url, false, $context);  //read the contents of a file into a string
  $obj = json_decode($file, $true);    //Takes a JSON encoded string and converts it into a PHP variable.
- for($i=0; $i<count($obj['main']); $i++) {
-    echo "Rating is " . $obj['main'][$i]["description"] . " and the excerpt is " . $obj['description'][$i]["temp"] . "<br>";
-}
+ foreach($obj as $json){
+   echo $json['key']; // you can access your key value like this if result is array
  
  //print_r($obj);
 
