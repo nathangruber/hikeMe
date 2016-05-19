@@ -40,12 +40,12 @@
     
     
     ?>
-    
+    <div class="container">
     
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>Where do you want to go?</h1>
 		
-		<div class="text-cener" align="center">
+		<div class="text-center" align="center">
 			<form method="post">
 			  <div class="form-group" style="max-width: 200px">
 			    <input type="search" class="form-control" name="search" placeholder="Write location here...">
@@ -66,12 +66,12 @@
 	
 	
 	<div class="row">
-		<div class="col-xs-12 col-md-6 text-left">
+		<div class="col-xs-12 col-md-4 col-offset-2 text-left">
 			<h2>Hiking information</h2>
 			Bla bla bla
 		</div>
 		
-		<div class="col-xs-12 col-md-6 text-left">
+		<div class="col-xs-12 col-md-4 text-left">
 			<h2>Weather information</h2>
 			<?php	    
 			    echo "<b>the Lon is: </b>".$obj->coord->lon;
@@ -117,7 +117,7 @@
 
 
 
-
+    </div>
 <?php require_once 'includes/footer.php'; ?>
 
 
