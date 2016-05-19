@@ -22,7 +22,8 @@
     if(isset($_POST['search'])){
 	    //We make the call to the API and get the results...
 	    $place = $_POST['search'];
-	    $url = "http://api.openweathermap.org/data/2.5/weather?q=$place&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
+	    $loc = urlencode($place);
+	    $url = "http://api.openweathermap.org/data/2.5/weather?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
 		$opts = array(
 		        'http' => array (
 		            'method' => 'GET'
