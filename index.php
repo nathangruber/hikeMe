@@ -25,7 +25,7 @@
  $url = "api.openweathermap.org/data/2.5/weather?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de";
  $opts = array(
         'http' => array (
-            'method' => 'GET',
+            'method' => 'GET'
         )   
     );
  $context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
