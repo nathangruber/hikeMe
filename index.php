@@ -44,17 +44,21 @@
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>Where do you want to go?</h1>
 		
-		<form action="" method="post" class="form-search">
-			<!--<input class="input-medium search-query" type="text" name="search"><br>
-			<input class="btn btn-default" type="submit" style="margin-top: 20px">-->
+		<!--<form action="" method="post" class="form-search">
+			<input class="input" type="text" name="search"><br>
+			<input class="btn btn-default" value="Search" type="submit" style="margin-top: 20px">
 			
-		    <div class="input-group add-on" style="max-width: 200px">
-		      <input class="form-control" placeholder="Search" name="search" id="srch-term" type="text">
-		      <div class="input-group-btn">
-		        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-		      </div>
-		    </div>
+		</form>-->
+		
+		<form method="post">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="search" class="form-control" id="" placeholder="Write location here...">
+		  </div>
+		  <button type="submit" class="btn btn-default">Search now!</button>
 		</form>
+		
+		
 		
     </div>
     
