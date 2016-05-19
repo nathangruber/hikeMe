@@ -100,8 +100,12 @@
 					echo "<b>Name: </b>".$place->name;
 					echo "<br>";
 					echo "<b>Directions: </b>".$place->directions;
+					echo "<br>";
+					echo "<b>Description: </b>".$place->activities[0]->description;
+					echo "<br>";
 					
 				}
+				echo "<hr>";
 				
 				
 				
