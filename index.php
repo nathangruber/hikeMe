@@ -44,9 +44,9 @@
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>Where do you want to go?</h1>
 		
-		<form action="" method="post">
-			<input class="input" type="text" name="search"><br>
-			<input class="btn btn-default" type="submit">
+		<form action="" method="post" class="form-search">
+			<input class="input-medium search-query" type="text" name="search"><br>
+			<input class="btn btn-default" type="submit" style="margin-top: 20px">
 		</form>
 		
     </div>
@@ -56,16 +56,24 @@
     
     <?php
 	    if(isset($_POST['search'])){
-		    
+	?>
+	<div class="text-center" style="margin-top: 50px">
+		<h2>Mmmm in <b><?php echo $_POST['search']; ?></b> you have...</h2>
+	<?php	    
 		    echo "the Lon is: ".$obj->coord->lon;
 			echo "<br>";
 			echo "the Lon is: ".$obj->coord->lat;
 			echo "<br>";
-			echo "Weather description: ".$obj->weather->description;
+			echo "Weather description: ".$obj->weather[0]->description;
 			echo "<br>";
 			echo "Farenhei: ".$obj->main->temp;
 	    
-	    
+	
+	?>
+	
+	</div>
+	
+	<?php  
 	    }
 	?>
     
