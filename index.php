@@ -51,8 +51,7 @@
 		</form>-->
 		
 		<form method="post">
-		  <div class="form-group">
-		    <label for="exampleInputEmail1">Email address</label>
+		  <div class="form-group" style="max-width: 200px">
 		    <input type="search" class="form-control" id="" placeholder="Write location here...">
 		  </div>
 		  <button type="submit" class="btn btn-default">Search now!</button>
