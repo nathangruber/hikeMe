@@ -89,18 +89,19 @@
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
 			<h3>Hiking information</h3>
 			<?php
-				$total = count($obj2->places);	    
+				$total = count($obj2->places);
+			?>	
+				<h4><b>Total founds: </b><?php echo $total; ?></h4>    
+			<?php    
 			    
-			    echo "We found: $total <br>";
-			    
-			    /*for($i=0;$i<$total;$i++){
+			    for($i=0;$i<$total;$i++){
 					$place = $obj2->places[$i];
 					
 					echo "<b>Name: </b>".$place->name;
 					echo "<br>";
 					echo "<b>Directions: </b>".$place->directions;
 					
-				}*/
+				}
 				
 				
 				
