@@ -34,8 +34,11 @@
  $context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
  $file = file_get_contents($url, false, $context);  //read the contents of a file into a string
  $obj = json_decode($file,$true);    //Takes a JSON encoded string and converts it into a PHP variable.
- echo $obj[3]['main']; // Fetches the first ID
- //echo $obj[2]['main']; // Fetches the first c_name
+ foreach($json as $obj){
+   echo $obj->name;
+
+
+}
  
  //print_r($obj);
 
