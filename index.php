@@ -25,7 +25,7 @@
     <br>
     <br>
  <?php
- $url = "http://api.openweathermap.org/data/2.5/weather?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de";
+ $url = "http://api.openweathermap.org/data/2.5/weather?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
  $opts = array(
         'http' => array (
             'method' => 'GET'
@@ -42,9 +42,15 @@
  //temperature
  //echo $obj['main']['temp'];
 
-echo "the info is: ".$obj->coord->lon;
+echo "the Lon is: ".$obj->coord->lon;
+echo "<br>";
+echo "the Lon is: ".$obj->coord->lat;
+echo "<br>";
+echo "Weather description: ".$obj->weather->description;
+echo "<br>";
+echo "Farenhei: ".$obj->main->temp;
 
- print_r($obj);
+ //print_r($obj);
 
  ?>
 
