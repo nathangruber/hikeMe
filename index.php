@@ -89,7 +89,7 @@
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
 			<h3>Hiking information</h3>
 			<?php
-				$total = $obj2->places;	    
+				$total = count($obj2->places);	    
 			    
 			    echo "We found: $total <br>";
 			    
