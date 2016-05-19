@@ -48,7 +48,7 @@
 			<!--<input class="input-medium search-query" type="text" name="search"><br>
 			<input class="btn btn-default" type="submit" style="margin-top: 20px">-->
 			
-		    <div class="input-group add-on">
+		    <div class="input-group add-on" style="max-width: 200px">
 		      <input class="form-control" placeholder="Search" name="search" id="srch-term" type="text">
 		      <div class="input-group-btn">
 		        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
