@@ -39,7 +39,7 @@
   foreach($someObject as $key => $value) {
     echo $value->main . ", " . $value->description . "<br>";
   }
- print_r($obj);
+ //print_r($obj);
 
  ?>
 
