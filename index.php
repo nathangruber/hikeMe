@@ -37,7 +37,7 @@
  
  $someObject = $obj; // Replace ... with your PHP Object
   foreach($someObject as $key => $value) {
-    echo $value->main . ", " . $value->description . "<br>";
+    echo $value->weather . ", " . $value->main . "<br>";
   }
  //print_r($obj);
 
