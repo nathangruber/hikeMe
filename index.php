@@ -118,7 +118,7 @@
 			<?php	    
 			    echo "<b>the Lon is: </b>".$obj->coord->lon;
 				echo "<br>";
-				echo "<b>the Lon is: </b>".$obj->coord->lat;
+				echo "<b>the Lat is: </b>".$obj->coord->lat;
 				echo "<br>";
 				echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
