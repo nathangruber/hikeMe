@@ -116,13 +116,13 @@
 		<div class="col-xs-12 col-md-4 text-left">
 			<h3>Current Weather</h3>
 			<?php	    
-			    echo "<b>the Lon is: </b>".$obj->coord->lon;
+			    echo "<b>the Longitude is: </b>".$obj->coord->lon;
 				echo "<br>";
-				echo "<b>the Lat is: </b>".$obj->coord->lat;
+				echo "<b>the Lattitude is: </b>".$obj->coord->lat;
 				echo "<br>";
 				echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
-				echo "<b>Farenheit: </b>".$obj->main->temp;
+				echo "<b>Temperature in Farenheit: </b>".$obj->main->temp;
 	    	?>
 		</div>
 		
