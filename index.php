@@ -142,18 +142,8 @@
 	    		echo "<b>Wind Speed: </b>".$obj->wind->speed; 
 	    		?>
 	    	
-	    	<h4>5 Day Forecast</h4>
-	    	<?php	    
-				echo "<b>Weather description: </b>".$obj->weather[0]->description;
-				echo "<br>";
-
-
-
-
-
-
-				?>
-
+	<    	<h4>5 Day Forecast</h4>
+	    	
 
 
 <!--http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
