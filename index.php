@@ -139,7 +139,7 @@
 				echo "<br>";
 				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
-	    		echo "<b>Wind Speed: </b>".$obj->wind->speed; echo"MPH";
+	    		echo "<b>Wind Speed: </b>".$obj->wind->speed; 
 	    		?>
 	    	<h4>5 Day Forecast</h4>
 	    	<?php	    
