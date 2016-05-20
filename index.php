@@ -34,7 +34,7 @@
 		$obj = json_decode($file, false); 
 
 
-		if(isset($_POST['search'])){
+	/*	if(isset($_POST['search'])){
 	    //We make the call to the API and get the results...
 	    $place = $_POST['search'];
 	    $loc = urlencode($place);
@@ -46,7 +46,7 @@
 		    );
 		$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
 		$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
-		$obj = json_decode($file, false); 
+		$obj = json_decode($file, false); */
 	    
 	    
 	    
@@ -141,6 +141,7 @@
 	    		echo "<br>";
 	    		echo "<b>Wind Speed: </b>".$obj->wind->speed; 
 	    		?>
+	    	
 	    	<h4>5 Day Forecast</h4>
 	    	<?php	    
 				echo "<b>Weather description: </b>".$obj->weather[0]->description;
