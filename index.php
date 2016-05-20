@@ -124,7 +124,7 @@
 				echo "<br>";
 				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
-	    		echo "<b>Wind Speed: </b>"MPH.$obj->wind->speed;
+	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
 
 
 //http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
