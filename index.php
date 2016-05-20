@@ -32,12 +32,27 @@
 		$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
 		$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
 		$obj = json_decode($file, false); 
+
+
+		if(isset($_POST['search'])){
+	    //We make the call to the API and get the results...
+	    $place = $_POST['search'];
+	    $loc = urlencode($place);
+	    $url = "http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
+		$opts = array(
+		        'http' => array (
+		            'method' => 'GET'
+		        )   
+		    );
+		$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
+		$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
+		$obj = json_decode($file, false); 
 	    
 	    
 	    
 	    
 	    
-	    //Second API
+	    //third API
 	    $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
 		$opts = array(
 		        'http' => array (
@@ -124,16 +139,29 @@
 				echo "<br>";
 				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
-	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
+	    		echo "<b>Wind Speed: </b>".$obj->wind->speed; echo"MPH";
+	    		?>
+	    	<h4>5 Day Forecast</h4>
+	    	<?php	    
+				echo "<b>Weather description: </b>".$obj->weather[0]->description;
+				echo "<br>";
 
 
-//http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
-
-//http://api.openweathermap.org/data/2.5/weather?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
 
 
 
-	    	?>
+
+				?>
+
+
+
+<!--http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
+
+http://api.openweathermap.org/data/2.5/weather?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial  -->
+
+
+
+	    	
 		</div>
 		
 	
@@ -143,10 +171,7 @@
 	
 	
 	
-	<?php  
-	    }
-	?>
-    
+	
  
   
     
