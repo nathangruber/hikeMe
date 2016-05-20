@@ -120,11 +120,11 @@
 				echo "<br>";
 				echo "<b>Current Temperature in Farenheit: </b>".$obj->main->temp;
 				echo "<br>";
-				echo "<b>Today's High in Farenheit: </b>".$obj->main->temp_max;
+				echo "<b>Today's High: </b>".$obj->main->temp_max;
 				echo "<br>";
-				echo "<b>Today's Low in Farenheit: </b>".$obj->main->temp_min;
+				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
-	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
+	    		echo "<b>Wind Speed: </b>MPH".$obj->wind->speed;
 
 
 //http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
