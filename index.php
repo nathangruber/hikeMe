@@ -127,6 +127,13 @@
 				echo "<b>Today's High in Farenheit: </b>".$obj->main->temp_max;
 				echo "<br>";
 				echo "<b>Today's Low in Farenheit: </b>".$obj->main->temp_min;
+	    		echo "<br>";
+	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
+
+
+
+
+
 	    	?>
 		</div>
 		
