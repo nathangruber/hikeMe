@@ -60,7 +60,7 @@
     <div class="container">
     
     <div class="text-center" style="margin-top: 100px;">
-	    <h1>Where do you want to go?</h1>
+	    <h1>Where do you want to hike?</h1>
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -68,7 +68,7 @@
 				  <div class="form-group">
 				    <input type="search" class="form-control" name="search" placeholder="Write location here...">
 				  </div>
-				  <button type="submit" class="btn btn-default">Search now!</button>
+				  <button type="submit" class="btn btn-default">Search</button>
 				</form>
 			</div>
 		</div>
@@ -83,11 +83,11 @@
 	    if(isset($_POST['search'])){
 	?>
 	
-	<h2 class="text-center" style="margin-top: 100px">let's see what's going on in <b><?php echo $_POST['search']; ?></b></h2>
+	<h2 class="text-center" style="margin-top: 100px">Hiking destinations in <b><?php echo $_POST['search']; ?></b></h2>
 	
 	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
-			<h3>Hiking information</h3>
+			<h3>Trails</h3>
 			<?php
 				$total = count($obj2->places);
 			?>	
@@ -114,7 +114,7 @@
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
-			<h3>Weather information</h3>
+			<h3>Current Weather</h3>
 			<?php	    
 			    echo "<b>the Lon is: </b>".$obj->coord->lon;
 				echo "<br>";
