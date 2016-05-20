@@ -83,7 +83,7 @@
 	    if(isset($_POST['search'])){
 	?>
 	
-	<h2 class="text-center" style="margin-top: 100px">Mmm let's see what's going on in <b><?php echo $_POST['search']; ?></b></h2>
+	<h2 class="text-center" style="margin-top: 100px">let's see what's going on in <b><?php echo $_POST['search']; ?></b></h2>
 	
 	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
@@ -122,7 +122,7 @@
 				echo "<br>";
 				echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
-				echo "<b>Farenhei: </b>".$obj->main->temp;
+				echo "<b>Farenheit: </b>".$obj->main->temp;
 	    	?>
 		</div>
 		
