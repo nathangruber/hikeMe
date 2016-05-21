@@ -20,7 +20,7 @@
     <h1>Successfully Registered</h1>
 	</div>
     <center>
-        <p>You have successfully created an account at BBS, please login.</p>
+        <p>You have successfully created a hikeMe account, please login.</p>
     
 
     <p>go <a class="btn btn-default" href="index.php">Back</a> or <a class="btn btn-default" href="loginpage.php">Login</a>.</p></center><?php require_once 'includes/footer.php'; ?>
