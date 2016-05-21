@@ -22,7 +22,7 @@
 </head>
 
 <body>
-<div class="content">Social Footer</div>
+<div class="content">hikeMe</div>
 <div class="footer">
   <div class="social">&#62220;</div>
   <div class="social">&#62217;</div>
