@@ -108,8 +108,6 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 					echo "<br>";
 					echo "<b>Description: </b>".$favorite_plans[$i]['description'];
 					echo "<br>";
-					echo "<b>id: </b>".$favorite_plans[$i]['id'];
-					echo "<br>";
 					
 					?>
 					<form method="post">
