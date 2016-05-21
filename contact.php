@@ -30,11 +30,11 @@
                             <label for="email">Email Address *&nbsp;</label>
                              <input type="text" name="email" maxlength="45" size="30"> 
                              <br>
-                             <label for="telephone">Phone Number*</label> 
+                             <label for="telephone">Phone Number*&nbsp;</label> 
                              <input type="text" name="telephone" maxlength="30" size="30"> 
                             <br>
                              <label for="comments">Comments *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
-                            <textarea name="comments" maxlength="1000" cols="45" rows="15">
+                            <textarea name="comments" maxlength="1000" cols="30" rows="20">
                             </textarea> <input class="btn btn-default" type="submit" value="Submit">
                         </form>
                 </div>
