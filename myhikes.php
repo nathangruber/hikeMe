@@ -84,7 +84,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
-				<form method="post">
+				<form method="post" action="index.php">
 				  <div class="form-group">
 				    <input type="search" class="form-control" name="search" placeholder="Write location here...">
 				  </div>
