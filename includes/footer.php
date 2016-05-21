@@ -22,8 +22,12 @@
 </head>
 
 <body>
+<main>
+  Content
+</main>
+<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
 <footer class="flex-rw">
-  
+
   <ul class="footer-list-top">
     <li>
       <h4 class="footer-list-header">About Pavilion</h4></li>
@@ -56,10 +60,10 @@
     <li id='order-tracking'><a href='/shop/order-status' itemprop="significantLink" class="generic-anchor footer-list-anchor">ORDER STATUS</a></li>
   </ul>
   <section class="footer-social-section flex-rw">
-      <span class="footer-social-overlap footer-social-connect">
+    <span class="footer-social-overlap footer-social-connect">
       CONNECT <span class="footer-social-small">with</span> US
-      </span>
-      <span class="footer-social-overlap footer-social-icons-wrapper">
+    </span>
+    <span class="footer-social-overlap footer-social-icons-wrapper">
       <a href="http://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
       <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
       <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
@@ -69,14 +73,14 @@
       </span>
   </section>
   <section class="footer-bottom-section flex-rw">
-<div class="footer-bottom-wrapper">   
-<i class="fa fa-copyright" role="copyright">
+    <div class="footer-bottom-wrapper">
+      <i class="fa fa-copyright" role="copyright">
  
 </i> 2015 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
     </div>
     <div class="footer-bottom-wrapper">
-    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
-      </div>
+      <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+    </div>
   </section>
 </footer>
 
