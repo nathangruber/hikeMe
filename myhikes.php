@@ -67,12 +67,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 <body>
     <title>hikeMe</title>
      <?php
-	 require_once'includes/navbar.php';
-
-	 
-    
-    
-    ?>
+	 require_once'includes/navbar.php';?>
     <div class="container">
     
     <?php if($message_favorites_show){ ?>
@@ -80,7 +75,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
     <?php } ?>
     
     <div class="text-center" style="margin-top: 100px;">
-	    <h1>Welcome back <?php echo $name; ?></h1>
+	    <h1>Welcome Back <?php echo $name; ?></h1>
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
