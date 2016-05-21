@@ -27,8 +27,10 @@
       <div class="container">
 <div class="col-md-3 pull-right">
   	<?php
-	  if($_SESSION['id']!=""){
+	  if($logged){
 		  echo 'Welcome '.$_SESSION['name'];
+	  }else{
+		  echo 'Welcome visitor';
 	  }
   	?>
   
