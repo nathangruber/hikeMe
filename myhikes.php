@@ -96,7 +96,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-3 text-left">
-				<h3>My Favorite Hikes:</h3>
+				<h3>My favorites:</h3>
 				
 				<?php
 				for($i=0;$i<count($favorite_plans);$i++){
@@ -115,7 +115,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 					    <input type="hidden" name="option" value="removefromfavorites">
 					    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 					  </div>
-					  <button type="submit" class="btn btn-default">Remove Favorite Hike</button>
+					  <button type="submit" class="btn btn-default">Remove from favorites</button>
 					</form>
 					<?php
 					echo "<hr>";
@@ -153,7 +153,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 			<?php
 				$total = count($obj2->places);
 			?>	
-				<h4><b>Total Found: </b><?php echo $total; ?></h4>    
+				<h4><b>Total founds: </b><?php echo $total; ?></h4>    
 			<?php    
 			    
 			    for($i=0;$i<$total;$i++){
@@ -205,7 +205,10 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 	
 	
 	
-	
+	<?php  
+	    }
+	?>
+    
  
   
     
