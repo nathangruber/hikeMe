@@ -20,9 +20,9 @@ body {
   text-align: center;
   color: #999;
   background: #eee;
-  min-height: 10%;
+  min-height: 100%;
   /* equal to footer height */
-    margin-bottom: -142px; 
+    margin-bottom: -100px; 
 }
 .content:after {
   display: block;
