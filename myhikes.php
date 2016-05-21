@@ -1,5 +1,62 @@
-<?php require_once 'includes/session.php';?>
-<?php require_once 'includes/sessioncheck.php';?>
+<?php 
+require_once 'includes/session.php';
+require_once 'includes/sessioncheck.php';
+
+$message_favorites_show=false;
+
+
+//Testing add plan
+$_POST['option'] = 'addtofavorites';
+$_POST['city'] = '4ffr56';
+$_POST['state'] = 'milton';
+$_POST['name'] = 'peterdf fall';
+$_POST['unique_id'] = '678';
+$_POST['description'] = 'super description';
+
+
+
+if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){
+	
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+	$name = $_POST['name'];
+	$unique_id = $_POST['unique_id'];
+	$description = $_POST['description'];
+	
+	$plan = new Plan();
+	
+	$plan->addToFavorites($_SESSION['id'],$city,$state,$name,$unique_id,$description);
+	
+	$message_favorites_show = true;
+	$message_favorites_text = "Your hike ".$name." has been saved to your favorites";
+}
+
+
+if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
+	$plan_id = $_POST['plan_id'];
+	
+	$plan = new Plan();
+	$plan->removeFromFavorites($_SESSION['id'],$plan_id);
+	
+	$message_favorites_show = true;
+	$message_favorites_text = "This hike ".$name." was one of your favorites";
+	
+}
+
+
+
+
+	
+
+$plan = new Plan();
+$favorite_plans = $plan->getMyFavorites($_SESSION['id']);
+
+print_r($favorite_plans);
+	
+	
+	
+	
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +72,10 @@
     
     ?>
     <div class="container">
+    
+    <?php if($message_favorites_show){ ?>
+    <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
+    <?php } ?>
     
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>Welcome back <?php echo $name; ?></h1>
@@ -32,11 +93,45 @@
 		
 		
 		<div class="row">
-			<div class="col-xs-12 col-md-6">
-				<h3>Activities planned:</h3>
+			<div class="col-xs-12 col-md-3 text-left">
+				<h3>My favorites:</h3>
+				
+				<?php
+				for($i=0;$i<count($favorite_plans);$i++){
+					echo "<b>Name: </b>".$favorite_plans[$i]['name'];
+					echo "<br>";
+					echo "<b>City: </b>".$favorite_plans[$i]['city'];
+					echo "<br>";
+					echo "<b>State: </b>".$favorite_plans[$i]['state'];
+					echo "<br>";
+					echo "<b>Description: </b>".$favorite_plans[$i]['description'];
+					echo "<br>";
+					echo "<b>id: </b>".$favorite_plans[$i]['id'];
+					echo "<br>";
+					
+					?>
+					<form method="post">
+					  <div class="form-group">
+					    <input type="hidden" name="option" value="removefromfavorites">
+					    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+					  </div>
+					  <button type="submit" class="btn btn-default">Remove from favorites</button>
+					</form>
+					<?php
+					echo "<hr>";
+					
+				
+				}	
+				?>
+				
+				
+				
 			</div>
-			<div class="col-xs-12 col-md-6">
-				<h3>Activities done:</h3>
+			<div class="col-xs-12 col-md-3">
+				<h3>Planned:</h3>
+			</div>
+			<div class="col-xs-12 col-md-3">
+				<h3>Done:</h3>
 			</div>
 		</div>
 		

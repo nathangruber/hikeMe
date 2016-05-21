@@ -4,7 +4,7 @@
 </head>
 
 <body>
-    <footer>
+    <footer class="text-center">
         <p><a href="sitemap.php">Site Map</a></p>
     </footer>
 

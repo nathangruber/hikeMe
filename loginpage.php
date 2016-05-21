@@ -26,20 +26,24 @@
 		            <p class="lead">Enter Username and Password to login.<br></p>
 		        </div>
 		
-		        <div>
-		            <form action="includes/login.php" method="post">
-		                <input type="text" name="username" placeholder="username"> <input type="password" name="password" placeholder="password"> <input class="btn btn-default" type="submit" value="Login">
-		            </form>
-		        </div>
-		
+		            <form class="form-horizontal" action="includes/login.php" method="post">
+					  <div class="form-group">
+					    <label for="username">User name</label>
+					    <input name="username" id="username" type="text" class="form-control" placeholder="Username...">
+					  </div>
+					  
+					  <div class="form-group">
+					    <label for="name">Password</label>
+					    <input name="password" id="name" type="password" class="form-control" placeholder="Password...">
+					  </div>
+					  <div class="form-group">
+					  <button type="submit" class="btn btn-success">Login</button>
+					  </div>
+					</form>
+		        
 		        <div>
 		            <p>No Account? Register below</p>
-		        </div>
-		
-		        <div>
-		            <form action="register.php" method="post">
-		                <input class="btn btn-default" type="submit" value="Register">
-		            </form>
+		            <a href="register.php" class="btn btn-default">Register</a>
 		        </div>
 		    </div>
 	    </div>
