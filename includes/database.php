@@ -10,9 +10,10 @@ class Database
     //To play in Amazon:
     private static $dbUserPassword = 'blake811';
     
-    //To play local:
+    //To play in localhost:
     //private static $dbUserPassword = 'root';
-     
+    
+    
     private static $cont  = null;
      
     public function __construct() {

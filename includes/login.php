@@ -12,12 +12,12 @@ require_once('database.php');
        		$q->execute(array($username,$password));
        		if($query = $q->fetch(PDO::FETCH_ASSOC)){
 	       		session_start();
-				$_SESSION['name'] = $name;
-				$_SESSION['username'] = $username;
-				$_SESSION['id'] = $id;
-				$_SESSION['permissions'] = $permissions;
+				$_SESSION['name'] = $query['name'];
+				$_SESSION['username'] = $query['username'];
+				$_SESSION['id'] = $query['id'];
+				$_SESSION['permissions'] = $query['permissions'];
 	       		//print_r($query);
-				header('Location: ../index.php');
+				header('Location: ../myhikes.php');
        		}else{
 	       		header('Location: ../loginpage.php?result=error');
        		}

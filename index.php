@@ -23,6 +23,17 @@
 		    );
 		$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
 		$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		echo $file;
+		
 		$obj = json_decode($file, false); 
 	    
 	    
@@ -42,6 +53,8 @@
 		$obj2 = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
 	    
 	    
+	    
+	    print_r($file);
 	    
 	    
     }
@@ -95,6 +108,15 @@
 					echo "<br>";
 					echo "<b>Description: </b>".$place->activities[0]->description;
 					echo "<br>";
+					?>
+					<form method="post" action="addplan.php">
+					  <div class="form-group">
+					    <input type="hidden" name="place" value="<?php echo $_POST['search'];?>">
+					    <input type="hidden" name="activityid" value="<?php echo $place->activities[0]->unique_id;?>">
+					  </div>
+					  <button type="submit" class="btn btn-default">Add to my plans</button>
+					</form>
+					<?php
 					echo "<hr>";
 					
 				}

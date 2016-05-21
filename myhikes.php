@@ -32,6 +32,18 @@
 				</form>
 			</div>
 		</div>
+		
+		
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<h3>Activities planned:</h3>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<h3>Activities done:</h3>
+			</div>
+		</div>
+		
+		
 	</div>
     
     
