@@ -1,7 +1,9 @@
 <?php
+echo "document root is: ".$_SERVER['DOCUMENT_ROOT'];
+
 require_once 'includes/session.php';
 
-echo "document root is: ".$_SERVER['DOCUMENT_ROOT'];
+
 
 if ( !empty($_POST)) {
 	// keep track validation errors
