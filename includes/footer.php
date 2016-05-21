@@ -16,101 +16,70 @@
 <script src="assets/js/hidden.js"></script>
 </body>
 </html>  -->
-
-<!DOCTYPE html>
 <html>
-
 <head>
-
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="footer, contact, form, icons" />
-
-	<title>Footer Distributed With Contact Form</title>
-
-	<link rel="stylesheet" href="css/demo.css">
-	<link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
-
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
-	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-
+    <title>Footer</title>
 </head>
 
-	<body>
-
-		<header>
-
-			<h1>Freebie: 5 Responsive Footer Templates</h1>
-			<h2><a href="http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/">Download</a></h2>
-
-			<ul>
-				<li><a href="index.html">Basic Centered</a></li>
-				<li><a href="footer-distributed.html">Distributed</a></li>
-				<li><a href="footer-distributed-with-address-and-phones.html">Distributed With Address And Phones</a></li>
-				<li><a href="footer-distributed-with-contact-form.html" class="active">Distributed With Contact Form</a></li>
-				<li><a href="footer-distributed-with-search.html">Distributed With Search</a></li>
-			</ul>
-
-		</header>
-
-		<!-- The content of your page would go here. -->
-
-		<footer class="footer-distributed">
-
-			<div class="footer-left">
-
-				<h3>Company<span>logo</span></h3>
-
-				<p class="footer-links">
-					<a href="#">Home</a>
-					·
-					<a href="#">Blog</a>
-					·
-					<a href="#">Pricing</a>
-					·
-					<a href="#">About</a>
-					·
-					<a href="#">Faq</a>
-					·
-					<a href="#">Contact</a>
-				</p>
-
-				<p class="footer-company-name">Company Name &copy; 2015</p>
-
-				<div class="footer-icons">
-
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
-
+<body>
+<footer id="footerWrapper" class="footer5">
+	<section id="mainFooter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="footerWidget">
+						<img src="images/neko-logo.png" alt="latest Little Neko news" id="footerLogo">
+						<p><a href="http://www.little-neko.com" title="Little Neko, website template creation">Little Neko</a> is a web design and development studio. We build responsive HTML5 and CSS3 templates, integrating best web design practices and up-to-date web technologies to create great user experiences. We love what we do and we hope you do too! </p>
+					</div>
 				</div>
-
+				<div class="col-md-6">
+					<div class="footerWidget">
+						<h3>Latest tweets </h3>
+						<!-- twitter -->
+						<div id="twitterFrame">
+							<a class="twitter-timeline" height="250" href="https://twitter.com/LIttleNeko1" data-widget-id="339736854519754752" data-tweet-limit="2" data-theme="dark" data-chrome="nofooter noheader transparent">
+								Tweets by @LIttleNeko1
+							</a>
+							<script>
+								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+							</script>
+						</div>
+						<!-- twitter -->
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="footerWidget">
+						<h3>Keep in touch </h3>
+						<h1 class="phone">+ 1-800-487-1254</h1>
+						<address>
+							
+							<i class="icon-location"></i>&nbsp;77 Mass. Ave., E14/E15<br>
+							Seattle, MA 02139-4307 USA <br>
+							<i class="icon-mail-alt"></i>&nbsp;<a href="mailto:little@little-neko.com">little@little-neko.com</a>
+						</address>
+					</div>
+				</div>
 			</div>
-
-			<div class="footer-right">
-
-				<p>Contact Us</p>
-
-				<form action="#" method="post">
-
-					<input type="text" name="email" placeholder="Email" />
-					<textarea name="message" placeholder="Message"></textarea>
-					<button>Send</button>
-
-				</form>
-
+		</div>
+	</section>
+	<section id="footerRights">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<p class="copyright">Copyright © 2016 <a href="http://www.little-neko.com" target="blank">Little NEKO</a> / All rights reserved.</p>
+				</div>
+				<div class="col-md-6">
+					<ul class="socialNetwork">
+						<li><a href="#" class="tips" title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
+						<li><a href="#" class="tips" title="follow me on Twitter"><i class="icon-twitter-bird iconRounded"></i></a></li>
+						<li><a href="#" class="tips" title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+						<li><a href="#" class="tips" title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+						<li><a href="#" class="tips" title="follow me on Dribble"><i class="icon-dribbble iconRounded"></i></a></li>
+					</ul>     
+				</div>
 			</div>
-
-		</footer>
-
-		<!-- Demo ads. Please ignore and remove. -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="http://cdn.tutorialzine.com/misc/enhance/v2.js" async></script>
-		
-	</body>
-
-</html>
-
+		</div>
+	</section>	
+</footer>
+</body>
+</html> 
