@@ -25,7 +25,6 @@ body {
     margin-bottom: -142px; 
 }
 .content:after {
-  content: "";
   display: block;
 }
 .footer {
