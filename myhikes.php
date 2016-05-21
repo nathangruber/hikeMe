@@ -7,7 +7,7 @@ require_once 'includes/crud.php';
 
 $message_favorites_show=false;
 
-
+/*
 //Testing add plan
 $_POST['option'] = 'addtofavorites';
 $_POST['city'] = '4ffr56';
@@ -15,7 +15,7 @@ $_POST['state'] = 'milton';
 $_POST['name'] = 'peterdf fall';
 $_POST['unique_id'] = '678';
 $_POST['description'] = 'super description';
-
+*/
 
 
 if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){
@@ -54,7 +54,6 @@ if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
 $plan = new Plan();
 $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 
-print_r($favorite_plans);
 	
 	
 	
