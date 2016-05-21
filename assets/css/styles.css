@@ -22,8 +22,11 @@ body {
   background: #eee;
   min-height: 100%;
   /* equal to footer height */
-    margin-bottom: -142px; 
+    margin-bottom: -142px;
+      display: block;
+ 
 }
+
 
 .footer {
   padding: 20px 0;
