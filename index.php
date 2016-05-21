@@ -127,12 +127,12 @@ require_once 'includes/crud.php';
 		<div class="col-xs-12 col-md-4 text-left">
 			<h3>Current Weather</h3>
 			<?php	    
-				echo "<b>Weather description: </b>".$obj->weather[2]->description;
+				echo "<b>Weather description: </b>".$obj->weather[4]->description;
 				echo "<br>";
 				echo "<b>Current Temperature in Farenheit: </b>".$obj->main->temp;
 				echo "<br>";
 				echo "<b>Today's High: </b>".$obj->main->temp_max;
-				echo "<br>";
+				echo "<br>"
 				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
 	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
