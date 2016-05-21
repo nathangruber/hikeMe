@@ -19,7 +19,8 @@ require_once 'includes/crud.php';
 	    //Call to the API and get the results
 	    $place = $_POST['search'];
 	    $loc = urlencode($place);
-	    $url = "http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
+	    $url = "http://api.openweathermap.org/data/2.5/weather?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
+";
 		$opts = array(
 		        'http' => array (
 		            'method' => 'GET'
@@ -89,7 +90,7 @@ require_once 'includes/crud.php';
 			<h3>Trails</h3>
 			<?php
 				$total = count($obj2->places);
-			?>	
+			?>
 				<h4><b>Total founds: </b><?php echo $total; ?></h4>    
 			<?php    
 			    
@@ -128,15 +129,15 @@ require_once 'includes/crud.php';
 		<div class="col-xs-12 col-md-4 text-left">
 			<h3>Current Weather</h3>
 			<?php	    
-				echo "<b>Weather Description: </b>".$obj->weather->description;
-				//echo "<br>";
-				//echo "<b>Current Temperature in Farenheit: </b>".$obj->main->temp;
-				//echo "<br>";
-				//echo "<b>Today's High: </b>".$obj->main[0]->temp_max;
-				//echo "<br>";
-				//echo "<b>Today's Low: </b>".$obj->main[1]->temp_min;
-	    		//echo "<br>";
-	    		//echo "<b>Wind Speed: </b>".$obj->wind->speed;
+				echo "<b>Weather Description: </b>".$obj->weather[0]->description;
+				echo "<br>";
+				echo "<b>Current Temperature in Farenheit: </b>".$obj->main->temp;
+				echo "<br>";
+				echo "<b>Today's High: </b>".$obj->main[0]->temp_max;
+				echo "<br>";
+				echo "<b>Today's Low: </b>".$obj->main[1]->temp_min;
+	    		echo "<br>";
+	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
 
 
 //http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
