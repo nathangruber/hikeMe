@@ -92,9 +92,9 @@ class customerCreditcards {
 
 		}
 	}
-
+}
 	
-
+/*
 class product {
 
 	public $product_id;
@@ -236,6 +236,6 @@ class category {
 
 	}
 }
+*/
 
-
-
+?>
