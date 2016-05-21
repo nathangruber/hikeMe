@@ -1,4 +1,8 @@
-<?php require_once('includes/session.php');?>
+<?php 
+require_once('includes/session.php');
+require_once 'includes/database.php';
+require_once 'includes/crud.php';
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html lang="en">

@@ -1,7 +1,8 @@
 <?php
-echo "document root is: ".$_SERVER['DOCUMENT_ROOT'];
 
 require_once 'includes/session.php';
+require_once 'includes/database.php';
+require_once 'includes/crud.php';
 
 
 
