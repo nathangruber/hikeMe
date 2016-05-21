@@ -4,7 +4,14 @@ class Database
     private static $dbName = 'hikeMe' ;
     private static $dbHost = 'localhost' ;
     private static $dbUsername = 'root';
-    private static $dbUserPassword = 'blake811';
+    
+    
+    
+    //To play in Amazon:
+    //private static $dbUserPassword = 'blake811';
+    
+    //To play local:
+    private static $dbUserPassword = 'root';
      
     private static $cont  = null;
      

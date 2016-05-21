@@ -10,19 +10,23 @@ require_once('database.php');
 		    $sql = "SELECT * FROM user WHERE username = ? AND password =?";
 		    $q = $pdo->prepare($sql);
        		$q->execute(array($username,$password));
-       		$query = $q->fetch(PDO::FETCH_ASSOC);
+       		if($query = $q->fetch(PDO::FETCH_ASSOC)){
+	       		session_start();
+				$_SESSION['name'] = $name;
+				$_SESSION['username'] = $username;
+				$_SESSION['id'] = $id;
+				$_SESSION['permissions'] = $permissions;
+	       		//print_r($query);
+				header('Location: ../index.php');
+       		}else{
+	       		header('Location: ../loginpage.php?result=error');
+       		}
+       		
+       		
 		    Database::disconnect();
-       		$name = $query['name'];
-       		$username = $query['username'];
-       		$id = $query['id'];
-       		$permission = $query['permissions'];
-			session_start();
-			$_SESSION['name'] = $name;
-			$_SESSION['username'] = $username;
-			$_SESSION['id'] = $id;
-			$_SESSION['permissions'] = $permissions;
-       		print_r($query);
-			header('Location: ../index.php');			
+		    
+		    
+       					
 		}
 	}
 	

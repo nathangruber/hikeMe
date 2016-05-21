@@ -1,7 +1,7 @@
 <?php require_once 'includes/session.php';?>
 <?php
 	if($logged==false){
-		header('Location: login.php');
+		header('Location: loginpage.php');
 	}	
 ?>
 <!DOCTYPE html>
@@ -32,9 +32,7 @@
 				</form>
 			</div>
 		</div>
-		
-		
-    </div>
+	</div>
     
     
    
