@@ -15,9 +15,10 @@
         require_once'includes/navbar.php';
     }
     ?>
-
-    <h3>Successfully Registered</h3>
-
+	
+	<div class="text-center" style="margin-top: 100px">
+    <h1>Successfully Registered</h1>
+	</div>
     <center>
         <p>You have successfully created an account at BBS, please login.</p>
     

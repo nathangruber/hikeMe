@@ -1,5 +1,31 @@
 <?php
 
+
+
+class User{
+	
+	
+	public function create($name, $birth_date, $email_address, $username, $password ){
+		if (!valid($name) || !valid($birth_date) || !valid($email_address)|| !valid($username)|| !valid($password) ) {
+			return false;
+		} else {
+			$pdo = Database::connect();
+			$sql = "INSERT INTO user (name,birth_date,email_address,username,password) values(?, ?, ?, ?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($name,$birth_date,$email_address,$username,$password)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}
+	}
+	
+	
+}
+
+
+
+
+
+/*
 // helper function for validation
 function valid($varname){
 	return ( !empty($varname) && isset($varname) );
@@ -94,7 +120,7 @@ class customerCreditcards {
 	}
 }
 	
-/*
+
 class product {
 
 	public $product_id;

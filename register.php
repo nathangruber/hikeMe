@@ -45,12 +45,12 @@ if ( !empty($_POST)) {
 
 	// insert data
 	if ($valid) {
-		try {
+		/*try {
 			$pdo = Database::connect();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$sql = "INSERT INTO user (name,birth_date,email_address,permissions,username,password) values(?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO user (name,birth_date,email_address,username,password) values(?, ?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$birth_date,$email_address,0,$username,$password));
+			$q->execute(array($name,$birth_date,$email_address,$username,$password));
 			Database::disconnect();
 			header("Location: registrationsuccess.php");
 		} catch (PDOException $e) {
@@ -58,6 +58,15 @@ if ( !empty($_POST)) {
 			echo "msg: " . $e->getMessage();
 			die();
 		}
+		*/
+		$user = new User();
+		if($user->create($name,$birth_date,$email_address,$username,$password)){
+			header("Location: registrationsuccess.php");
+		}else{
+			echo 'validate doesnt exissss';
+		}
+		
+		
 	}
 }
 

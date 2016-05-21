@@ -8,10 +8,10 @@ class Database
     
     
     //To play in Amazon:
-    private static $dbUserPassword = 'blake811';
+    //private static $dbUserPassword = 'blake811';
     
     //To play in localhost:
-    //private static $dbUserPassword = 'root';
+    private static $dbUserPassword = 'root';
     
     
     private static $cont  = null;
