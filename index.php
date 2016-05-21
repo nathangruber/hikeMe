@@ -48,7 +48,7 @@ require_once 'includes/crud.php';
 	    
 	    
 	    
-	    print_r($file);
+	    
 	    
 	    
     }
@@ -105,10 +105,14 @@ require_once 'includes/crud.php';
 					?>
 					<form method="post" action="addplan.php">
 					  <div class="form-group">
-					    <input type="hidden" name="place" value="<?php echo $_POST['search'];?>">
-					    <input type="hidden" name="activityid" value="<?php echo $place->activities[0]->unique_id;?>">
+					    <input type="hidden" name="option" value="addtofavorites">
+					    <input type="hidden" name="city" value="<?php echo $place->city;?>">
+					    <input type="hidden" name="state" value="<?php echo $place->state;?>">
+					    <input type="hidden" name="name" value="<?php echo $place->activities[0]->name;?>">
+					    <input type="hidden" name="unique_id" value="<?php echo $place->activities[0]->unique_id;?>">
+					    <input type="hidden" name="description" value="<?php echo $place->activities[0]->description;?>">
 					  </div>
-					  <button type="submit" class="btn btn-default">Add to my plans</button>
+					  <button type="submit" class="btn btn-default">Add to my favorites</button>
 					</form>
 					<?php
 					echo "<hr>";
