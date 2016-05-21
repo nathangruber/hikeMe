@@ -22,12 +22,12 @@ body {
   background: #eee;
   min-height: 100%;
   /* equal to footer height */
-    margin-bottom: -142px;
-      display: block;
- 
+    margin-bottom: -142px; 
 }
-
-
+.content:after {
+  content: "";
+  display: block;
+}
 .footer {
   padding: 20px 0;
   text-align: center;
