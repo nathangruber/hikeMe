@@ -10,5 +10,5 @@ if (!empty($_SESSION['id']) && !empty($_SESSION['username'])) {
 	$name = $_SESSION['name'];
 }
 
-require_once '/includes/database.php';
-require_once '/includes/crud.php';
+require_once 'includes/database.php';
+require_once 'includes/crud.php';
