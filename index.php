@@ -6,17 +6,9 @@
 <body>
     <title>hikeMe</title>
      <?php
-    if ($admin) {
-        require_once'includes/adminNavbar.php';
-    } else {
-        require_once'includes/navbar.php';
-    }
-    ?>
-    <?php
-    if ($logged) {
-        echo "Welcome Back, ";
-        echo $_SESSION['name'];
-    }
+	 require_once'includes/navbar.php';
+
+
     
     
     if(isset($_POST['search'])){
