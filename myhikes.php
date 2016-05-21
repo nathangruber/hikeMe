@@ -91,7 +91,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-3 text-left">
-				<h3>My favorites:</h3>
+				<h3>My Favorite Hikes:</h3>
 				
 				<?php
 				for($i=0;$i<count($favorite_plans);$i++){
