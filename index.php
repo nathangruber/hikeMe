@@ -154,7 +154,10 @@ require_once 'includes/crud.php';
 	
 	
 	
-	
+	<?php  
+	    }
+	?>
+    
  
   
     
