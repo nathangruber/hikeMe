@@ -1,6 +1,8 @@
 <?php
 require_once 'includes/session.php';
 
+echo $_SERVER['DOCUMENT_ROOT'];
+
 if ( !empty($_POST)) {
 	// keep track validation errors
 	$nameError = null;
