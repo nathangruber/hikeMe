@@ -81,7 +81,7 @@
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
-			<h3>Current Weather</h3>
+			<h3>Current Weather and Forecast</h3>
 			<?php	    
 				echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
