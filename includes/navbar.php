@@ -18,31 +18,28 @@
     <ul class="nav navbar-nav">
 
 	    <li><a href="index.php">hikeMe</a></li>
-	    <li><a href="register.php">Register</a></li>
-	    <li><a href="loginpage.php">Login</a></li>
 	    <li><a href="about.php" >About</a></li>
 	    <li><a href="contact.php">Contact Us</a></li>
 	    <li><a href="update.php">My Hikes</a></li>
     </ul>
-    <ul class="nav navbar-nav pull-right">
-
-	    <li><a href="register.php">Register</a></li>
-	    <li><a href="loginpage.php">Login</a></li>
-    </ul>
-      <div class="container">
-<div class="col-md-3 pull-right">
-  	<?php
-	  if($logged){
-		  echo 'Welcome '.$_SESSION['name'];
+    
+    <?php
+	  if(!$logged){
+	?>
+		<ul class="nav navbar-nav pull-right">
+			<li><a href="register.php">Register</a></li>
+		    <li><a href="loginpage.php">Login</a></li>
+	    </ul>
+	<?php
 	  }else{
-		  echo 'Welcome visitor';
+	  
+	  ?>
+	  <ul class="nav navbar-nav pull-right">
+			<li><a href="myprofile.php"><?php echo $_SESSION['name']; ?></a></li>
+		    <li><a href="logout.php">Logout</a></li>
+	    </ul>
+	 <?php
 	  }
   	?>
-  
-  
-  
-  
-        </div>
-      </div>
       
       </nav>
