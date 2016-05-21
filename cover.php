@@ -9,7 +9,7 @@
 <body>
 
 <div id="bg">
-  <img src="assets/img/away-1356948_1280.jpg" alt="">
+  <img src="assets/img/away-1356948_1920.jpg" alt="">
 </div>
 
 
