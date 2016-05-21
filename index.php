@@ -132,7 +132,7 @@ require_once 'includes/crud.php';
 				echo "<b>Current Temperature in Farenheit: </b>".$obj->main->temp;
 				echo "<br>";
 				echo "<b>Today's High: </b>".$obj->main->temp_max;
-				echo "<br>"
+				echo "<br>";
 				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
 	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
