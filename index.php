@@ -103,7 +103,7 @@ require_once 'includes/crud.php';
 					echo "<b>Description: </b>".$place->activities[0]->description;
 					echo "<br>";
 					?>
-					<form method="post" action="addplan.php">
+					<form method="post" action="myhikes.php">
 					  <div class="form-group">
 					    <input type="hidden" name="option" value="addtofavorites">
 					    <input type="hidden" name="city" value="<?php echo $place->city;?>">
