@@ -18,7 +18,7 @@ require_once 'includes/crud.php';
 	    //We make the call to the API and get the results...
 	    $place = $_POST['search'];
 	    $loc = urlencode($place);
-	    $url = "http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
+	    $url = "http://api.openweathermap.org/data/2.5/weather?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
 		$opts = array(
 		        'http' => array (
 		            'method' => 'GET'
