@@ -20,10 +20,14 @@
 
                     <p>Contact Us</p><br>
 
-                    <form name="contactform" method="post" action="emailform.php">
-                        <label for="first_name">First Name *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="text" name="first_name" maxlength="45" size="30"> <label for="last_name">Last Name     *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="text" name="last_name" maxlength="45" size="30"> <label for="email">Email Address *&nbsp;</label> <input type="text" name="email" maxlength="45" size="30"> <label for="telephone">Phone Number*</label> <input type="text" name="telephone" maxlength="30" size="30"> <label for="comments">Comments *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                     <form name="contactform" method="post" action="emailform.php">
+                        <label for="first_name">First Name *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                        <input type="text" name="first_name" maxlength="45" size="30"> <label for="last_name">Last Name     *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                        <input type="text" name="last_name" maxlength="45" size="30"> <label for="email">Email Address *&nbsp;</label>
+                         <input type="text" name="email" maxlength="45" size="30"> <label for="telephone">Phone Number*</label> 
+                         <input type="text" name="telephone" maxlength="30" size="30"> <label for="comments">Comments *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
                         <textarea name="comments" maxlength="1000" cols="30" rows="5">
-</textarea> <input class="btn btn-default" type="submit" value="Submit">
+                        </textarea> <input class="btn btn-default" type="submit" value="Submit">
                     </form>
                 </div>
             </div>
