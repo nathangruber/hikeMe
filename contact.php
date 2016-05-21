@@ -34,7 +34,7 @@
                              <input type="text" name="telephone" maxlength="30" size="30"> 
                             <br>
                              <label for="comments">Comments *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
-                            <textarea name="comments" maxlength="1000" cols="35" rows="10">
+                            <textarea name="comments" maxlength="1000" cols="45" rows="15">
                             </textarea> <input class="btn btn-default" type="submit" value="Submit">
                         </form>
                 </div>
