@@ -22,36 +22,171 @@
 </head>
 
 <body>
-<footer id="footerWrapper" class="footer3">
-	<section id="mainFooter">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="footerWidget text-center">
-						<h1 class="bigTitle text-center">+ 1-800-487-1254</h1> 
-						<address class="text-center">
-						</address>
-						<ul class="socialNetwork">
-							<li><a href="#" class="tips" title="follow me on Facebook"><i class="icon-facebook-1 iconRounded iconSmall"></i></a></li>
-							<li><a href="#" class="tips" title="follow me on Twitter"><i class="icon-twitter-bird iconRounded iconSmall"></i></a></li>
-							<li><a href="#" class="tips" title="follow me on Google+"><i class="icon-gplus-1 iconRounded iconSmall"></i></a></li>
-							<li><a href="#" class="tips" title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded iconSmall"></i></a></li>
-							<li><a href="#" class="tips" title="follow me on Dribble"><i class="icon-dribbble iconRounded iconSmall"></i></a></li>
-						</ul>    
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="footerRights">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>Copyright © 2014 <a href="http://www.little-neko.com" target="blank">Little NEKO</a> / All rights reserved.</p> 
-				</div>
-			</div>
-		</div>
-	</section>
-</footer>
+<footer>
+        <div class="splitter"></div>
+
+        <ul>
+<ul>
+
+    <li>
+
+        <div class="icon" data-icon="E"></div>
+
+        <div class="text">
+
+            <h4>About</h4>
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique justo eu sollicitudin pretium. Nam scelerisque arcu at dui porttitor, non viverra sapien pretium. Nunc nec dignissim nunc. Sed eget est purus. Sed convallis, metus in dictum feugiat, odio orci rhoncus metus. <a href="#">Read more</a></div>
+
+        </div>
+
+    </li>
+
+    <li>
+
+        <div class="icon" data-icon="a"></div>
+
+        <div class="text">
+
+            <h4>Archive</h4>
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique justo eu sollicitudin pretium. Nam scelerisque arcu at dui porttitor, non viverra sapien pretium. Nunc nec dignissim nunc. Sed eget est purus. Sed convallis, metus in dictum feugiat, odio orci rhoncus metus. <a href="#">Read more</a></div>
+
+        </div>
+
+    </li>
+
+    <li>
+
+        <div class="icon" data-icon="s"></div>
+
+        <div class="text">
+
+            <h4>Cloud</h4>
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique justo eu sollicitudin pretium. Nam scelerisque arcu at dui porttitor, non viverra sapien pretium. Nunc nec dignissim nunc. Sed eget est purus. Sed convallis, metus in dictum feugiat, odio orci rhoncus metus. <a href="#">Read more</a></div>
+
+        </div>
+
+    </li>
+
+</ul>
+
+            <!-- three footer columns are here -->
+
+        </ul>
+
+ 
+
+        <div class="bar">
+
+            <div class="bar-wrap">
+
+                <ul class="links"> <!-- footer menu -->
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">License</a></li>
+
+                    <li><a href="#">Contact Us</a></li>
+
+                    <li><a href="#">Advertise</a></li>
+
+                    <li><a href="#">About</a></li>
+                </ul>
+
+ 
+
+                <div class="social">
+<div class="bar">
+
+    <div class="bar-wrap">
+
+        <ul class="links">
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">License</a></li>
+
+            <li><a href="#">Contact Us</a></li>
+
+            <li><a href="#">Advertise</a></li>
+
+            <li><a href="#">About</a></li>
+
+        </ul>
+
+ 
+
+        <div class="social">
+
+            <a href="#" class="fb">
+
+                <span data-icon="f" class="icon"></span>
+
+                <span class="info">
+                    <span class="follow">Become a fan Facebook</span>
+
+                    <span class="num">9,999</span>
+
+                </span>
+
+            </a>
+
+ 
+
+            <a href="#" class="tw">
+
+                <span data-icon="T" class="icon"></span>
+
+                <span class="info">
+
+                    <span class="follow">Follow us Twitter</span>
+
+                    <span class="num">9,999</span>
+
+                </span>
+
+            </a>
+
+ 
+
+            <a href="#" class="rss">
+
+                <span data-icon="R" class="icon"></span>
+
+                <span class="info">
+                    <span class="follow">Subscribe RSS</span>
+
+                    <span class="num">9,999</span>
+
+                </span>
+
+            </a>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="copyright">&copy;  2014 All Rights Reserved</div>
+
+    </div>
+
+</div>
+
+                    <!-- social icons are here -->
+
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="copyright">&copy;  2014 All Rights Reserved</div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
 </body>
 </html> 
