@@ -21,7 +21,7 @@
                     <p>Contact Us</p><br>
 
                          <form name="contactform" method="post" action="emailform.php">
-                            <label for="first_name">First Name *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                            <label for="first_name">First Name *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
                             <input type="text" name="first_name" maxlength="45" size="30"> 
                             <br>
                             <label for="last_name">Last Name     *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
@@ -34,7 +34,7 @@
                              <input type="text" name="telephone" maxlength="30" size="30"> 
                             <br>
                              <label for="comments">Comments *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
-                            <textarea name="comments" maxlength="1000" cols="30" rows="5">
+                            <textarea name="comments" maxlength="1000" cols="35" rows="10">
                             </textarea> <input class="btn btn-default" type="submit" value="Submit">
                         </form>
                 </div>
