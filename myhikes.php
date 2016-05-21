@@ -126,7 +126,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 				<h3>Planned:</h3>
 			</div>
 			<div class="col-xs-12 col-md-3">
-				<h3>Done:</h3>
+				<h3>Hiked:</h3>
 			</div>
 		</div>
 		
