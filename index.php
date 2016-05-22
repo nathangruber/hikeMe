@@ -138,12 +138,12 @@ require_once 'includes/crud.php';
 				
 				if($page==1){
 					?>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($place);?>&page=2">Next</a>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">Next</a>
 					<?php
 				}else{
 					?>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($place);?>&page=<?php echo $page-1; ?>">Back</a>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($place);?>&page=<?php echo $page+1; ?>">Next</a>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page-1; ?>">Back</a>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page+1; ?>">Next</a>
 					<?php
 				}
 				
