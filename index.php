@@ -13,7 +13,7 @@ require_once 'includes/crud.php';
 
 
     if(isset($_GET['search'])){
-	    $_POST['search'] = $_GET['search'];
+	    $_POST['search'] = urldecode($_GET['search']);
 	}
 	
 	if(isset($_GET['page'])){
@@ -41,7 +41,6 @@ require_once 'includes/crud.php';
 	    
 	    //Trail API
 	    $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
-	    echo $url;
 		$opts = array(
 		        'http' => array (
 		            'method' => 'GET',
@@ -112,7 +111,8 @@ require_once 'includes/crud.php';
 			    for($i=$init;$i<$end;$i++){
 					$place = $obj2->places[$i];
 					
-					echo "<b>".($i+1)."</b>";
+					echo "<b>".($i+1).".</b>";
+					echo "<br>";
 					echo "<b>Name: </b>".$place->name;
 					echo "<br>";
 					echo "<b>Directions: </b>".$place->directions;
@@ -134,6 +134,17 @@ require_once 'includes/crud.php';
 					<?php
 					echo "<hr>";
 					
+				}
+				
+				if($page==1){
+					?>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($place);?>&page=2">Next</a>
+					<?php
+				}else{
+					?>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($place);?>&page=<?php echo $page-1; ?>">Back</a>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($place);?>&page=<?php echo $page+1; ?>">Next</a>
+					<?php
 				}
 				
 				
