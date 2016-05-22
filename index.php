@@ -175,7 +175,7 @@ require_once 'includes/crud.php';
 			
 			for($i=1;$i<5;$i++){
 				
-				echo "<h4><b>Day: </b>".$obj->list[$i]->dt_txt."</h4>";
+				echo "<h4><b>Day: </b>".substr($obj->list[$i]->dt_txt, 0,10)."</h4>";
 				echo "<b>Weather description: </b>".$obj->list[$i]->weather[0]->description;
 				echo "<br>";
 				echo "<b>Current Temperature in Farenheit: </b>".$obj->list[$i]->main->temp;
