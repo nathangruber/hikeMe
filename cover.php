@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
+<?php require_once 'includes/header.php';?>
 <head>
     <title>hikeMe</title>
 
