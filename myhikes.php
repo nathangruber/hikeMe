@@ -124,12 +124,12 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							echo "<b>Name: </b>".$favorite_plans[$i]['name'];
 							if($favorite_plans[$i]['type']=="PLANNED"){
 							?>
-								<span class="label label-info" style="font-size: 22px">PLANNED</span>
+								<span class="label label-info" style="font-size: 16px">PLANNED</span>
 							<?php
 							}
 							if($favorite_plans[$i]['type']=="HIKED"){
 							?>
-								<span class="label label-default" style="font-size: 22px">HIKED</span>
+								<span class="label label-success" style="font-size: 16px">HIKED</span>
 							<?php
 							}
 							
