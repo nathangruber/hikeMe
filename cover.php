@@ -14,8 +14,6 @@
 
 <center><h2>hikeME</h2></center>
 <br>
-<br>
-<br>
 <p>click to enter</p>
 </div>
 <?php require_once 'includes/footer.php'; ?>
