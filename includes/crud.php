@@ -72,13 +72,9 @@ class Plan{
 			$q->execute(array($user_id)); //asks db for info array is replacing ?info
 			$result=array();
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
-	       		
-	       		
 	       		//Select all the pictures of that plan
 	       		
-	       		$array_of_name_of_photos=$this->getPhotosOfPlan($user_id,$row['id']);
-	       		
-	       		$row['photos']=$array_of_name_of_photos;
+	       		$row['photos']=$this->getPhotosOfPlan($user_id,$row['id']);
 	       		
 	       		$result[]=$row;
 	       		
@@ -154,7 +150,7 @@ class Plan{
 			$q->execute(array($user_id,$plan_id)); //asks db for info array is replacing ?info
 			$result=array();
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
-	       		$result[]=$row;
+	       		$result[]=$row['photo_name'];
 	       	}
        		
        		Database::disconnect();
