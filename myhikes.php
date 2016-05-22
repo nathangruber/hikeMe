@@ -46,6 +46,17 @@ if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
 	
 }
 
+if(isset($_POST['option'])&&($_POST['option']=='setasplanned')){
+	$plan_id = $_POST['plan_id'];
+	
+	$plan = new Plan();
+	$plan->setAsPlanned($_SESSION['id'],$plan_id);
+	
+	$message_favorites_show = true;
+	$message_favorites_text = "This hike ".$name." is now planned";
+	
+}
+
 
 
 
@@ -90,43 +101,75 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 		
 		
 		<div class="row">
-			<div class="col-xs-12 col-md-3 text-left">
+			<div class="col-xs-12 text-left">
 				<h3>My Favorite Hikes:</h3>
 				
 				<?php
 				for($i=0;$i<count($favorite_plans);$i++){
-					echo "<b>Name: </b>".$favorite_plans[$i]['name'];
-					echo "<br>";
-					echo "<b>City: </b>".$favorite_plans[$i]['city'];
-					echo "<br>";
-					echo "<b>State: </b>".$favorite_plans[$i]['state'];
-					echo "<br>";
-					echo "<b>Description: </b>".$favorite_plans[$i]['description'];
-					echo "<br>";
-					
 					?>
-					<form method="post">
-					  <div class="form-group">
-					    <input type="hidden" name="option" value="removefromfavorites">
-					    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
-					  </div>
-					  <button type="submit" class="btn btn-default">Remove Favorite</button>
-					</form>
-					<?php
-					echo "<hr>";
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<?php
+							echo "<b>Name: </b>".$favorite_plans[$i]['name'];
+							echo "<br>";
+							echo "<b>City: </b>".$favorite_plans[$i]['city'];
+							echo "<br>";
+							echo "<b>State: </b>".$favorite_plans[$i]['state'];
+							echo "<br>";
+							echo "<b>Description: </b>".$favorite_plans[$i]['description'];
+							echo "<br>";
+							
+							?>
+							
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<form method="post">
+							  <div class="form-group">
+							    <input type="hidden" name="option" value="removefromfavorites">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							  </div>
+							  <button type="submit" class="btn btn-default">Remove Favorite</button>
+							</form>
+							
+							<?php
+							if($favorite_plans[$i]['type']!="PLANNED"){	
+							?>
+							
+							<form method="post">
+							  <div class="form-group">
+							    <input type="hidden" name="option" value="setasplanned">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							  </div>
+							  <button type="submit" class="btn btn-default">Set as planned</button>
+							</form>
+							<?php
+							}	
+							?>
+							
+							
+							<?php
+							if($favorite_plans[$i]['type']!="HIKED"){	
+							?>
+							<form method="post">
+							  <div class="form-group">
+							    <input type="hidden" name="option" value="setashiked">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							  </div>
+							  <button type="submit" class="btn btn-default">Set as hiked</button>
+							</form>
+							<?php
+							}	
+							?>
+						</div>
+					</div>
+					<hr>
 					
-				
+				<?php
 				}	
 				?>
 				
 				
 				
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<h3>Planned:</h3>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<h3>Hiked:</h3>
 			</div>
 		</div>
 		
