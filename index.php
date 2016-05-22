@@ -148,8 +148,15 @@ require_once 'includes/crud.php';
 				}else{
 					?>
 					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page-1; ?>">Back</a>
+					
+					
+					<?php
+					if($end!=$total){
+					?>
 					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page+1; ?>">Next</a>
 					<?php
+					}
+					
 				}
 				
 				
