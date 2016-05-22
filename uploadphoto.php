@@ -5,15 +5,60 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
+if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	$plan_id = $_POST['plan_id'];
 	
-	$plan = new Plan();
-	$plan->setAsHiked($_SESSION['id'],$plan_id);
-	
-	$message_favorites_show = true;
-	$message_favorites_text = "This hike ".$name." is now hiked";
-	
+	$target_dir = "uploads/";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+	// Check if image file is a actual image or fake image
+	if(isset($_POST["submit"])) {
+	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+	    if($check !== false) {
+	        echo "File is an image - " . $check["mime"] . ".";
+	        $uploadOk = 1;
+	    } else {
+	        echo "File is not an image.";
+	        $uploadOk = 0;
+	    }
+	}
+	// Check if file already exists
+	if (file_exists($target_file)) {
+	    echo "Sorry, file already exists.";
+	    $uploadOk = 0;
+	}
+	// Check file size
+	if ($_FILES["fileToUpload"]["size"] > 500000) {
+	    echo "Sorry, your file is too large.";
+	    $uploadOk = 0;
+	}
+	// Allow certain file formats
+	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+	&& $imageFileType != "gif" ) {
+	    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+	    $uploadOk = 0;
+	}
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 0) {
+	    echo "Sorry, your file was not uploaded.";
+	// if everything is ok, try to upload file
+	} else {
+	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+	        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+	        
+	        //Store in the database the name of the file of this user
+	        
+	        
+	        echo '<img src="uploads/'.basename( $_FILES["fileToUpload"]["name"]).'"/>';
+			
+	        
+	        
+	        
+	    } else {
+	        echo "Sorry, there was an error uploading your file.";
+	    }
+	}
 }
 
 
@@ -33,22 +78,15 @@ if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
     <div class="container">
     	<div class="text-center" style="margin-top: 100px;">
 		    <h1>Upload photo</h1>
-			
-			<div class="row">
+			<p>Select a photo in your computer and upload it!</p>
+			<div class="row text-left">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
-					<form>
-					  <div class="form-group">
-					    <label for="exampleInputFile">File input</label>
-					    <input type="file" id="exampleInputFile">
-					    <p class="help-block">Upload your photo</p>
-					  </div><button type="submit" class="btn btn-default">Upload</button>
-					</form>
-					
-					
 					<form method="post" enctype="multipart/form-data">
-						Select image to upload:
+					  <div class="form-group">
+					    <input type="hidden" name="option" value="uploadphoto">
+					    <input type="hidden" name="plan_id" value="<?php echo $plan_id ?>">
 					    <input type="file" name="fileToUpload" id="fileToUpload">
-					    <input type="submit" value="Upload Image" name="submit">
+					  </div><button type="submit" class="btn btn-default">Upload photo</button>
 					</form>
 					
 				</div>
