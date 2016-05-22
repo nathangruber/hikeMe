@@ -77,7 +77,6 @@ $plan = new Plan();
 $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 
 
-print_r($favorite_plans);
 	
 	
 	
@@ -146,7 +145,9 @@ print_r($favorite_plans);
 							
 							for($j=0;$j<count($favorite_plans[$i]['photos']);$j++){
 								?>
-								<img src="uploads/<?php echo $favorite_plans[$i]['photos'][$j]; ?>" width="100px" height="100px"/>
+								<a href="uploads/<?php echo $favorite_plans[$i]['photos'][$j]; ?>" target="_blank" >
+									<img src="uploads/<?php echo $favorite_plans[$i]['photos'][$j]; ?>" width="100px" height="100px"/>
+								</a>
 								<?php
 							}
 							
