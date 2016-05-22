@@ -41,6 +41,7 @@ require_once 'includes/crud.php';
 	    
 	    //Trail API
 	    $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
+	    echo $url;
 		$opts = array(
 		        'http' => array (
 		            'method' => 'GET',
