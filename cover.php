@@ -8,8 +8,12 @@
 
 <body>
 
-<div id="bg">
-  <img src="assets/img/away-1356948_1920.jpg" alt="">
+<!--<div id="bg"> -->
+<div class="image">
+  <img src="assets/img/away-1356948_1920.jpg" alt="Beautiful Hiking Path"/>
+
+        <h2>A Movie in the Park:<br />Kung Fu Panda</h2>
+
 </div>
 
 
