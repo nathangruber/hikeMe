@@ -8,7 +8,7 @@ require_once 'includes/crud.php';
 if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	$plan_id = $_POST['plan_id'];
 	
-	$target_dir = "";
+	$target_dir = "uploads/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
