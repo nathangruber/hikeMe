@@ -9,7 +9,8 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	$plan_id = $_POST['plan_id'];
 	
 	$target_dir = "uploads/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$new_name_file = $_SESSION['id']."-".rand(1,9999999) .basename($_FILES["fileToUpload"]["name"]);
+	$target_file = $target_dir . $new_name_file;
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
@@ -50,8 +51,10 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	        //Store in the database the name of the file of this user
 	        
 	        
-	        echo '<img src="uploads/'.basename( $_FILES["fileToUpload"]["name"]).'"/>';
+	        echo '<img src="'.$target_file.'"/>';
 			
+	        
+	        
 	        
 	        
 	        
