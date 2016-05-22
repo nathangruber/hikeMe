@@ -57,6 +57,17 @@ if(isset($_POST['option'])&&($_POST['option']=='setasplanned')){
 	
 }
 
+if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
+	$plan_id = $_POST['plan_id'];
+	
+	$plan = new Plan();
+	$plan->setAsHiked($_SESSION['id'],$plan_id);
+	
+	$message_favorites_show = true;
+	$message_favorites_text = "This hike ".$name." is now hiked";
+	
+}
+
 
 
 
@@ -113,12 +124,12 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							echo "<b>Name: </b>".$favorite_plans[$i]['name'];
 							if($favorite_plans[$i]['type']=="PLANNED"){
 							?>
-								<span class="label label-info" style="font-size: 32px">PLANNED</span>
+								<span class="label label-info" style="font-size: 22px">PLANNED</span>
 							<?php
 							}
 							if($favorite_plans[$i]['type']=="HIKED"){
 							?>
-								<span class="label label-default" style="font-size: 32px">HIKED</span>
+								<span class="label label-default" style="font-size: 22px">HIKED</span>
 							<?php
 							}
 							
