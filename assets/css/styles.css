@@ -80,8 +80,11 @@ button{
 }
 
 h2 { 
+   color:#FFFFFF;
    position: absolute; 
    top: 300px; 
    left: 0; 
-   width: 100%; 
+   width: 100%;
+   font-size: 40px;
+ 
 }
