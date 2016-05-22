@@ -29,7 +29,6 @@ require_once 'includes/crud.php';
 		
 		$obj = json_decode($file, false); 
 	    
-	    print_r($obj);
 	    
 	    
 	    
