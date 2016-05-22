@@ -153,12 +153,44 @@ require_once 'includes/crud.php';
 				
 				
 				$num_elements = count($obj->list);
-				echo $num_elements;
+				//echo $num_elements;
 				
+				
+				echo "<b>Weather description: </b>".$obj->list[0]->weather[0]->description;
+				echo "<br>";
+				echo "<b>Current Temperature in Farenheit: </b>".$obj->list[0]->main->temp;
+				echo "<br>";
+				echo "<b>Today's High: </b>".$obj->list[0]->main->temp_max;
+				echo "<br>";
+				echo "<b>Today's Low: </b>".$obj->list[0]->main->temp_min;
+	    		echo "<br>";
+	    		echo "<b>Wind Speed: </b>".$obj->list[0]->main->wind->speed;
+				
+				
+				echo '<hr>';
 				
 				
 				
 			echo '<h3>Forecast:</h3>';
+			
+			for($i=1;$i<5;$i++){
+				
+				echo "<h4><b>Day: </b>".$obj->list[$i]->dt_txt."</h4>";
+				echo "<b>Weather description: </b>".$obj->list[$i]->weather[0]->description;
+				echo "<br>";
+				echo "<b>Current Temperature in Farenheit: </b>".$obj->list[$i]->main->temp;
+				echo "<br>";
+				echo "<b>Today's High: </b>".$obj->list[$i]->main->temp_max;
+				echo "<br>";
+				echo "<b>Today's Low: </b>".$obj->list[$i]->main->temp_min;
+	    		echo "<br>";
+	    		echo "<b>Wind Speed: </b>".$obj->list[$i]->main->wind->speed;
+				echo '<hr>';
+				
+			}
+			
+			
+			
 
 	    	?>
 		</div>
