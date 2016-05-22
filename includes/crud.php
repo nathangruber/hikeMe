@@ -122,6 +122,19 @@ class Plan{
 		}
 	}
 	
+	public function uploadPhoto($user_id,$photo_name,$plan_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "INSERT INTO upload_images (user_id,photo_name,plan_id) values(?, ?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id,$photo_name,$plan_id)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
 	
 }
 

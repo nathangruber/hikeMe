@@ -9,6 +9,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	$plan_id = $_POST['plan_id'];
 	
 	$target_dir = "uploads/";
+	
 	$new_name_file = $_SESSION['id']."-".rand(1,9999999) .basename($_FILES["fileToUpload"]["name"]);
 	$target_file = $target_dir . $new_name_file;
 	$uploadOk = 1;
@@ -51,10 +52,13 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	        //Store in the database the name of the file of this user
 	        
 	        
-	        echo '<img src="'.$target_file.'"/>';
+	        //echo '<img src="'.$target_file.'"/>';
 			
 	        
+	        $plan = new Plan();
+	        $plan->uploadPhoto($_SESSION['id'],$new_name_file,$_POST['plan_id']);
 	        
+	        header('Location: myhikes.php');
 	        
 	        
 	        
