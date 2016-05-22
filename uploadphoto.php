@@ -5,6 +5,8 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
+$plan_id = $_POST['plan_id'];
+
 if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	$plan_id = $_POST['plan_id'];
 	
@@ -91,7 +93,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 					<form method="post" enctype="multipart/form-data">
 					  <div class="form-group">
 					    <input type="hidden" name="option" value="uploadphoto">
-					    <input type="hidden" name="plan_id" value="<?php echo $plan_id ?>">
+					    <input type="hidden" name="plan_id" value="<?php echo $plan_id; ?>">
 					    <input type="file" name="fileToUpload" id="fileToUpload">
 					  </div><button type="submit" class="btn btn-default">Upload photo</button>
 					</form>
