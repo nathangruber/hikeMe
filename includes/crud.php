@@ -72,7 +72,17 @@ class Plan{
 			$q->execute(array($user_id)); //asks db for info array is replacing ?info
 			$result=array();
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
+	       		
+	       		
+	       		//Select all the pictures of that plan
+	       		
+	       		$array_of_name_of_photos=$this->getPhotosOfPlan($user_id,$row['id']);
+	       		
+	       		$row['photos']=$array_of_name_of_photos;
+	       		
 	       		$result[]=$row;
+	       		
+	       		
        		}
        		
        		Database::disconnect();
@@ -130,6 +140,26 @@ class Plan{
 			$q->execute(array($user_id,$photo_name,$plan_id)); //asks db for info array is replacing ?info
 			Database::disconnect();
 			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	
+	public function getPhotosOfPlan($user_id,$plan_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select photo_name from upload_images where user_id=? and id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id,$plan_id)); //asks db for info array is replacing ?info
+			$result=array();
+			while($row = $q->fetch(PDO::FETCH_ASSOC)){
+	       		$result[]=$row;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
 		}catch (PDOException $error){
 			return false;
 		}

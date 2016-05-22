@@ -76,6 +76,8 @@ if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
 $plan = new Plan();
 $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 
+
+print_r($favorite_plans);
 	
 	
 	
@@ -141,6 +143,12 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							echo "<br>";
 							echo "<b>Description: </b>".$favorite_plans[$i]['description'];
 							echo "<br>";
+							
+							for($j=0;$j<count($favorite_plans[$i]['photos']);$j++){
+								?>
+								<img src="uploads/<?php echo $favorite_plans[$i]['photos'][$j]; ?>" width="100px" height="100px"/>
+								<?php
+							}
 							
 							?>
 							
