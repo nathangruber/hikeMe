@@ -149,9 +149,13 @@ class Plan{
 			$q = $pdo->prepare($sql);
 			$q->execute(array($user_id,$plan_id)); //asks db for info array is replacing ?info
 			$result=array();
+			echo 'eyyyhello';
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
+				
 	       		$result[]=$row['photo_name'];
+	       		echo $row['photo_name'];
 	       	}
+	       	echo 'bye';
        		
        		Database::disconnect();
        		return $result;
