@@ -68,7 +68,7 @@ require_once 'includes/crud.php';
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
-				<form method="post">
+				<form action="index.php" method="post">
 				  <div class="form-group">
 				    <input type="search" class="form-control" name="search" placeholder="Write location here...">
 				  </div>
