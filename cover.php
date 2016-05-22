@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<p>you may wander, but you'll never be lost. Plan and remember your hikes</p>
+<center><p>you may wander, but you'll never be lost. plan and remember your hikes</p></center>
 <div class="image">
  
 <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/index.php"><img src="assets/img/away-1356948_1920.jpg" alt="Beautiful Hiking Path"/>
