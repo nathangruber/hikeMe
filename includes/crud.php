@@ -145,11 +145,11 @@ class Plan{
 	public function getPhotosOfPlan($user_id,$plan_id){
 		try{
 			$pdo = Database::connect();
-			$sql = "select photo_name from upload_images where user_id=? and id=?";
+			$sql = "select * from upload_images where user_id=? and id=?";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($user_id,$plan_id)); //asks db for info array is replacing ?info
 			$result=array();
-			echo 'eyyyhello';
+			echo 'eyyyhello->'.$sql.' and vars are:'.$user_id." and ".$plan_id." that is all";
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
 				
 	       		$result[]=$row['photo_name'];
