@@ -15,10 +15,25 @@ require_once 'includes/crud.php';
     
     
     if(isset($_POST['search'])){
-	    //Call to the API and get the results
-	    $place = $_POST['search'];
+	    //Weather API
+	    /*$place = $_POST['search'];
 	    $loc = urlencode($place);
 	    $url = "http://api.openweathermap.org/data/2.5/weather?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
+		$opts = array(
+		        'http' => array (
+		            'method' => 'GET'
+		        )   
+		    );
+		$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
+		$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
+		
+		$obj = json_decode($file, false); 
+	    */
+	    
+	    //Weather API forecast
+	    $place = $_POST['search'];
+	    $loc = urlencode($place);
+	    $url = "http://api.openweathermap.org/data/2.5/forecast?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
 		$opts = array(
 		        'http' => array (
 		            'method' => 'GET'
@@ -31,8 +46,7 @@ require_once 'includes/crud.php';
 	    
 	    
 	    
-	    
-	    //Second API
+	    //Trail API
 	    $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
 		$opts = array(
 		        'http' => array (
@@ -124,9 +138,9 @@ require_once 'includes/crud.php';
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
-			<h3>Current Weather and Forecast</h3>
+			<h3>Current weather:</h3>
 			<?php	    
-				echo "<b>Weather description: </b>".$obj->weather[0]->description;
+				/*echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
 				echo "<b>Current Temperature in Farenheit: </b>".$obj->main->temp;
 				echo "<br>";
@@ -135,13 +149,16 @@ require_once 'includes/crud.php';
 				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
 	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
-
-
-//http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
-
-//http://api.openweathermap.org/data/2.5/weather?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
-
-
+				*/
+				
+				
+				$num_elements = $obj->list;
+				echo $num_elements;
+				
+				
+				
+				
+			echo '<h3>Forecast:</h3>';
 
 	    	?>
 		</div>
