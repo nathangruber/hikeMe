@@ -152,7 +152,7 @@ require_once 'includes/crud.php';
 				*/
 				
 				
-				$num_elements = $obj->list;
+				$num_elements = count($obj->list);
 				echo $num_elements;
 				
 				
