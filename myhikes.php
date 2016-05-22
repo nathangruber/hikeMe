@@ -178,6 +178,13 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							}	
 							?>
 							
+							<form method="post" action="uploadphoto.php">
+							  <div class="form-group">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							  </div>
+							  <button type="submit" class="btn btn-default btn-block">Upload photo</button>
+							</form>
+							
 							<form method="post">
 							  <div class="form-group">
 							    <input type="hidden" name="option" value="removefromfavorites">
@@ -251,11 +258,6 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
 	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
-
-
-//http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
-
-//http://api.openweathermap.org/data/2.5/weather?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial
 
 
 
