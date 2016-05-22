@@ -107,6 +107,11 @@ require_once 'includes/crud.php';
 				}
 				
 				
+				if($end>$total){
+					$end=$total;
+				}
+				
+				
 			    
 			    for($i=$init;$i<$end;$i++){
 					$place = $obj2->places[$i];
