@@ -108,7 +108,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 				for($i=0;$i<count($favorite_plans);$i++){
 					?>
 					<div class="row">
-						<div class="col-xs-12 col-md-6">
+						<div class="col-xs-12 col-md-9">
 							<?php
 							echo "<b>Name: </b>".$favorite_plans[$i]['name'];
 							echo "<br>";
@@ -122,13 +122,13 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							?>
 							
 						</div>
-						<div class="col-xs-12 col-md-6">
+						<div class="col-xs-12 col-md-3">
 							<form method="post">
 							  <div class="form-group">
 							    <input type="hidden" name="option" value="removefromfavorites">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default">Remove Favorite</button>
+							  <button type="submit" class="btn btn-danger btn-block">Remove Favorite</button>
 							</form>
 							
 							<?php
@@ -140,7 +140,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							    <input type="hidden" name="option" value="setasplanned">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default">Set as planned</button>
+							  <button type="submit" class="btn btn-default btn-block">Set as planned</button>
 							</form>
 							<?php
 							}	
@@ -155,7 +155,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							    <input type="hidden" name="option" value="setashiked">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default">Set as hiked</button>
+							  <button type="submit" class="btn btn-default btn-block">Set as hiked</button>
 							</form>
 							<?php
 							}	
