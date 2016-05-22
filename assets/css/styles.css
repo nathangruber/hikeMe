@@ -82,9 +82,13 @@ button{
 h2 { 
    color:#FFFFFF;
    position: absolute; 
-   top: 300px; 
+   top: 350px; 
    left: 0; 
    width: 100%;
-   font-size: 40px;
+   font-size: 50px;
  
+}
+p{
+  color:#FFFFFF;
+  font-size: 100px;
 }
