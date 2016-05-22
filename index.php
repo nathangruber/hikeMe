@@ -164,7 +164,7 @@ require_once 'includes/crud.php';
 				echo "<br>";
 				echo "<b>Today's Low: </b>".$obj->list[0]->main->temp_min;
 	    		echo "<br>";
-	    		echo "<b>Wind Speed: </b>".$obj->list[0]->main->wind->speed;
+	    		echo "<b>Wind Speed: </b>".$obj->list[0]->wind->speed;
 				
 				
 				echo '<hr>';
@@ -184,7 +184,7 @@ require_once 'includes/crud.php';
 				echo "<br>";
 				echo "<b>Today's Low: </b>".$obj->list[$i]->main->temp_min;
 	    		echo "<br>";
-	    		echo "<b>Wind Speed: </b>".$obj->list[$i]->main->wind->speed;
+	    		echo "<b>Wind Speed: </b>".$obj->list[$i]->wind->speed;
 				echo '<hr>';
 				
 			}
