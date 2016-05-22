@@ -59,7 +59,6 @@ h1{
 }
 h2{
    font-family: Lato, sans-serif;
-   color:#FFFFFF;
 
 }
 h3{
@@ -83,7 +82,7 @@ button{
 h2 { 
    color:#FFFFFF;
    position: absolute; 
-   top: 350px; 
+   top: 375px; 
    left: 0; 
    width: 100%;
    font-size: 50px;
