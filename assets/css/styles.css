@@ -86,7 +86,7 @@ button{
    width: 100%; /* for IE 6 */
 }
 #banner {
-position: relative;
+position: absolute;
 top: 0px;
 left: 0px;
 right: 0px;
