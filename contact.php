@@ -41,7 +41,7 @@
                       <div class="form-group">
                         <label for="last_name" class="col-sm-2 control-label">Phone Number</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" name="telephone" placeholder="Last Name">
+                          <input type="text" class="form-control" name="telephone" placeholder="Phone Number">
                         </div>
                       </div>
                       <div class="form-group">
