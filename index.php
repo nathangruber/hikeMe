@@ -61,7 +61,7 @@ require_once 'includes/crud.php';
     
     
     ?>
-    <div class="container">
+   <div class="container">
     
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>Where do you want to hike?</h1>
@@ -76,9 +76,11 @@ require_once 'includes/crud.php';
 				</form>
 			</div>
 		</div>
-		
-		
-    </div>
+	</div>
+  </div><img id="banner" src="assets/img/mountain-1075914_1920.jpg" alt="Banner Image">
+
+
+
     
     
    
