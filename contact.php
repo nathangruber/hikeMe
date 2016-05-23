@@ -21,25 +21,25 @@
                     <p>Contact Us</p><br>
                      <form class="form-horizontal">
                       <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">First Name</label>
+                        <label for="first_name" class="col-sm-2 control-label">First Name</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" id="inputEmail3" placeholder="First Name">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Last Name</label>
+                        <label for="last_name" class="col-sm-2 control-label">Last Name</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" id="inputEmail3" placeholder="Last Name">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">Email Address</label>
+                        <label for="email" class="col-sm-2 control-label">Email Address</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputPassword3" placeholder="Email Address">
+                          <input type="text" class="form-control" id="inputPassword3" placeholder="Email Address">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">Comments</label>
+                        <label for="comments" class="col-sm-2 control-label">Comments</label>
                         <div class="col-sm-10">
                           <textarea class="form-control" rows="3"></textarea>
                         </div>
