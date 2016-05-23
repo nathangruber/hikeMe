@@ -16,7 +16,7 @@
             <div class="col-md-4">
                 <div class="contactus">
                     <br>
-                  <p><bold>Contact hikeMe</bold></p>
+                  <p>Contact hikeMe</p>
                     <br>
                 </div>
                      <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
@@ -36,6 +36,12 @@
                         <label for="email" class="col-sm-2 control-label">Email Address</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="email" placeholder="Email Address">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="last_name" class="col-sm-2 control-label">Phone Number</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="telephone" placeholder="Last Name">
                         </div>
                       </div>
                       <div class="form-group">
