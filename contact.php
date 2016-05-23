@@ -16,7 +16,7 @@
             <div class="col-md-4">
                 <div class="contactus">
                     <br>
-                    <p>Contact Us</p><br>
+                    <p>Contact hikeMe</p><br>
                 </div>
                      <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
                       <div class="form-group">
@@ -52,7 +52,6 @@
                 </div>
             </div>
         </div>
-    </div> 
 
     <?php require_once 'includes/footer.php';?>
 </body>
