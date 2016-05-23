@@ -13,13 +13,7 @@
    	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery-1.12.0.min.js"></script>
    	<script src="assets/js/jquery.min.js"></script>
-
-
-
-
-
-
-    <title>hikeMe</title>
+		<title>hikeMe</title>
 </head>
 
  
