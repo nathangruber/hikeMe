@@ -11,6 +11,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
    	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery-1.12.0.min.js"></script>
+   	<script src="assets/js/jquery.min.js"></script>
+
+
 
 
 
