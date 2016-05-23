@@ -20,7 +20,7 @@
 
                     <p>Contact Us</p><br>
 
-                     <!--    <form name="contactform" method="post" action="emailform.php">
+                            <form name="contactform" method="post" action="emailform.php">
                             <label for="first_name">First Name *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
                             <input type="text" name="first_name" maxlength="45" size="30"> 
                             <br>
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-    </div>  -->
+    </div> 
 <form class="form-horizontal">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
