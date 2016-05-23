@@ -13,35 +13,34 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="contactus">
                     <br>
-                    <br>
-
                     <p>Contact Us</p><br>
-                     <form class="form-horizontal">
+                </div>
+                     <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
                       <div class="form-group">
-                        <label for="first_name" class="col-sm-2 control-label">First Name</label>
+                        <label for="first_name" class="col-sm-3 control-label">First Name</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="First Name">
+                          <input type="text" class="form-control" name="first_name" placeholder="First Name">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="last_name" class="col-sm-2 control-label">Last Name</label>
+                        <label for="last_name" class="col-sm-3 control-label">Last Name</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputEmail3" placeholder="Last Name">
+                          <input type="text" class="form-control" name="last_name" placeholder="Last Name">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">Email Address</label>
+                        <label for="email" class="col-sm-3 control-label">Email Address</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputPassword3" placeholder="Email Address">
+                          <input type="text" class="form-control" name="email" placeholder="Email Address">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="comments" class="col-sm-2 control-label">Comments</label>
+                        <label for="comments" class="col-sm-3 control-label">Comments</label>
                         <div class="col-sm-10">
-                          <textarea class="form-control" rows="3"></textarea>
+                          <textarea class="form-control" rows="3" name="comments"></textarea>
                         </div>
                       </div>
                       <div class="form-group">
