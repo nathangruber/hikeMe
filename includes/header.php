@@ -10,6 +10,11 @@
     <link rel="stylesheet" type="text/styles" href="assets/css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+   	<script src="assets/js/bootstrap.min.js"></script>
+
+
+
+
     <title>hikeMe</title>
 </head>
 
