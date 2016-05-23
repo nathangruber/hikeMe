@@ -16,7 +16,8 @@
             <div class="col-md-4">
                 <div class="contactus">
                     <br>
-                    <p>Contact hikeMe</p><br>
+                    <bold><p>Contact hikeMe</p></bold>
+                    <br>
                 </div>
                      <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
                       <div class="form-group">
