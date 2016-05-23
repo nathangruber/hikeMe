@@ -11,29 +11,5 @@
 		<script type="text/javascript"src="https://maps.googleapis.com/maps/pi/js?client=2bd428fa9cf856303ff450f01f4a97de"></script>
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript">
-      
-
-   $(document).ready(function(){
-      $( "#find" ).keyup(function(){
-         fetch();
-      });
-   });
-
-   function fetch()
-   {
-   
-      var val = document.getElementById( "find" ).value;
-      $.ajax({
-         type: 'post',
-         url: 'fetch.php',
-         data: {
-            get_val:val
-         },
-         success: function (response) {
-            document.getElementById( "search_items" ).innerHTML = response; 
-         }
-      });
-
-   }
 </script>
 </head>
