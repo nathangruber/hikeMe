@@ -133,7 +133,29 @@ require_once 'includes/crud.php';
 					echo "<br>";
 					echo "<b>Description: </b>".$place->activities[0]->description;
 					echo "<br>";
+					echo "User's photos:<br>";
+					
+					$plan = new Plan();
+					$public_photos = $plan-> getPublicPhotosOfPlan($place->activities[0]->unique_id);
 					?>
+					<div class="row">
+					<?php
+					for($p=0;$p<count($public_photos);$p++){
+						?>
+						<div class="col-xs-12 col-md-3">
+							<img src="uploads/<?php echo $public_photos['name']; ?>" width="120px"/>
+						</div>
+						<?php
+					}
+					
+					
+					
+					
+					?>
+					</div>
+					
+					
+					
 					<form method="post" action="myhikes.php">
 					  <div class="form-group">
 					    <input type="hidden" name="option" value="addtofavorites">

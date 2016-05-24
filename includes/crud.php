@@ -190,6 +190,26 @@ class Plan{
 		}
 	}
 	
+	public function getPublicPhotosOfPlan($unique_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from upload_images where unique_id=? where public_photo=1";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($unique_id)); //asks db for info array is replacing ?info
+			$result=array();
+			while($row = $q->fetch(PDO::FETCH_ASSOC)){
+				
+	       		$result[]=$row;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
 	public function addComment($user_id,$plan_id,$comment){
 		try{
 			$pdo = Database::connect();
