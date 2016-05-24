@@ -171,16 +171,20 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							
 							for($j=0;$j<count($favorite_plans[$i]['photos']);$j++){
 								?>
-								<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-									<a href="photo.php?photo_id=<?php echo $favorite_plans[$i]['photos']['id'][$j]; ?>"  >
-										<img src="uploads/<?php echo $favorite_plans[$i]['photos']['name'][$j]; ?>" width="100px" height="100px"/>
-									</a>
-									<div>
-										<?php
-											if($favorite_plans[$i]['photos']['public_photo'][$j]==1){
-												echo 'public';
-											}
-										?>
+								<div class="row">
+									<div class="col-xs-12 col-md-2">
+										<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
+											<a href="photo.php?photo_id=<?php echo $favorite_plans[$i]['photos']['id'][$j]; ?>"  >
+												<img src="uploads/<?php echo $favorite_plans[$i]['photos']['name'][$j]; ?>" width="120px"/>
+											</a>
+											<div>
+												<?php
+													if($favorite_plans[$i]['photos']['public_photo'][$j]==1){
+														echo 'public';
+													}
+												?>
+											</div>
+										</div>
 									</div>
 								</div>
 								<?php
