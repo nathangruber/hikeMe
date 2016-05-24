@@ -129,9 +129,9 @@ require_once 'includes/crud.php';
 					echo "<br>";
 					echo "<b>Name: </b>".$place->name;
 					echo "<br>";
-					echo "<b>Directions: </b>".$place->directions;
+					echo "<b>Directions: </b>".strip_tags($place->directions);
 					echo "<br>";
-					echo "<b>Description: </b>".$place->activities[0]->description;
+					echo "<b>Description: </b>".strip_tags($place->activities[0]->description);
 					echo "<br>";
 					echo "User's photos:<br>";
 					

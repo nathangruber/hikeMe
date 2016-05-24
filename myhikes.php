@@ -166,7 +166,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							echo "<br>";
 							echo "<b>State: </b>".$favorite_plans[$i]['state'];
 							echo "<br>";
-							echo "<b>Description: </b>".$favorite_plans[$i]['description'];
+							echo "<b>Description: </b>".strip_tags($favorite_plans[$i]['description']);
 							echo "<br>";
 							?>
 							
