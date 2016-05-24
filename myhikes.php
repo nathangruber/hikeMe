@@ -168,10 +168,13 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							echo "<br>";
 							echo "<b>Description: </b>".$favorite_plans[$i]['description'];
 							echo "<br>";
+							?>
 							
+							<div class="row">
+							<?php
 							for($j=0;$j<count($favorite_plans[$i]['photos']);$j++){
 								?>
-								<div class="row">
+								
 									<div class="col-xs-12 col-md-2">
 										<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
 											<a href="photo.php?photo_id=<?php echo $favorite_plans[$i]['photos']['id'][$j]; ?>"  >
@@ -186,13 +189,14 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 											</div>
 										</div>
 									</div>
-								</div>
+								
 								<?php
 							}
 							
 							
 							
 							?>
+							</div>
 							<div style="margin-top: 30px">
 								<b>My comments:</b>
 							</div>
