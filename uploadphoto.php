@@ -65,7 +65,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	        
 	        
 	    } else {
-	        echo "Sorry, there was an error uploading your file.";
+	        echo "Sorry, there was an error uploading your photo.";
 	    }
 	}
 }
@@ -87,7 +87,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
     <div class="container">
     	<div class="text-center" style="margin-top: 100px;">
 		    <h1>Upload photo</h1>
-			<p>Select a photo in your computer and upload it!</p>
+			<p>Select a photo and upload it!</p>
 			<div class="row text-left">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					<form method="post" enctype="multipart/form-data">

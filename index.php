@@ -71,9 +71,8 @@ require_once 'includes/crud.php';
    <div class="container">
     
     <div class="text-center">
-	   <!-- <img id="banner" src="assets/img/mountain-1075914_1920.jpg" alt="Banner Image"> -->
 	   
-	    <h1>Where do you want to hike?</h1>
+	    <h1>find your trail</h1>
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -81,7 +80,7 @@ require_once 'includes/crud.php';
 				  <div class="form-group">
 				    <input type="search" class="form-control" name="search" placeholder="Write location here...">
 				  </div>
-				  <button type="submit" class="btn btn-default">Search</button>
+				  <button type="submit" class="btn btn-default">search</button>
 				</form>
 			</div>
 		</div>
@@ -97,11 +96,11 @@ require_once 'includes/crud.php';
 	    if(isset($_POST['search'])){
 	?>
 	
-	<h3 class="text-center" style="margin-top: 100px">Hiking destinations in <b><?php echo $_POST['search']; ?></b></h3>
+	<h3 class="text-center" style="margin-top: 100px">hiking destinations in <b><?php echo $_POST['search']; ?></b></h3>
 	
 	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
-			<h3>Trails</h3>
+			<h3>trails</h3>
 			<?php
 				$total = count($obj2->places);
 			?>	
@@ -176,7 +175,7 @@ require_once 'includes/crud.php';
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
-			<h3>Current weather:</h3>
+			<h3>current weather:</h3>
 			<?php	    
 				/*echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
