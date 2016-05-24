@@ -194,7 +194,6 @@ class Plan{
 		try{
 			$pdo = Database::connect();
 			$sql = "select * from upload_images where unique_id=? and public_photo=1";
-			echo $sql."  of id:".$unique_id."doneeee";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($unique_id)); //asks db for info array is replacing ?info
 			$result=array();
