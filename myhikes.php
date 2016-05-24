@@ -172,8 +172,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							
 							<div class="row">
 							<?php
-								print_r($favorite_plans);
-							for($j=0;$j<count($favorite_plans[$i]['photos']);$j++){
+							for($j=0;$j<count($favorite_plans[$i]['photos']['id']);$j++){
 								?>
 								
 									<div class="col-xs-12 col-md-2">
