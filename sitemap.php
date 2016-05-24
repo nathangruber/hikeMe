@@ -32,7 +32,7 @@ if ($admin) {
                 <p><a href="index.php">Home Page</a></p>
 
                 <ul>
-                    <li>jfjfjfjfjffj</li>
+                    <li>Search for your next hiking adventure.</li>
                 </ul>
 
                 <p><a href=".php">jfkdslfdjk</a></p>
