@@ -72,7 +72,7 @@ require_once 'includes/crud.php';
     
     <div class="text-center">
 	   
-	    <h1>find your trail</h1>
+	    <h1>Where do you want to Hike?</h1>
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -80,7 +80,7 @@ require_once 'includes/crud.php';
 				  <div class="form-group">
 				    <input type="search" class="form-control" name="search" placeholder="Write location here...">
 				  </div>
-				  <button type="submit" class="btn btn-default">search</button>
+				  <button type="submit" class="btn btn-default">Search</button>
 				</form>
 			</div>
 		</div>
@@ -96,15 +96,15 @@ require_once 'includes/crud.php';
 	    if(isset($_POST['search'])){
 	?>
 	
-	<h3 class="text-center" style="margin-top: 100px">hiking destinations in <b><?php echo $_POST['search']; ?></b></h3>
+	<h3 class="text-center" style="margin-top: 100px">Hiking destinations in <b><?php echo $_POST['search']; ?></b></h3>
 	
 	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
-			<h3>trails</h3>
+			<h3>Trails</h3>
 			<?php
 				$total = count($obj2->places);
 			?>	
-				<h4><b>trails found: </b><?php echo $total; ?></h4>    
+				<h4><b>Trails found: </b><?php echo $total; ?></h4>    
 			<?php 
 				
 				if($page==1){
@@ -143,7 +143,7 @@ require_once 'includes/crud.php';
 					    <input type="hidden" name="unique_id" value="<?php echo $place->activities[0]->unique_id;?>">
 					    <input type="hidden" name="description" value="<?php echo $place->activities[0]->description;?>">
 					  </div>
-					  <button type="submit" class="btn btn-default">add to my favorites</button>
+					  <button type="submit" class="btn btn-default">Add to my favorites</button>
 					</form>
 					<?php
 					echo "<hr>";
@@ -152,17 +152,17 @@ require_once 'includes/crud.php';
 				
 				if($page==1){
 					?>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">next</a>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">Next</a>
 					<?php
 				}else{
 					?>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page-1; ?>">back</a>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page-1; ?>">Back</a>
 					
 					
 					<?php
 					if($end!=$total){
 					?>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page+1; ?>">next</a>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page+1; ?>">Next</a>
 					<?php
 					}
 					
@@ -175,7 +175,7 @@ require_once 'includes/crud.php';
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
-			<h3>current weather and 5 day forecast:</h3>
+			<h3>Current Weather and 5 day forecast:</h3>
 			<?php	    
 				/*echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
