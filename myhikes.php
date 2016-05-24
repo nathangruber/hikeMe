@@ -73,7 +73,11 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'includes/header.php';?>
-
+<meta property="og:http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php"           content="http://www.your-domain.com/your-page.html" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Your Website Title" />
+	<meta property="og:description"   content="Your description" />
+	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 <body>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
