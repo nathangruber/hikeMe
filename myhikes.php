@@ -196,6 +196,13 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							}	
 							?>
 							
+							<form method="post" action="journal.php">
+							  <div class="form-group">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							  </div>
+							  <button type="submit" class="btn btn-default btn-block">Add journal</button>
+							</form>
+							
 							<form method="post" action="uploadphoto.php">
 							  <div class="form-group">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">

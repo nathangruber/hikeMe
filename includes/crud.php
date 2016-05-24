@@ -162,6 +162,19 @@ class Plan{
 		}
 	}
 	
+	public function addComment($user_id,$plan_id,$comment){
+		try{
+			$pdo = Database::connect();
+			$sql = "INSERT INTO journal (user_id,plan_id,comment) values(?, ?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id,$plan_id,$comment)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
 	
 }
 
