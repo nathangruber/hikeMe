@@ -246,6 +246,32 @@ class Plan{
 		}
 	}
 	
+	public function setPhotoAsPublic($user_id,$photo_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "UPDATE  upload_images SET  `public` =  '1' where user_id=? and id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id,$photo_id)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	public function setPhotoAsPrivate($user_id,$photo_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "UPDATE  upload_images SET  `public` =  '0' where user_id=? and id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id,$photo_id)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
 	
 }
 

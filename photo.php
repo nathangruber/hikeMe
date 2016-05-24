@@ -23,10 +23,11 @@ if($result==false){
 
 
 if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
-	echo 'i set this as public';
-	
-	
-	
+	$plan->setPhotoAsPublic($_SESSION['user_id'],$photo_id);
+}
+
+if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
+	$plan->setPhotoAsPrivate($_SESSION['user_id'],$photo_id);
 }
 
 
@@ -51,11 +52,21 @@ if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					
 					<img src="uploads/<?php echo $result['photo_name']; ?>" width=500px"/>
-					
-					<div>
+					<?php
+						if($result['public']==0){
+					?>
+						
+					<div style="margin-top:50px">
 						<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setaspublic" class="btn btn-default">Set as public</a>
 					</div>
-					
+					<?php
+						}else{
+							?>
+							<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setasprivate" class="btn btn-default">Set to private</a>
+						<?php
+						}	
+						
+					?>
 					
 				</div>
 			</div>
