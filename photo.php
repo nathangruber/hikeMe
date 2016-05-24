@@ -23,11 +23,11 @@ if($result==false){
 
 
 if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
-	$plan->setPhotoAsPublic($_SESSION['user_id'],$photo_id);
+	$plan->setPhotoAsPublic($_SESSION['id'],$photo_id);
 }
 
 if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
-	$plan->setPhotoAsPrivate($_SESSION['user_id'],$photo_id);
+	$plan->setPhotoAsPrivate($_SESSION['id'],$photo_id);
 }
 
 
