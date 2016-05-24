@@ -129,9 +129,9 @@ require_once 'includes/crud.php';
 					echo "<br>";
 					echo "<b>Name: </b>".$place->name;
 					echo "<br>";
-					echo "<b>Directions: </b>".nl2br(str_replace('<br />', '', $place->directions));
+					echo "<b>Directions: </b>".nl2br(str_replace("<br />", '', $place->directions));
 					echo "<br>";
-					echo "<b>Description: </b>".nl2br(str_replace('<br />', '', $place->activities[0]->description));
+					echo "<b>Description: </b>".nl2br(str_replace("<br />", '', $place->activities[0]->description));
 					echo "<br>";
 					echo "User's photos:<br>";
 					
