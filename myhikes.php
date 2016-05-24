@@ -48,7 +48,8 @@ if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
 	$plan_id = $_POST['plan_id'];
 	
 	$plan = new Plan();
-	$plan->setAsHiked($_SESSION['id'],$plan_id);
+	$todays_weather = "78.32";
+	$plan->setAsHiked($_SESSION['id'],$plan_id,$todays_weather);
 	
 	$message_favorites_show = true;
 	$message_favorites_text = "This hike ".$name." is now hiked";
@@ -171,7 +172,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 									echo "<p>";
 									echo $favorite_plans[$i]['comments'][$j];
 									echo "</p>";
-									echo "<br>-----<br>";
+									echo "<hr>";
 								}
 							?>
 							

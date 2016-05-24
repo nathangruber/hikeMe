@@ -116,12 +116,12 @@ class Plan{
 		}
 	}
 	
-	public function setAsHiked($user_id,$plan_id){
+	public function setAsHiked($user_id,$plan_id,$todays_weather){
 		try{
 			$pdo = Database::connect();
-			$sql = "UPDATE  plan SET  `type` =  'HIKED' where user_id=? and id=?";
+			$sql = "UPDATE  plan SET  `type` =  'HIKED',`hiked_day` =  now(),`hiked_weather` =  ? where user_id=? and id=?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($user_id,$plan_id)); //asks db for info array is replacing ?info
+			$q->execute(array($user_id,$plan_id,$todays_weather)); //asks db for info array is replacing ?info
 			Database::disconnect();
 			return true;
 		}catch (PDOException $error){
