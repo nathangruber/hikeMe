@@ -70,7 +70,7 @@ require_once 'includes/crud.php';
 
    <div class="container">
     
-    <div class="text-center" style="margin-top: 100px;">
+    <div class="text-center" style="margin-top: 50px;">
 	   <!-- <img id="banner" src="assets/img/mountain-1075914_1920.jpg" alt="Banner Image"> -->
 	   
 	    <h1>Where do you want to hike?</h1>
