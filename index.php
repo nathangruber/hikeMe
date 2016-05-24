@@ -96,7 +96,7 @@ require_once 'includes/crud.php';
 	    if(isset($_POST['search'])){
 	?>
 	
-	<h3 class="text-center" style="margin-top: 50px">Hiking destinations in <b><?php echo $_POST['search']; ?></b></h3>
+	<h3 class="text-center" style="margin-top: 10px">Hiking destinations in <b><?php echo $_POST['search']; ?></b></h3>
 	
 	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
@@ -175,7 +175,7 @@ require_once 'includes/crud.php';
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
-			<h3>Current Weather and 5 day forecast:</h3>
+			<h3>Current Weather:</h3>
 			<?php	    
 				/*echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
