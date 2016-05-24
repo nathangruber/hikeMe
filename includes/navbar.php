@@ -10,7 +10,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-         <a class="navbar-brand" href="cover.php"><img src="assets/img/coollogo_com-30322752.png" height="26" width="26"></a>
+         <a class="navbar-brand" href="cover.php"><img src="assets/img/coollogo_com-207624064.png" height="26" width="26"></a>
+         <br>
      </div>
 
 
