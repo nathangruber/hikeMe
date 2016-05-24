@@ -62,7 +62,9 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 					<?php
 						}else{
 							?>
+							<div style="margin-top:50px">
 							<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setasprivate" class="btn btn-default">Set to private</a>
+							</div>
 						<?php
 						}	
 						
