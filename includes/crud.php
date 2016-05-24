@@ -121,7 +121,7 @@ class Plan{
 			$pdo = Database::connect();
 			$sql = "UPDATE  plan SET  `type` =  'HIKED',`hiked_day` =  now(),`hiked_weather` =  ? where user_id=? and id=?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($user_id,$plan_id,$todays_weather)); //asks db for info array is replacing ?info
+			$q->execute(array($todays_weather,$user_id,$plan_id)); //asks db for info array is replacing ?info
 			Database::disconnect();
 			return true;
 		}catch (PDOException $error){
