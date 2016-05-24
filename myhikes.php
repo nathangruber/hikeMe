@@ -116,7 +116,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 				<h3>My Favorite Hikes:</h3>
 				
 				<div class="left">
-				<div><a href="https://twitter.com/intent/tweet?text=Hello%20world" class="twitter-share-button left-button" data-show-count="false">Tweet</a></div></div><script type="text/javascript">
+				<div><a href="https://twitter.com/intent/tweet?text=" class="twitter-share-button left-button" data-show-count="false">Tweet</a></div></div><script type="text/javascript">
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                 </script>
 				
