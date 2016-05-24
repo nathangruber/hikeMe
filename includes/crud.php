@@ -193,7 +193,7 @@ class Plan{
 	public function getPublicPhotosOfPlan($unique_id){
 		try{
 			$pdo = Database::connect();
-			$sql = "select * from upload_images where unique_id=? where public_photo=1";
+			$sql = "select * from upload_images where unique_id='?' where public_photo=1";
 			echo $sql."  of id:".$unique_id."doneeee";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($unique_id)); //asks db for info array is replacing ?info
