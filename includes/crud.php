@@ -222,6 +222,30 @@ class Plan{
 	}
 	
 	
+	public function getPhotoDetails($user_id,$photo_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from upload_images where user_id=? and id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id,$photo_id)); //asks db for info array is replacing ?info
+			$result=array();
+			if($row = $q->fetch(PDO::FETCH_ASSOC)){
+				
+	       		$result=$row;
+	       	}else{
+		       	Database::disconnect();
+			   	return false;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	
 }
 
 
