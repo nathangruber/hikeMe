@@ -64,8 +64,7 @@ require_once 'includes/crud.php';
    <div class="jumbotron">
   <h1></h1> 
 </div>
-<div class="container">
-</div>
+
 
 
    <div class="container">
