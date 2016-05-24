@@ -7,7 +7,7 @@ require_once 'includes/crud.php';
 
 $photo_id = $_GET['photo_id'];
 
-echo 'checking photo id:'.$photo_id;
+
 
 //I get the photo details
 $plan = new Plan();
@@ -18,25 +18,13 @@ if($result==false){
 }
 
 
-echo 'I have permissions';
 
 
 
-if(isset($_POST['option'])&&($_POST['option']=='setaspublic')){
+
+if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
+	echo 'i set this as public';
 	
-	//I get the photo details
-	
-	//I check if I have permissions to see this photo
-	
-	//If I have permission I 
-	
-	
-	$comment = $_POST['comment'];
-	
-	$plan = new Plan();
-	$plan->addComment($_SESSION['id'],$plan_id,$comment);
-	
-	header('Location: myhikes.php');
 	
 	
 }
@@ -64,18 +52,10 @@ if(isset($_POST['option'])&&($_POST['option']=='setaspublic')){
 					
 					<img src="uploads/<?php echo $result['photo_name']; ?>" width=500px"/>
 					
+					<div>
+						<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setaspublic" class="btn btn-default">Set as public</a>
+					</div>
 					
-					<form method="post" enctype="multipart/form-data">
-					  <div class="form-group">
-					    <input type="hidden" name="option" value="addjournal">
-					    <input type="hidden" name="plan_id" value="<?php echo $plan_id; ?>">
-					    <div class="form-group">
-						  <label for="comment">Comments:</label>
-						  <textarea name="comment" class="form-control" rows="5" id="comment"></textarea>
-						</div>
-					  </div>
-					  <button type="submit" class="btn btn-default">Upload photo</button>
-					</form>
 					
 				</div>
 			</div>
