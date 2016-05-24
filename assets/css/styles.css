@@ -95,3 +95,9 @@ button{
     color: white;
 
 }
+.left {
+float: left;
+}
+.right{
+float: left;
+}

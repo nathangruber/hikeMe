@@ -114,11 +114,17 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 		<div class="row">
 			<div class="col-xs-12 text-left">
 				<h3>My Favorite Hikes:</h3>
-				<div id="wrapper">
-				<div><a href="https://twitter.com/intent/tweet?text=Hello%20world" class="twitter-share-button" data-show-count="false">Tweet</a></div><script type="text/javascript">
+				
+				<div class="left">
+				<div><a href="https://twitter.com/intent/tweet?text=Hello%20world" class="twitter-share-button left-button" data-show-count="false">Tweet</a></div></div><script type="text/javascript">
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                 </script>
-				<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" data-layout="button" data-mobile-iframe="true"></div></div>
+				
+				<div class="right">
+
+				<div class="fb-share-button right-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" data-layout="button" data-mobile-iframe="true"></div></div>
+				
+
 				<?php
 				for($i=0;$i<count($favorite_plans);$i++){
 					?>
