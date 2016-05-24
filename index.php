@@ -137,7 +137,6 @@ require_once 'includes/crud.php';
 					
 					$plan = new Plan();
 					$public_photos = $plan-> getPublicPhotosOfPlan($place->activities[0]->unique_id);
-					print_r($public_photos)
 					?>
 					<div class="row">
 					<?php
