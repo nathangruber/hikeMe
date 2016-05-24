@@ -1,5 +1,5 @@
-<!--<nav class="navbar navbar-default navbar-fixed-top">-->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
+<!-- <nav class="navbar navbar-default"> -->
 
   <div class="container">
     <div class="navbar-header">
