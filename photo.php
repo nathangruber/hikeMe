@@ -5,17 +5,20 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-$photo_id = $_GET'photo_id'];
+$photo_id = $_GET['photo_id'];
+
+echo 'checking photo id:'.$photo_id;
 
 //I get the photo details
 $plan = new Plan();
 $result = $plan->getPhotoDetails($_SESSION['id'],$photo_id);
+//If It is not my photo then redirect
 if($result==false){
 	header('Location: myhikes.php');
 }
 
-//If It is not my photo then redirect
 
+echo 'I have permissions';
 
 
 
