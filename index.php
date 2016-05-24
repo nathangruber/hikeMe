@@ -143,7 +143,7 @@ require_once 'includes/crud.php';
 					for($p=0;$p<count($public_photos);$p++){
 						?>
 						<div class="col-xs-12 col-md-3">
-							<img src="uploads/<?php echo $public_photos[$p]['name']; ?>" width="120px"/>
+							<img src="uploads/<?php echo $public_photos[$p]['photo_name']; ?>" width="120px"/>
 						</div>
 						<?php
 					}
