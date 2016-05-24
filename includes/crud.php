@@ -179,6 +179,7 @@ class Plan{
 				
 	       		$result['name'][]=$row['photo_name'];
 	       		$result['id'][]=$row['id'];
+	       		$result['public_photo'][]=$row['public_photo'];
 	       	}
        		
        		Database::disconnect();
