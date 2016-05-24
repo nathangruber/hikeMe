@@ -75,6 +75,7 @@ class Plan{
 	       		//Select all the pictures of that plan
 	       		
 	       		$row['photos']=$this->getPhotosOfPlan($user_id,$row['id']);
+	       		$row['comments']=$this->getCommentsOfPlan($user_id,$row['id']);
 	       		
 	       		$result[]=$row;
 	       		
@@ -170,6 +171,26 @@ class Plan{
 			$q->execute(array($user_id,$plan_id,$comment)); //asks db for info array is replacing ?info
 			Database::disconnect();
 			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	public function getCommentsOfPlan($user_id,$plan_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from journal where user_id=? and plan_id=? order by id desc";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id,$plan_id)); //asks db for info array is replacing ?info
+			$result=array();
+			while($row = $q->fetch(PDO::FETCH_ASSOC)){
+				
+	       		$result[]=$row['comment'];
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
 		}catch (PDOException $error){
 			return false;
 		}

@@ -160,6 +160,16 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 								<?php
 							}
 							
+							
+							
+							?>
+							
+							<b>My comments:</b>
+							<?php
+								for($j=0;$j<count($favorite_plans[$i]['comments']);$j++){
+									echo $favorite_plans[$i]['comments'][$j];
+									echo "-----<br>";
+								}
 							?>
 							
 						</div>
