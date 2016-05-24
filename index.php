@@ -64,10 +64,8 @@ require_once 'includes/crud.php';
    <div class="jumbotron">
   <h1></h1> 
 </div>
+<div class="container">
 
-
-
-   <div class="container">
     
     <div class="text-center" style="margin-top: 100px;">
 	   <!-- <img id="banner" src="assets/img/mountain-1075914_1920.jpg" alt="Banner Image"> -->
@@ -87,6 +85,7 @@ require_once 'includes/crud.php';
 		</div>
 	</div>
   </div>
+ </div>
 
 
     
