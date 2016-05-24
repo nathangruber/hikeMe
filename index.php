@@ -96,7 +96,7 @@ require_once 'includes/crud.php';
 	    if(isset($_POST['search'])){
 	?>
 	
-	<h3 class="text-center" style="margin-top: 100px">Hiking destinations in <b><?php echo $_POST['search']; ?></b></h3>
+	<h3 class="text-center" style="margin-top: 80px">Hiking destinations in <b><?php echo $_POST['search']; ?></b></h3>
 	
 	<div class="row" style="margin-top: 20px">
 		<div class="col-xs-12 col-md-4 col-md-offset-2 text-left">
