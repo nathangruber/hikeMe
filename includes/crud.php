@@ -177,7 +177,8 @@ class Plan{
 			$result=array();
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
 				
-	       		$result[]=$row['photo_name'];
+	       		$result['myphotos']=$row['photo_name'];
+	       		$result['myphotos_id']=$row['id'];
 	       	}
        		
        		Database::disconnect();

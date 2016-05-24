@@ -5,7 +5,7 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-$photo_id = $_POST['photo_id'];
+$photo_id = $_GET'photo_id'];
 
 //I get the photo details
 $plan = new Plan();
