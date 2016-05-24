@@ -15,7 +15,7 @@
         require_once'includes/navbar.php';
     }
     ?>
-	
+	<br>
 	<div class="text-center" style="margin-top: 100px">
     <h1>Successfully Registered</h1>
 	</div>
