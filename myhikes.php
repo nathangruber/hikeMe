@@ -6,7 +6,7 @@ require_once 'includes/crud.php';
 
 
 $message_favorites_show=false;
-if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form submission/ 
+if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form submission 
 	$city = $_POST['city'];
 	$state = $_POST['state'];
 	$name = $_POST['name'];
@@ -102,7 +102,10 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 		<div class="row">
 			<div class="col-xs-12 text-left">
 				<h3>My Favorite Hikes:</h3>
-				
+				<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Hello%20world"
+  data-size="large">
+Tweet</a>
 				<?php
 				for($i=0;$i<count($favorite_plans);$i++){
 					?>

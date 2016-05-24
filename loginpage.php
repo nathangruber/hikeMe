@@ -23,12 +23,12 @@
 				  }  
 				?>
 		        <div class="starter-template">
-		            <p class="lead">Enter Username and Password to login.<br></p>
+		            <p class="lead">Enter Username and Password to Login.<br></p>
 		        </div>
 		
 		            <form class="form-horizontal" action="includes/login.php" method="post">
 					  <div class="form-group">
-					    <label for="username">User name</label>
+					    <label for="username">Username</label>
 					    <input name="username" id="username" type="text" class="form-control" placeholder="Username...">
 					  </div>
 					  
