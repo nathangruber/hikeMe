@@ -65,12 +65,14 @@ require_once 'includes/crud.php';
   <h1></h1> 
 </div>
 <div class="container">
+</div>
 
+
+   <div class="container">
     
     <div class="text-center" style="margin-top: 100px;">
 	   <!-- <img id="banner" src="assets/img/mountain-1075914_1920.jpg" alt="Banner Image"> -->
-	    <br>
-	    <br>
+	   
 	    <h1>Where do you want to hike?</h1>
 		
 		<div class="row">
@@ -85,7 +87,6 @@ require_once 'includes/crud.php';
 		</div>
 	</div>
   </div>
- </div>
 
 
     
