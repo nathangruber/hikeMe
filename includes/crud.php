@@ -131,12 +131,38 @@ class Plan{
 	
 	public function uploadPhoto($user_id,$photo_name,$plan_id){
 		try{
+			
+			$unique_id = $this->getUniqueId($plan_id);
+			
+			echo $unique_id;
+			die();
+			
 			$pdo = Database::connect();
 			$sql = "INSERT INTO upload_images (user_id,photo_name,plan_id) values(?, ?, ?)";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($user_id,$photo_name,$plan_id)); //asks db for info array is replacing ?info
 			Database::disconnect();
 			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	public function getUniqueId($plan_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from plan where id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($plan_id)); //asks db for info array is replacing ?info
+			$result=array();
+			if($row = $q->fetch(PDO::FETCH_ASSOC)){
+				
+	       		return $row['unique_id'];
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
 		}catch (PDOException $error){
 			return false;
 		}
