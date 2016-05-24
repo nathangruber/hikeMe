@@ -6,8 +6,7 @@ require_once 'includes/crud.php';
 
 
 $message_favorites_show=false;
-if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){
-	
+if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form submission/ 
 	$city = $_POST['city'];
 	$state = $_POST['state'];
 	$name = $_POST['name'];
