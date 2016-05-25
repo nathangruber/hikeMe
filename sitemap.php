@@ -64,9 +64,10 @@ require_once 'includes/crud.php';
 
                
             </div>
-        </div><?php
+        </div>
+    </div>
+    <?php
 require_once 'includes/footer.php';
 ?>
-    </div>
 </body>
 </html>
