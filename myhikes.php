@@ -120,7 +120,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
 				<form method="post" action="index.php">
 				  <div class="form-group">
-				    <input type="search" class="form-control" name="search" placeholder="Write location here...">
+				    <input type="search" class="form-control" name="search" placeholder="Enter nearest city to trail here...">
 				  </div>
 				  <button type="submit" class="btn btn-default">Search</button>
 				</form>
@@ -245,7 +245,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							    <input type="hidden" name="city" value="<?php echo $favorite_plans[$i]['city']; ?>">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default btn-block">Set as hiked</button>
+							  <button type="submit" class="btn btn-default btn-block">Set as Hiked</button>
 							</form>
 							<?php
 							}	
