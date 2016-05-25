@@ -191,7 +191,7 @@ require_once 'includes/crud.php';
 					
 				}
 				
-				//urlencode convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.
+				//urlencode used when encoding a string to be used in a url query, as a convenient way to pass variables to the next page.
 				
 				
 	    	?>
