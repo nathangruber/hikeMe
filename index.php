@@ -82,6 +82,7 @@ require_once 'includes/crud.php';
 				  </div>
 				  <button type="submit" class="btn btn-default">Search</button>
 				</form>
+				<br>
 			</div>
 		</div>
 	</div>
