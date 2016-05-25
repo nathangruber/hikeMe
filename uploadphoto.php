@@ -97,7 +97,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 					    <input type="hidden" name="option" value="uploadphoto">
 					    <input type="hidden" name="plan_id" value="<?php echo $plan_id; ?>">
 					    <input type="file" name="fileToUpload" id="fileToUpload">
-					  </div><button type="submit" class="btn btn-default">Upload Photo</button>
+					  </div><button type="submit" class="btn btn-success">Upload Photo</button>
 					</form>
 					<br>	
 				</div>
