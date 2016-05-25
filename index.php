@@ -175,7 +175,7 @@ require_once 'includes/crud.php';
 				
 				if($page==1){
 					?>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">Next</a>  //function convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">Next</a>  
 					<?php
 				}else{
 					?>
@@ -192,7 +192,7 @@ require_once 'includes/crud.php';
 					
 				}
 				
-				
+				//urlencode convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.
 				
 				
 	    	?>
