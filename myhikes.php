@@ -213,7 +213,6 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 									echo "<p>";
 									echo $favorite_plans[$i]['comments'][$j];
 									echo "</p>";
-									echo "<hr>";
 								}
 							?>
 							
