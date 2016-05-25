@@ -87,8 +87,8 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 
     <div class="container">
     	<div class="text-center" style="margin-top: 50px;">
-		    <h1>Upload Photo to hikeMe</h1>
-			<p>Make your photo public, and share it in the trail search.</p>
+		    <h1>Upload Photos to hikeMe</h1>
+			<p>Make your photo public, and share it in hikeMe's trail search.</p>
 			<br>
 			<div class="row text-left">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
