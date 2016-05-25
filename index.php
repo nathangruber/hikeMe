@@ -218,7 +218,7 @@ require_once 'includes/crud.php';
 				
 				echo "<b>Weather description: </b>".$obj->list[0]->weather[0]->description;
 				echo "<br>";
-				echo "<b>Current Temperature in Farenheit: </b>".$obj->list[0]->main->temp;
+				echo "<b>Current Temperature in &#8457: </b>".$obj->list[0]->main->temp;
 				echo "<br>";
 				echo "<b>Today's High: </b>".$obj->list[0]->main->temp_max;
 				echo "<br>";
@@ -238,7 +238,7 @@ require_once 'includes/crud.php';
 				echo "<h4><b>Day: </b>".substr($obj->list[$i]->dt_txt, 0,10)."</h4>";  
 				echo "<b>Weather description: </b>".$obj->list[$i]->weather[0]->description;
 				echo "<br>";
-				echo "<b>Current Temperature in Fahrenheit: </b>".$obj->list[$i]->main->temp;
+				echo "<b>Current Temperature in &#8457: </b>".$obj->list[$i]->main->temp;
 				echo "<br>";
 				echo "<b>Today's High: </b>".$obj->list[$i]->main->temp_max;
 				echo "<br>";
