@@ -26,7 +26,7 @@ require_once 'includes/crud.php';
                 <p><a href="index.php">Home Page</a></p>
 
                 <ul>
-                    <li>Search for your next hiking adventure.</li>
+                    <li>Search for your next hiking adventure</li>
                 </ul>
 
                 <p><a href="myHikes.php">My Hikes</a></p>
