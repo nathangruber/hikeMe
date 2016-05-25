@@ -193,7 +193,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 														echo 'public';
 													}
 												?>
-												<center><small><p>click to enlarge</p></small></center> 
+												<small><p>click to enlarge</p></small>
 											</div>
 										</div>
 									</div>
