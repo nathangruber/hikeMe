@@ -211,17 +211,12 @@ require_once 'includes/crud.php';
 				echo "<b>Today's Low: </b>".$obj->list[0]->main->temp_min;
 	    		echo "<br>";
 	    		echo "<b>Wind Speed: </b>".$obj->list[0]->wind->speed;
-				
-				
 				echo '<hr>';
-				
-				
-				
-			echo '<h3>Forecast:</h3>';
+				echo '<h3>Forecast:</h3>';
 			
 			for($i=1;$i<5;$i++){
 				
-				echo "<h4><b>Day: </b>".substr($obj->list[$i]->dt_txt, 0,10)."</h4>";  
+				echo "<h4><b>Day: </b>".substr($obj->list[$i]->dt_txt, 0,10)."</h4>";  //substr - returns part of string from api list
 				echo "<b>Weather description: </b>".$obj->list[$i]->weather[0]->description;
 				echo "<br>";
 				echo "<b>Current Temperature in &#8457: </b>".$obj->list[$i]->main->temp;
