@@ -44,6 +44,7 @@
 		        <div>
 		            <p>No Account? Register below</p>
 		            <center><a href="register.php" class="btn btn-default">Register</a></center>
+		            <br>
 		        </div>
 		    </div>
 	    </div>
