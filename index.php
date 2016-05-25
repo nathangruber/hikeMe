@@ -12,11 +12,11 @@ require_once 'includes/crud.php';
  <?php require_once 'includes/navbar.php';
 
 
-    if(isset($_GET['search'])){
-	    $_POST['search'] = urldecode($_GET['search']);
+    if(isset($_GET['search'])){   //isset function determines if var has been set or not. if it is it will search
+	    $_POST['search'] = urldecode($_GET['search']);   //$_POST array determines if the variable was posted or not. 
 	}
 	
-	if(isset($_GET['page'])){
+	if(isset($_GET['page'])){   
 		$page=$_GET['page'];
 	}else{
 		$page = 1;
@@ -50,25 +50,16 @@ require_once 'includes/crud.php';
 		$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
 		$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
 		$obj2 = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
-	    
-	    
-	    
-	    
-	    
-	    
-    }
+	}
     
     
     
     ?>
-   <div class="jumbotron">
-  <h1></h1> 
-</div>
-<div class="container">
-</div>
-
-
-   <div class="container">
+    <div class="jumbotron">
+	</div>
+	<div class="container">
+	</div>
+	<div class="container">
     
     <div class="text-center">
 	   
@@ -77,9 +68,9 @@ require_once 'includes/crud.php';
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
 				<form action="index.php" method="post">
-				  <div class="form-group">
-				    <input type="search" class="form-control" name="search" placeholder="Search by nearest city to trail...">
-				  </div>
+					  <div class="form-group">
+					    <input type="search" class="form-control" name="search" placeholder="Search by nearest city to trail...">
+					  </div>
 				  <button type="submit" class="btn btn-default">Search</button>
 				</form>
 				<br>
@@ -88,12 +79,7 @@ require_once 'includes/crud.php';
 	</div>
   </div>
 
-
-    
-    
-   
-    
-    <?php
+	<?php
 	    if(isset($_POST['search'])){
 	?>
 	
@@ -108,7 +94,7 @@ require_once 'includes/crud.php';
 				<h4><b>Trails found: </b><?php echo $total; ?></h4>    
 			<?php 
 				
-				if($page==1){       //pagination
+				if($page==1){       //pagination ==equal
 				 	$init = 0;
 				 	$end = 5;
 				}else{
@@ -175,7 +161,7 @@ require_once 'includes/crud.php';
 				
 				if($page==1){
 					?>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">Next</a>  
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">Next</a><!--encodes string for use in a url query-->
 					<?php
 				}else{
 					?>

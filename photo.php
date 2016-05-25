@@ -6,9 +6,6 @@ require_once 'includes/crud.php';
 
 
 $photo_id = $_GET['photo_id'];
-
-
-
 //get the photo details
 $plan = new Plan();
 $result = $plan->getPhotoDetails($_SESSION['id'],$photo_id);
@@ -16,12 +13,6 @@ $result = $plan->getPhotoDetails($_SESSION['id'],$photo_id);
 if($result==false){
 	header('Location: myhikes.php');
 }
-
-
-
-
-
-
 if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
 	$plan->setPhotoAsPublic($_SESSION['id'],$photo_id);
 }
@@ -29,11 +20,6 @@ if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
 if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 	$plan->setPhotoAsPrivate($_SESSION['id'],$photo_id);
 }
-
-
-
-	
-	
 ?>
 
 <!DOCTYPE html>

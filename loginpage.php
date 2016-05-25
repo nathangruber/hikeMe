@@ -13,9 +13,6 @@
     <div class="container">
 	    <div class="row">
 		    <div class="col-xs-12 col-md-4 col-md-offset-4">
-			    
-			    
-			    
 			    <h1 style="margin-top: 100px">Login</h1>
 			    <?php
 				  if($_GET['result']=='error'){
@@ -36,11 +33,11 @@
 					    <label for="name">Password</label>
 					    <input name="password" id="name" type="password" class="form-control" placeholder="Password...">
 					  </div>
+					  
 					  <div class="form-group">
 					  <button type="submit" class="btn btn-success">Login</button>
 					  </div>
 					</form>
-		        
 		        <div>
 		            <center><p>No Account? Register below</p></center>
 		            <center><a href="register.php" class="btn btn-default">Register</a></center>
@@ -49,10 +46,6 @@
 		    </div>
 	    </div>
     </div>
-    
-    
-    <?php
-require_once 'includes/footer.php';
-?>
+<?php require_once 'includes/footer.php';?>
 </body>
 </html>
