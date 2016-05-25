@@ -114,7 +114,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
     <?php } ?>
     
     <div class="text-center" style="margin-top: 100px;">
-	    <h1>Your Favorite Trails </h1>
+	    <h1>hikeMe</h1>
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
