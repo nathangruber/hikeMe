@@ -20,8 +20,9 @@
     <ul class="nav navbar-nav">
 
 	    <li><a href="index.php">Home</a></li>
-	    <li><a href="contact.php">Contact Us</a></li>
 	    <li><a href="myhikes.php">My Hikes</a></li>
+		<li><a href="contact.php">Contact Us</a></li>
+	    <li><a href="sitemap.php">Site Map</a></li>
     </ul>
     
     <?php
