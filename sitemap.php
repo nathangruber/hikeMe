@@ -11,9 +11,6 @@ require_once 'includes/crud.php';
     <title>Site Map</title>
 <body>
     <?php require_once'includes/navbar.php';?>
-    <br>
-    <br>
-    <br>
 
     <div class="container">
         <div class="row">
