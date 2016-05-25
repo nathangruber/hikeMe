@@ -8,10 +8,7 @@ require_once 'includes/crud.php';
 <html lang="en">
 <?php require_once 'includes/header.php';?>
 
-<head>
     <title>Site Map</title>
-</head>
-
 <body>
     <?php require_once'includes/navbar.php';?>
     <br>
