@@ -7,6 +7,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<br>
 	<center><p>“Now I see the secret of making the best person, it is to grow in the open air and to eat and sleep with the earth.”
 – Walt Whitman</p></center>
 	<div class="image">
