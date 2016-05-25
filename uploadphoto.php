@@ -83,7 +83,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 <body>
     <title>hikeMe</title>
 <?php require_once'includes/navbar.php';?>
-<img id="banner" src="assets/img/photographers-1150033_1280.jpg" alt="Photographer Banner Image">
+<img id="banner" src="assets/img/photographer-1031393_1920.jpg" alt="Photographer Banner Image">
 
     <div class="container">
     	<div class="text-center" style="margin-top: 50px;">
