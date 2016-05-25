@@ -7,15 +7,8 @@
 
 <body>
     <title>hikeMe</title>
-     <?php
-	 require_once'includes/navbar.php';
-
-	 
-    
-    
-    ?>
+     <?php require_once'includes/navbar.php';?>
     <div class="container">
-    
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>Welcome Back <?php echo $name; ?></h1>
 		

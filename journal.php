@@ -14,14 +14,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$plan->addComment($_SESSION['id'],$plan_id,$comment);
 	
 	header('Location: myhikes.php');
-	
-	
-}
-
-
-
-	
-	
+	}	
 ?>
 
 <!DOCTYPE html>

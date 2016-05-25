@@ -17,10 +17,12 @@
     ?>
 	<br>
 	<div class="text-center" style="margin-top: 100px">
-        <h1>Successfully Registered</h1>
+        <h1>Success!</h1>
 	</div>
     <center>
         <p>You have successfully created a hikeMe account, please login and start planning your next Hike.</p>
+        <br>
+        <br>
         <p>go <a class="btn btn-default" href="index.php">Back</a> or <a class="btn btn-default" href="loginpage.php">Login</a>.</p></center>
     <?php require_once 'includes/footer.php'; ?>
 </body>
