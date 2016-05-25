@@ -193,6 +193,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 														echo 'public';
 													}
 												?>
+												<p>Click Photo
 											</div>
 										</div>
 									</div>
@@ -203,6 +204,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							
 							
 							?>
+							<p>Click photo to share it with the trail.<p>
 							</div>
 							<div style="margin-top: 30px">
 								<b>My Trail Journal:</b>
