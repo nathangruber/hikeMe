@@ -34,8 +34,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	 require_once'includes/navbar.php';?>
     <div class="container">
     	<div class="text-center" style="margin-top: 100px;">
-		    <h1>Add journal</h1>
-			<p>Write your comments now!</p>
+		    <h1>Trail Journal</h1>
 			<div class="row text-left">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					<form method="post" enctype="multipart/form-data">
