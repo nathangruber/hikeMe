@@ -156,7 +156,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							}
 							if($favorite_plans[$i]['type']=="HIKED"){
 							?>
-							<span class="label label-success" style="font-size: 16px">Hiked on <?php echo $favorite_plans[$i]['hiked_day']; ?> - Temperature was: <?php echo $favorite_plans[$i]['hiked_weather']; ?>&#8457</span>
+							<span class="label label-success" style="font-size: 14px">Hiked on <?php echo $favorite_plans[$i]['hiked_day']; ?> - Temperature was: <?php echo $favorite_plans[$i]['hiked_weather']; ?>&#8457</span>
 							<?php
 							}
 							
