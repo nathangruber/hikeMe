@@ -130,7 +130,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 		
 		<div class="row">
 			<div class="col-xs-12 text-left">
-				<h3>My Favorite Hikes:</h3>
+				<h3>My Favorite Trails:</h3>
 				
 				<div class="left">
 				<div><a href="https://twitter.com/intent/tweet?text=" class="twitter-share-button left-button" data-show-count="false">Tweet</a></div></div><script type="text/javascript">
