@@ -193,7 +193,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 														echo 'public';
 													}
 												?>
-												<p>click on photo to share it with the trail</p>
+												<small><p>click to make it public</p></small>
 											</div>
 										</div>
 									</div>
