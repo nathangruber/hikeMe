@@ -120,7 +120,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
 				<form method="post" action="index.php">
 				  <div class="form-group">
-				    <input type="search" class="form-control" name="search" placeholder="Enter nearest city to trail here...">
+				    <input type="search" class="form-control" name="search" placeholder="Search by nearest city to trail...">
 				  </div>
 				  <button type="submit" class="btn btn-default">Search</button>
 				</form>
@@ -229,7 +229,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							    <input type="hidden" name="option" value="setasplanned">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default btn-block">Set as planned</button>
+							  <button type="submit" class="btn btn-default btn-block">Set as Planned</button>
 							</form>
 							<?php
 							}	
@@ -304,7 +304,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 			<?php
 				$total = count($obj2->places);
 			?>	
-				<h4><b>Total founds: </b><?php echo $total; ?></h4>    
+				<h4><b>Total found: </b><?php echo $total; ?></h4>    
 			<?php    
 			    
 			    for($i=0;$i<$total;$i++){

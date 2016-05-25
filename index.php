@@ -78,7 +78,7 @@ require_once 'includes/crud.php';
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
 				<form action="index.php" method="post">
 				  <div class="form-group">
-				    <input type="search" class="form-control" name="search" placeholder="Enter nearest city to trail here...">
+				    <input type="search" class="form-control" name="search" placeholder="Search by nearest city to trail...">
 				  </div>
 				  <button type="submit" class="btn btn-default">Search</button>
 				</form>
@@ -107,7 +107,7 @@ require_once 'includes/crud.php';
 				<h4><b>Trails found: </b><?php echo $total; ?></h4>    
 			<?php 
 				
-				if($page==1){
+				if($page==1){       //pagination
 				 	$init = 0;
 				 	$end = 5;
 				}else{
@@ -165,7 +165,7 @@ require_once 'includes/crud.php';
 					    <input type="hidden" name="unique_id" value="<?php echo $place->activities[0]->unique_id;?>">
 					    <input type="hidden" name="description" value="<?php echo $place->activities[0]->description;?>">
 					  </div>
-					  <button type="submit" class="btn btn-default">Add to my favorites</button>
+					  <button type="submit" class="btn btn-default">Add to my Favorites</button>
 					</form>
 					<?php
 					echo "<hr>";
@@ -174,7 +174,7 @@ require_once 'includes/crud.php';
 				
 				if($page==1){
 					?>
-					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">Next</a>
+					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=2">Next</a>  //function convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.
 					<?php
 				}else{
 					?>
@@ -185,6 +185,7 @@ require_once 'includes/crud.php';
 					if($end!=$total){
 					?>
 					<a class="btn btn-default" href="index.php?search=<?php echo urlencode($_POST['search']);?>&page=<?php echo $page+1; ?>">Next</a>
+					<br>
 					<?php
 					}
 					
