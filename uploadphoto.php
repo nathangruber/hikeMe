@@ -86,7 +86,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 <img id="banner" src="assets/img/photographer-519565_640.jpg" alt="Photographer Banner Image">
 
     <div class="container">
-    	<div class="text-center" style="margin-top: 100px;">
+    	<div class="text-center" style="margin-top: 50px;">
 		    <h1>Upload Photo to hikeMe</h1>
 			<p>Make your photo public, and share it in the trail search.</p>
 			<br>
