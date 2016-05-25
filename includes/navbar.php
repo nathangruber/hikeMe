@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="cover.php"><img src="assets/img/coollogo_com-20326892.png" alt="hikeMe logo" style="float:left;">
+        <a class="navbar-brand" href="cover.php"><img src="assets/img/coollogo_com-20326892.png" alt="hikeMe logo" style="float:left">
         </a>
      </div>
 
