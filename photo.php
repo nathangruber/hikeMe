@@ -57,13 +57,13 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 					?>
 						
 					<div style="margin-top:50px">
-						<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setaspublic" class="btn btn-default">Set as public</a>
+						<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setaspublic" class="btn btn-default">Make Public</a>
 					</div>
 					<?php
 						}else{
 							?>
 							<div style="margin-top:50px">
-							<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setasprivate" class="btn btn-default">Set to private</a>
+							<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setasprivate" class="btn btn-default">Set back to Private</a>
 							</div>
 						<?php
 						}	
