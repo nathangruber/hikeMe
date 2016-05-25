@@ -15,6 +15,7 @@ require_once 'includes/crud.php';
         <div class="row">
             <div class="col-md-4">
                 <br>
+                <br>
                 <h1>Site Map</h1>
                 <p><a href="cover.php">Cover Page</a></p>
 
