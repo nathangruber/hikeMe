@@ -195,7 +195,6 @@ require_once 'includes/crud.php';
 				
 				
 	    	?>
-	    	<br> 
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
@@ -277,13 +276,8 @@ require_once 'includes/crud.php';
 	    }
 	?>
     
- 
-  
-    
-
-
-
-    </div>
+</div>
+    <br>
 <?php require_once 'includes/footer.php'; ?>
 
 
