@@ -69,7 +69,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 						}	
 						
 					?>
-					
+					<br>
 				</div>
 			</div>
 		</div>
