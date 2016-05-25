@@ -86,8 +86,8 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	 require_once'includes/navbar.php';?>
     <div class="container">
     	<div class="text-center" style="margin-top: 100px;">
-		    <h1>Upload photo</h1>
-			<p>Select a photo and upload it</p>
+		    <h1>Upload Photo</h1>
+			<p>Upload Photo to hikeMe</p>
 			<div class="row text-left">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					<form method="post" enctype="multipart/form-data">
@@ -95,7 +95,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 					    <input type="hidden" name="option" value="uploadphoto">
 					    <input type="hidden" name="plan_id" value="<?php echo $plan_id; ?>">
 					    <input type="file" name="fileToUpload" id="fileToUpload">
-					  </div><button type="submit" class="btn btn-default">Upload photo</button>
+					  </div><button type="submit" class="btn btn-default">Upload Photo</button>
 					</form>
 					
 				</div>

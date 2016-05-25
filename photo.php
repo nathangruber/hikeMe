@@ -47,7 +47,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
     <div class="container">
     	<div class="text-center" style="margin-top: 100px;">
 		    <h1>Your Photo</h1>
-			<p>Nice one!</p>
+			<p>If you make your photo public, it will be shared when anyone views that trail.</p>
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					
