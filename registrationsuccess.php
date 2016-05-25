@@ -8,13 +8,7 @@
 </head>
 
 <body>
-    <?php
-    if ($admin) {
-        require_once'includes/adminNavbar.php';
-    } else {
-        require_once'includes/navbar.php';
-    }
-    ?>
+    <?php require_once'includes/navbar.php';?>
 	<br>
 	<div class="text-center" style="margin-top: 100px">
         <h1>Success!</h1>
