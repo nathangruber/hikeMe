@@ -6,12 +6,11 @@ require_once 'includes/crud.php';
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html lang="en">
+<?php require_once'includes/navbar.php';?>
 <?php require_once 'includes/header.php';?>
 
     <title>Site Map</title>
 <body>
-    <?php require_once'includes/navbar.php';?>
-
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -31,7 +30,7 @@ require_once 'includes/crud.php';
                 <p><a href="myHikes.php">My Hikes</a></p>
 
                 <ul>
-                    <li>Favorite Hikes</li>
+                    <li>Search Trails</li>
 
                     <li>Plan your Hikes</li>
 
