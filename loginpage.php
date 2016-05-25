@@ -43,7 +43,7 @@
 		        
 		        <div>
 		            <p>No Account? Register below</p>
-		            <a href="register.php" class="btn btn-default">Register</a>
+		            <center><a href="register.php" class="btn btn-default">Register</a></center>
 		        </div>
 		    </div>
 	    </div>
