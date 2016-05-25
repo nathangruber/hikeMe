@@ -18,7 +18,7 @@
                     <br>
                     <br>
                     <br>
-                  <p>Contact hikeMe</p>
+                    <p style="font-size:160%;">Contact hikeMe</p>
                 </div>
                      <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
                       <div class="form-group">
