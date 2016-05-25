@@ -9,10 +9,10 @@ $photo_id = $_GET['photo_id'];
 
 
 
-//I get the photo details
+//get the photo details
 $plan = new Plan();
 $result = $plan->getPhotoDetails($_SESSION['id'],$photo_id);
-//If It is not my photo then redirect
+//not my photo then redirect
 if($result==false){
 	header('Location: myhikes.php');
 }
@@ -46,7 +46,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 	 require_once'includes/navbar.php';?>
     <div class="container">
     	<div class="text-center" style="margin-top: 100px;">
-		    <h1>Your photo</h1>
+		    <h1>Your Photo</h1>
 			<p>Nice one!</p>
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">

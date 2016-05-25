@@ -18,7 +18,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form subm
 	$plan->addToFavorites($_SESSION['id'],$city,$state,$name,$unique_id,$description);
 	
 	$message_favorites_show = true;
-	$message_favorites_text = "Your hike ".$name." has been saved to your favorites";
+	$message_favorites_text = "Your hike ".$name." has been Explored";
 }
 
 
@@ -68,7 +68,7 @@ if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
 	$plan->setAsHiked($_SESSION['id'],$plan_id,$todays_weather);
 	
 	$message_favorites_show = true;
-	$message_favorites_text = "This hike ".$name." is now hiked";
+	$message_favorites_text = "This hike ".$name." has been Explored";
 	
 }
 
@@ -156,7 +156,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							}
 							if($favorite_plans[$i]['type']=="HIKED"){
 							?>
-								<span class="label label-success" style="font-size: 16px">HIKED on <?php echo $favorite_plans[$i]['hiked_day']; ?> - weather was: <?php echo $favorite_plans[$i]['hiked_weather']; ?> Farenheit</span>
+								<span class="label label-success" style="font-size: 16px">Hiked on <?php echo $favorite_plans[$i]['hiked_day']; ?> - weather was: <?php echo $favorite_plans[$i]['hiked_weather']; ?> Fahrenheit</span>
 							<?php
 							}
 							
@@ -205,7 +205,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							?>
 							</div>
 							<div style="margin-top: 30px">
-								<b>My comments:</b>
+								<b>My Trail Journal:</b>
 							</div>
 							<?php
 								for($j=0;$j<count($favorite_plans[$i]['comments']);$j++){
@@ -255,14 +255,14 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							  <div class="form-group">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default btn-block">Add journal</button>
+							  <button type="submit" class="btn btn-default btn-block">Add Journal</button>
 							</form>
 							
 							<form method="post" action="uploadphoto.php">
 							  <div class="form-group">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default btn-block">Upload photo</button>
+							  <button type="submit" class="btn btn-default btn-block">Upload Photo</button>
 							</form>
 							
 							<form method="post">
