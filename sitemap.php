@@ -25,7 +25,7 @@ require_once 'includes/crud.php';
                 <p><a href="cover.php">Cover Page</a></p>
 
                 <ul>
-                    <li>Cover Page</li>
+                    <li>Enter hikeMe</li>
                 </ul>
                 
                 <p><a href="index.php">Home Page</a></p>
@@ -37,11 +37,11 @@ require_once 'includes/crud.php';
                 <p><a href="myHikes.php">My Hikes</a></p>
 
                 <ul>
-                    <li>Bkjfdfkldsjklfds</li>
+                    <li>Favorite Hikes</li>
 
-                    <li>kjfjffjf</li>
+                    <li>Plan your Hikes</li>
 
-                    <li>ffffffff</li>
+                    <li>Rememeber your Hikes</li>
                 </ul>
 
                 <p><a href="contact.php">Contact hikeMe</a></p>
