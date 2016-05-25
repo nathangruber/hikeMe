@@ -1,5 +1,5 @@
 <?php 
-require_once('includes/session.php');
+require_once'includes/session.php';
 require_once 'includes/database.php';
 require_once 'includes/crud.php';
 ?>
@@ -13,29 +13,28 @@ require_once 'includes/crud.php';
 </head>
 
 <body>
-    <?php
-if ($admin) {
-	require_once'includes/adminNavbar.php';
-} else {
-	require_once'includes/navbar.php';
-}
-?><br>
+    <?php require_once'includes/navbar.php';?>
     <br>
     <br>
-  <!--  <img id="siteimage" src="assets/img/bbs1.png" alt="Banner Image" width="300"> -->
+    <br>
 
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <h2>Site Map</h2>
+                <p><a href="cover.php">Cover Page</a></p>
 
+                <ul>
+                    <li>Cover Page</li>
+                </ul>
+                
                 <p><a href="index.php">Home Page</a></p>
 
                 <ul>
                     <li>Search for your next hiking adventure.</li>
                 </ul>
 
-                <p><a href=".php">jfkdslfdjk</a></p>
+                <p><a href="myHikes.php">My Hikes</a></p>
 
                 <ul>
                     <li>Bkjfdfkldsjklfds</li>
@@ -43,6 +42,12 @@ if ($admin) {
                     <li>kjfjffjf</li>
 
                     <li>ffffffff</li>
+                </ul>
+
+                <p><a href="contact.php">Contact hikeMe</a></p>
+
+                <ul>
+                    <li>Contact Us</li>
                 </ul>
 
                 <p><a href="register.php">Register</a></p>
@@ -57,23 +62,7 @@ if ($admin) {
                     <li>Login</li>
                 </ul>
 
-                <p><a href="about.php">About hikeMe</a></p>
-
-                <ul>
-                    <li> Mission</li>
-                </ul>
-
-                <p><a href="contact.php">Contact Us</a></p>
-
-                <ul>
-                    <li>Email Form</li>
-                </ul>
-
-                <p><a href=".php">dfddffd</a></p>
-
-                <ul>
-                    <li>fddfdffd</li>
-                </ul>
+               
             </div>
         </div><?php
 require_once 'includes/footer.php';

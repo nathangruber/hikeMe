@@ -255,7 +255,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							  <div class="form-group">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default btn-block">Add Journal</button>
+							  <button type="submit" class="btn btn-default btn-block">Add Trail Journal</button>
 							</form>
 							
 							<form method="post" action="uploadphoto.php">
