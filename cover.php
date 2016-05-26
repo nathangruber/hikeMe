@@ -2,11 +2,12 @@
 <html lang="en">
 <?php require_once 'includes/header.php';?>
 <head>
-	<title>hikeMe</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
+		<title>hikeMe</title>
+
 	<center><p>“Now I see the secret of making the best person, it is to grow in the open air and to eat and sleep with the earth.”
 – Walt Whitman</p></center>
 	<div class="image">

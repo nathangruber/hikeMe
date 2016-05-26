@@ -82,9 +82,10 @@ button{
 }
 
 .image { 
-   position: relative; 
-   width: 100%; /* for IE 6 */
+      background-size: 100% auto;
+
 }
+
 .jumbotron {
     position:static;
     background: #000 url(../img/mountain-1075914_1920.jpg)center center;
@@ -122,3 +123,5 @@ height: 450px;
 z-index: -1;
 
 }
+ position: relative; 
+   width: 100%; /* for IE 6 */
