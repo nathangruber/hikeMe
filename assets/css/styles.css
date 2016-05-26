@@ -100,7 +100,7 @@ button{
 @media screen and (max-width: 1920px) { /* Specific to this particular image */
   .image {
     left: 0%;
-    margin-left: -512px;   /* 50% */
+    margin-left:0px;   /* 50% */
   }
 }  
 }
