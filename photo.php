@@ -25,9 +25,9 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'includes/header.php';?>
+    <title>hikeMe</title>
 
 <body>
-    <title>hikeMe</title>
      <?php
 	 require_once'includes/navbar.php';?>
     <div class="container">
@@ -37,7 +37,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					
-					<img src="uploads/<?php echo $result['photo_name']; ?>" width=500px"/>
+					<img src="uploads/"<?php echo $result['photo_name']; ?>"width=500px"/>
 					<?php
 						if($result['public_photo']==0){
 					?>
@@ -51,6 +51,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 							<div style="margin-top:50px">
 							<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setasprivate" class="btn btn-default">Set back to Private</a>
 							</div>
+
 						<?php
 						}	
 						
