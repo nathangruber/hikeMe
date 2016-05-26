@@ -150,5 +150,10 @@ height: 450px;
 z-index: -1;
 
 }
-position: relative; 
-   width: 100%; /* for IE 6 */
+.cap p {
+  padding: 20px;
+  color: white;
+  font: 12px font-family: Lato, sans-serif;
+;
+  margin: 0;
+}
