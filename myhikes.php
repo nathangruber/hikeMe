@@ -29,7 +29,7 @@ if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
 	$plan->removeFromFavorites($_SESSION['id'],$plan_id);
 	
 	$message_favorites_show = true;
-	$message_favorites_text = "This hike ".$name." was one of your favorites";
+	$message_favorites_text = "This hike ".$name." was one of your favorites.";
 	
 }
 
