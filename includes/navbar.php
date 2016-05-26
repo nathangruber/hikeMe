@@ -1,5 +1,4 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-<!-- <nav class="navbar navbar-default"> -->
 
   <div class="container">
     <div class="navbar-header">
@@ -13,31 +12,21 @@
        <a class="navbar-brand" href="cover.php"><img src="assets/img/coollogo_com-20326892.png" alt="hikeMe logo" style="float:left"></a>
    </div>
 
-
    <div id="navbar" class="collapse navbar-collapse">
-
     <ul class="nav navbar-nav">
 		<li><a href="index.php">Home</a></li>
 	    <li><a href="myhikes.php">My Hikes</a></li>
 		<li><a href="contact.php">Contact Us</a></li>
     </ul>
-    
+   	<ul class="nav navbar-nav pull-right">
     <?php
 	  if(!$logged){
-	?>
-		<ul class="nav navbar-nav pull-right">
-			<li><a href="register.php">Register</a></li>
-		    <li><a href="loginpage.php">Login</a></li>
-	    </ul>
-	<?php
+		echo '<li><a href="register.php">Register</a></li>';
+	    echo '<li><a href="loginpage.php">Login</a></li>';
 	  }else{
-	  
-	  ?>
-	  <ul class="nav navbar-nav pull-right">
-			<li><a href="myhikes.php"><?php echo $_SESSION['name']; ?></a></li>
-		    <li><a href="logout.php">Logout</a></li>
-	    </ul>
-	 <?php
+	  	echo '<li><a href="myhikes.php">' . $_SESSION['name'] . '</a></li>';
+		echo '<li><a href="logout.php">Logout</a></li>';
 	  }
   	?>
+  	</ul>
 </nav>
