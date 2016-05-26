@@ -40,7 +40,7 @@ if(isset($_POST['option'])&&($_POST['option']=='setasplanned')){
 	$plan->setAsPlanned($_SESSION['id'],$plan_id);
 	
 	$message_favorites_show = true;
-	$message_favorites_text = "This hike is now planned, ".$name.".";
+	$message_favorites_text = "This hike is now planned.";
 	
 }
 
