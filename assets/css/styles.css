@@ -150,10 +150,11 @@ height: 450px;
 z-index: -1;
 
 }
-.cap p {
-  padding: 20px;
+.lr p {
+  font-family: Lato, sans-serif;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
   color: white;
-  font: 12px font-family: Lato, sans-serif;
-;
   margin: 0;
 }
