@@ -122,7 +122,7 @@ require_once 'includes/crud.php';
 					echo "User's photos:<br>";
 					
 					$plan = new Plan();
-					$public_photos = $plan-> getPublicPhotosOfPlan($place->activities[0]->unique_id);
+					$public_photos = $plan-> getPublicPhotosOfPlan($place->activities[0]->unique_id); //
 					?>
 					<div class="row">
 					<?php
@@ -258,8 +258,8 @@ require_once 'includes/crud.php';
     
 </div>
     <br>
-<?php require_once 'includes/footer.php'; ?>
 
+<?php require_once 'includes/footer.php'; ?>
 
 </body>
 </html>
