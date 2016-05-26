@@ -82,8 +82,9 @@ button{
 }
 
 .image { 
-      background-size: 100% auto;
-
+   background-image: url('http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/index.php');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .jumbotron {
@@ -123,5 +124,5 @@ height: 450px;
 z-index: -1;
 
 }
- position: relative; 
+position: relative; 
    width: 100%; /* for IE 6 */
