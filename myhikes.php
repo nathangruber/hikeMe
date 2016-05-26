@@ -219,7 +219,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							    <input type="hidden" name="option" value="setasplanned">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-default btn-block">Set as Planned</button>
+							  <button type="submit" class="btn btn-default btn-block">Plan your Hike</button>
 							</form>
 							<?php
 							}	
