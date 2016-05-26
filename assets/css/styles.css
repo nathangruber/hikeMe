@@ -103,7 +103,13 @@ button{
     margin-left:0px;   /* 50% */
   }
 }  
+.image .text {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:300px;
 }
+
 
 .jumbotron {
     position:static;
