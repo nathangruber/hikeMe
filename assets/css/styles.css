@@ -82,9 +82,11 @@ button{
 }
 
 .image { 
-   position: relative; 
-   width: 100%; /* for IE 6 */
-   margin:100px;
+ background: url(../img/away-1356948_1920.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
 }
 
 .jumbotron {
