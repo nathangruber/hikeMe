@@ -16,6 +16,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	$target_file = $target_dir . $new_name_file;
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+	$imageFileType = strtolower($imageFileType);
 	// Check if image file is a actual image or fake image
 	if(isset($_POST["submit"])) {
 	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
