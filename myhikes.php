@@ -68,7 +68,7 @@ if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
 	$plan->setAsHiked($_SESSION['id'],$plan_id,$todays_weather);
 	
 	$message_favorites_show = true;
-	$message_favorites_text = "This hike, ".$name." has been Explored.";
+	$message_favorites_text = "This hike has been Explored.";
 	
 }
 
