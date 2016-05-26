@@ -95,16 +95,15 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
     <title>hikeMe</title>
      <?php
 	 require_once'includes/navbar.php';?>
-    <div class="container">
-    <br>
-    <br>
-    <?php if($message_favorites_show){ ?>
-    <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
-    <?php } ?>
-    <div class="jumbotron jumbotron-special">
+    <div class="jumbotron">
 	</div>
 	<div class="container">
 	</div>
+    <div class="container">
+    <?php if($message_favorites_show){ ?>
+    <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
+    <?php } ?>
+    
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>hikeMe</h1>
 		
