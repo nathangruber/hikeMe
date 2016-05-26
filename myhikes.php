@@ -40,7 +40,7 @@ if(isset($_POST['option'])&&($_POST['option']=='setasplanned')){
 	$plan->setAsPlanned($_SESSION['id'],$plan_id);
 	
 	$message_favorites_show = true;
-	$message_favorites_text = "This hike ".$name." is now planned";
+	$message_favorites_text = "This hike is now planned, ".$name." ";
 	
 }
 
@@ -108,7 +108,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
      <?php
 	 require_once'includes/navbar.php';?>
     <div class="container">
-    
+    <br>
     <?php if($message_favorites_show){ ?>
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
