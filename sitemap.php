@@ -1,20 +1,10 @@
-<?php 
-require_once'includes/session.php';
-require_once 'includes/database.php';
-require_once 'includes/crud.php';
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
+<!DOCTYPE html>
 <html lang="en">
-<?php require_once'includes/navbar.php';?>
 <?php require_once 'includes/header.php';?>
-
-    <title>Site Map</title>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <br>
                 <br>
                 <h1>Site Map</h1>
                 <p><a href="cover.php">Cover Page</a></p>

@@ -5,8 +5,6 @@ class User{
 	
 	public $id,$name,$birth_date,$email_address,$username;
 	
-	
-	
 	public function create($name, $birth_date, $email_address, $username, $password ){
 		try{
 			$pdo = Database::connect();
@@ -133,8 +131,6 @@ class Plan{
 		try{
 			
 			$unique_id = $this->getUniqueId($plan_id);
-			
-			
 			
 			$pdo = Database::connect();
 			$sql = "INSERT INTO upload_images (user_id,photo_name,plan_id,unique_id) values(?, ?, ?, ?)";
@@ -296,6 +292,3 @@ class Plan{
 	
 }
 
-
-
-?>
