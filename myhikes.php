@@ -5,7 +5,7 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-$message_favorites_show=false;
+$message_favorites_show=false; //
 if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form submission/isset determines if var is set, not null 
 	$city = $_POST['city'];
 	$state = $_POST['state'];
@@ -72,21 +72,9 @@ if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
 	
 }
 
-
-
-
-	
-
 $plan = new Plan();
 $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
-
-
-	
-	
-	
-	
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'includes/header.php';?>

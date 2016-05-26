@@ -25,7 +25,7 @@ require_once 'includes/crud.php';
     if(isset($_POST['search'])){
 	    //Weather API forecast
 	    $place = $_POST['search'];
-	    $loc = urlencode($place);
+	    $loc = urlencode($place); //encodes string 
 	    $url = "http://api.openweathermap.org/data/2.5/forecast?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
 		$opts = array(
 		        'http' => array (
@@ -60,7 +60,6 @@ require_once 'includes/crud.php';
 	<div class="container">
 	</div>
 	<div class="container">
-    
     <div class="text-center">
 	   
 	    <h1>Where do you want to Hike?</h1>
