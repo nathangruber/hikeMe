@@ -119,7 +119,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 		
 		<div class="row">
 			<div class="col-xs-12 text-left">
-				<h3>My Favorite Trails:</h3>
+				<h3>Trail Planner:</h3>
 				
 				<div class="left">
 				<div><a href="https://twitter.com/intent/tweet?text=" class="twitter-share-button left-button" data-show-count="false">Tweet</a></div></div><script type="text/javascript">
@@ -260,7 +260,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							    <input type="hidden" name="option" value="removefromfavorites">
 							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-danger btn-block">Remove Favorite</button>
+							  <button type="submit" class="btn btn-danger btn-block">Remove Hike</button>
 							</form>
 							
 						</div>
