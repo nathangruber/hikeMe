@@ -101,7 +101,10 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
     <?php if($message_favorites_show){ ?>
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
-    
+    <div class="jumbotron jumbotron-special">
+	</div>
+	<div class="container">
+	</div>
     <div class="text-center" style="margin-top: 100px;">
 	    <h1>hikeMe</h1>
 		

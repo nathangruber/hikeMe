@@ -103,15 +103,17 @@ button{
     margin-left:0px;   /* 50% */
   }
 }  
-.image .text {
-    position:absolute;
-    top:10px;
-    left:10px;
-    width:300px;
-}
-
 
 .jumbotron {
+    position:static;
+    background: #000 url(../img/mountain-1075914_1920.jpg)center center;
+    width: 100%;
+    height: 250px;
+    background-size:cover ;
+    overflow:hidden;
+    color: white;
+}
+.jumbotron-special {
     position:static;
     background: #000 url(../img/mountain-1075914_1920.jpg)center center;
     width: 100%;
