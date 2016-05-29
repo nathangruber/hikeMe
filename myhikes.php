@@ -93,6 +93,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
     <title>hikeMe</title>
+    <a data-pin-do="buttonPin" data-pin-count="above" data-pin-round="true" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fec2-54-213-132-61.us-west-2.compute.amazonaws.com%2FhikeMe%2Fcover.php&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_16.png" /></a>
      <?php
 	 require_once'includes/navbar.php';?>
     <div class="jumbotron">
