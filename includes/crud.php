@@ -137,22 +137,20 @@ class Hike{
 
 
 class Image{
-	public function uploadPhoto($user_id,$photo_name,$hike_id){
+	public function uploadPhoto($photo_name,$hike_id){
 		try{
-			
-			
 			$pdo = Database::connect();
-			$sql = "INSERT INTO image (name,hike_fk,user_fk) values(?, ?, ?)";
-			echo $sql;
-			echo "values: $photo_name,$hike_id,$user_id";
+			$sql = "INSERT INTO image (name,hike_fk) values(?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($photo_name,$hike_id,$user_id)); //asks db for info array is replacing ?info
+			$q->execute(array($photo_name,$hike_id)); //asks db for info array is replacing ?info
 			Database::disconnect();
 			return true;
 		}catch (PDOException $error){
 			return false;
 		}
 	}
+	
+	
 }
 
 
