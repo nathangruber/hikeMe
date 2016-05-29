@@ -191,9 +191,9 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 									echo "<p><b>Day: </b>";
 									echo $comments[$j]['date'];
 									echo "</p>";
-									echo "<p><b>Comments: </b>";
+									echo "<p><b>Comments: </b><i>";
 									echo $comments[$j]['comments'];
-									echo "</p>";
+									echo "</i></p>";
 								}
 							?>
 							
