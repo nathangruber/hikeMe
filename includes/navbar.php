@@ -18,14 +18,17 @@
 	    <li><a href="myhikes.php">My Hikes</a></li>
 		<li><a href="contact.php">Contact Us</a></li>
     </ul>
+   
+	<form method="post" action="index.php" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search..." name="search">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+	
+	
    	<ul class="nav navbar-nav pull-right">
 	   	
-	   	<form method="post" action="index.php">
-		  <div class="form-group">
-		    <input type="search" class="form-control" name="search" placeholder="Search by nearest city to trail...">
-		  </div>
-		  <button type="submit" class="btn btn-default">Search</button>
-		</form>
 	   	
     <?php
 	  if(!$logged){
