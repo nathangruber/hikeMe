@@ -142,7 +142,7 @@ class Image{
 			
 			
 			$pdo = Database::connect();
-			$sql = "INSERT INTO images (name,hike_fk,user_fk) values(?, ?, ?)";
+			$sql = "INSERT INTO image (name,hike_fk,user_fk) values(?, ?, ?)";
 			echo $sql;
 			echo "values: $photo_name,$hike_id,$user_id";
 			$q = $pdo->prepare($sql);
