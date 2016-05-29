@@ -37,7 +37,7 @@ if ( !empty($_POST)) {
 		if($user->create($name,$username,$password)){
 			header("Location: registrationsuccess.php");
 		}else{
-			echo 'validate doesnt exissss';
+			echo 'validate';
 		}
 	}
 }
