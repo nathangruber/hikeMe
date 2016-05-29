@@ -31,54 +31,17 @@ if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form subm
 
 
 if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
-	$plan_id = $_POST['plan_id'];
+	$hike_id = $_POST['hike_id'];
 	
-	$plan = new Plan();
-	$plan->removeFromFavorites($_SESSION['id'],$plan_id);
+	$hike = new hike();
+	$hike->removeFromFavorites($_SESSION['id'],$hike_id);
 	
 	$message_favorites_show = true;
 	$message_favorites_text = "You removed your hike from your favorites.";
 	
 }
 
-if(isset($_POST['option'])&&($_POST['option']=='setasplanned')){
-	$plan_id = $_POST['plan_id'];
-	
-	$plan = new Plan();
-	$plan->setAsPlanned($_SESSION['id'],$plan_id);
-	
-	$message_favorites_show = true;
-	$message_favorites_text = "This hike is now planned.";
-	
-}
 
-if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
-	$plan_id = $_POST['plan_id'];
-	$city = $_POST['city'];
-	
-	$plan = new Plan();
-	
-	//we call the weather forecast for that location
-	$city = urlencode($city);
-    $url = "http://api.openweathermap.org/data/2.5/forecast?q=$city&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
-	$opts = array(
-	        'http' => array (
-	            'method' => 'GET'
-	        )   
-	    );
-	$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
-	$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
-	
-	$obj = json_decode($file, false);  //Takes a JSON encoded string and converts it into a PHP variable.
-	$todays_weather =$obj->list[0]->main->temp;
-	
-	
-	$plan->setAsHiked($_SESSION['id'],$plan_id,$todays_weather);
-	
-	$message_favorites_show = true;
-	$message_favorites_text = "This hike has been Explored.";
-	
-}
 
 $hike = new Hike();
 $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
@@ -274,10 +237,10 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 							  <button type="submit" class="btn btn-default btn-block">Upload Photo</button>
 							</form>
 							
-							<form method="post">
+							<form method="post" action="myhikes.php">
 							  <div class="form-group">
 							    <input type="hidden" name="option" value="removefromfavorites">
-							    <input type="hidden" name="plan_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
+							    <input type="hidden" name="hike_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
 							  </div>
 							  <button type="submit" class="btn btn-danger btn-block">Remove Hike</button>
 							</form>

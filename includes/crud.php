@@ -62,6 +62,19 @@ class Hike{
 		}
 	}
 	
+	public function removeFromFavorites($user_id,$hike_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "DELETE FROM hike where user_fk=? and id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id,$hike_id)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
 	public function getMyFavorites($user_id){
 		try{
 			$pdo = Database::connect();
