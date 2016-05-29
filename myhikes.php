@@ -5,6 +5,12 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
+if(!isset($_GET['show'])){
+	$_GET['show']='all';
+}
+
+
+
 $message_favorites_show=false; //
 if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form submission/isset determines if var is set, not null 
 	$city = $_POST['city'];
@@ -101,20 +107,17 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
     
-    <div class="text-center" style="margin-top: 100px;">
-	    <h1>hikeMe</h1>
+    <div style="margin-top: 100px;">
+	    <div class="text-center">
+	    	<h1>My hikes <?php echo $_GET['show']; ?></h1>
+	    </div>
 		
-		<div class="row">
-			<div class="col-xs-12 col-md-6 col-md-offset-3">
-				<form method="post" action="index.php">
-				  <div class="form-group">
-				    <input type="search" class="form-control" name="search" placeholder="Search by nearest city to trail...">
-				  </div>
-				  <button type="submit" class="btn btn-default">Search</button>
-				</form>
-			</div>
+		<div>
+			Show: 
+			<a href="myhikes.php?show=all" style="margin-right: 20px">All</a>
+			<a href="myhikes.php?show=planned" style="margin-right: 20px">Planned</a>
+			<a href="myhikes.php?show=done" style="margin-right: 20px">Done</a>
 		</div>
-		
 		
 		<div class="row">
 			<div class="col-xs-12 text-left">
