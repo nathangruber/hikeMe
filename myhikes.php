@@ -73,7 +73,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
     
     <div style="margin-top: 100px;">
 	    <div class="text-center">
-	    	<h1>My hikes <?php echo $_GET['show']; ?></h1>
+	    	<h1>My Hikes <?php echo $_GET['show']; ?></h1>
 	    </div>
 		
 		<div>
