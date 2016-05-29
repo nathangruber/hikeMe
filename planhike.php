@@ -55,9 +55,7 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 					echo '<div class="col-xs-12 col-md-2">';
 					
 					$timestamp=$obj->list[$i]->dt;
-					$theday= gmdate("Y-m-d\TH:i:s\Z", $timestamp);
-					
-					
+					$theday= gmdate("m / d / Y", $timestamp);
 					echo "<h4><b>Day: </b>".$theday."</h4>";  //substr - returns part of string from api list
 					echo "<b>Weather description: </b>".$obj->list[$i]->weather[0]->description;
 					echo "<br>";
