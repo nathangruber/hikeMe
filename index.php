@@ -123,7 +123,6 @@ require_once 'includes/crud.php';
 					
 					$image = new Image();
 					$public_images = $image-> getPublic($place->activities[0]->unique_id); //get public images for a given unique_id
-					print_r($public_images);
 					?>
 					<div class="row">
 					<?php
