@@ -158,10 +158,7 @@ class Image{
 			$q->execute(array($hike_id)); //asks db for info array is replacing ?info
 			$result=array();
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
-				
-	       		$result['name'][]=$row['name'];
-	       		$result['id'][]=$row['id'];
-	       		$result['public'][]=$row['public'];
+				$result[]=$row;
 	       	}
        		
        		Database::disconnect();
