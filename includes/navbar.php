@@ -19,7 +19,7 @@
 		<li><a href="contact.php">Contact Us</a></li>
     </ul>
    
-	<form method="post" action="index.php" class="navbar-form navbar-right" role="search">
+	<form method="post" action="index.php" class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search..." name="search">
         </div>
