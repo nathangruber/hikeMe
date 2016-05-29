@@ -52,7 +52,7 @@ class Hike{
 	public function addToFavorites($unique_id,$name,$city,$state,$description,$user_id){
 		try{
 			$pdo = Database::connect();
-			$sql = "INSERT INTO plan (unique_id,name,city,state,description,user_fk) values(?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO hike (unique_id,name,city,state,description,user_fk) values(?, ?, ?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($unique_id,$name,$city,$state,$description,$user_id)); //asks db for info array is replacing ?info
 			Database::disconnect();
