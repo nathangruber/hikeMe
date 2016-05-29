@@ -31,7 +31,6 @@ $file = file_get_contents($url, false, $context);  //read the contents of a file
 
 $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it into a PHP variable.
 
-print_r($obj);
 	
 ?>
 
@@ -54,7 +53,12 @@ print_r($obj);
 				<?php
 				for($i=0;$i<6;$i++){
 					echo '<div class="col-xs-12 col-md-2">';
-					echo "<h4><b>Day: </b>".substr($obj->list[$i]->dt_txt, 0,10)."</h4>";  //substr - returns part of string from api list
+					
+					$timestamp=$obj->list[$i]->dt;
+					$theday= gmdate("Y-m-d\TH:i:s\Z", $timestamp);
+					
+					
+					echo "<h4><b>Day: </b>".$theday."</h4>";  //substr - returns part of string from api list
 					echo "<b>Weather description: </b>".$obj->list[$i]->weather[0]->description;
 					echo "<br>";
 					echo "<b>Current Temperature in &#8457: </b>".$obj->list[$i]->temp->day;
