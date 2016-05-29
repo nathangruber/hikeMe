@@ -11,7 +11,7 @@ $hike_id=$_POST['hike_id'];
 
 
 $hike = new Hike();
-$hike_info = $hike->getHikeInfo($hike_id);
+$hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 
 
 
