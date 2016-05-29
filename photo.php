@@ -15,10 +15,12 @@ if($result==false){
 }
 if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
 	$image->setAsPublic($image_id);
+	$result = $image->getInfo($image_id);
 }
 
 if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 	$image->setAsPrivate($image_id);
+	$result = $image->getInfo($image_id);
 }
 ?>
 
