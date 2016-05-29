@@ -153,6 +153,13 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 							if($favorite_hikes[$i]['date']!="0000-00-00"){
 							?>
 								<span class="label label-info" style="font-size: 16px">PLANNED</span>
+								<div class="alert alert-info" role="alert">
+									<b style="font-size: 16px;">PLANNED</b><br>
+									<b>Day: </b><?php echo $favorite_hikes[$i]['date']; ?><br>
+									<b>Weather Temperature: </b><?php echo $favorite_hikes[$i]['weather_temp']; ?><br>
+									<b>Weather Wind: </b><?php echo $favorite_hikes[$i]['weather_wind']; ?><br>
+									<b>Weather Description: </b><?php echo $favorite_hikes[$i]['weather_desc']; ?><br>
+								</div>
 							<?php
 							}
 							if($favorite_hikes[$i]['type']=="HIKED"){
