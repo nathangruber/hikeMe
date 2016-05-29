@@ -5,20 +5,20 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-$photo_id = $_GET['photo_id'];
+$image_id = $_GET['image_id'];
 //get the photo details
-$plan = new Plan();
-$result = $plan->getPhotoDetails($_SESSION['id'],$photo_id);
+$image = new Image();
+$result = $image->getInfo($image_id);
 //not my photo then redirect
 if($result==false){
 	header('Location: myhikes.php');
 }
 if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
-	$plan->setPhotoAsPublic($_SESSION['id'],$photo_id);
+	$image->setAsPublic($image_id);
 }
 
 if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
-	$plan->setPhotoAsPrivate($_SESSION['id'],$photo_id);
+	$image->setAsPrivate($image_id);
 }
 ?>
 
@@ -43,13 +43,13 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 					?>
 						
 					<div style="margin-top:50px">
-						<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setaspublic" class="btn btn-default">Make Public</a>
+						<a href="photo.php?image_id=<?php echo $_GET['image_id']; ?>&option=setaspublic" class="btn btn-default">Make Public</a>
 					</div>
 					<?php
 						}else{
 							?>
 							<div style="margin-top:50px">
-							<a href="photo.php?photo_id=<?php echo $_GET['photo_id']; ?>&option=setasprivate" class="btn btn-default">Set back to Private</a>
+							<a href="photo.php?image_id=<?php echo $_GET['image_id']; ?>&option=setasprivate" class="btn btn-default">Set back to Private</a>
 							</div>
 
 						<?php

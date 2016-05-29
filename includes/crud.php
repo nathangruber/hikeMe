@@ -170,6 +170,56 @@ class Image{
 	}
 	
 	
+	public function getInfo($image_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from image where id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($image_id)); //asks db for info array is replacing ?info
+			$result=array();
+			if($row = $q->fetch(PDO::FETCH_ASSOC)){
+				
+	       		$result=$row;
+	       	}else{
+		       	Database::disconnect();
+			   	return false;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	public function setAsPublic($image_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "UPDATE  image SET  `public` =  '1' where id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($image_id)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	public function setAsPrivate($image_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "UPDATE  image SET  `public` =  '0' where id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($image_id)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	
 }
 
 
