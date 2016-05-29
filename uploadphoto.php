@@ -57,11 +57,9 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	        
 	        //echo '<img src="'.$target_file.'"/>';
 			
-	        echo "hello lets send: ";
 	        $image = new Image();
 	        $image->uploadPhoto($_SESSION['id'],$new_name_file,$_POST['hike_id']);
-	        echo 'bye bye';
-	        header('Location: myhikes.php');
+	        //header('Location: myhikes.php');
 	        
 	        
 	        
