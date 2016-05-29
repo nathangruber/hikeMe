@@ -255,6 +255,24 @@ class Image{
 }
 
 
+class Journal{
+	public function addComments($hike_fk,$date,$comments){
+		try{
+			$pdo = Database::connect();
+			$sql = "INSERT INTO journal (hike_id,date,comments) values(?, ?, ?)";
+			echo $sql;
+			echo "values: $hike_fk,$date,$comments";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($hike_fk,$date,$comments)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+}
+
+/*
 
 class Plan{
 	public function addToFavorites($user_id,$city,$state,$name,$unique_id,$description){
@@ -499,4 +517,4 @@ class Plan{
 	
 	
 }
-
+*/

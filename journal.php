@@ -5,16 +5,17 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-$plan_id = $_POST['plan_id'];
+$hike_id = $_POST['hike_id'];
 
 if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
-	$comment = $_POST['comment'];
+	$date = $_POST['date'];
+	$comments = $_POST['comments'];
 	
-	$plan = new Plan();
-	$plan->addComment($_SESSION['id'],$plan_id,$comment);
+	$journal = new Journal();
+	$journal->addComments($hike_fk,$date,$comments);
 	
-	header('Location: myhikes.php');
-	}	
+	//header('Location: myhikes.php');
+}	
 ?>
 
 <!DOCTYPE html>
@@ -33,10 +34,14 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 					<form method="post" enctype="multipart/form-data">
 					  <div class="form-group">
 					    <input type="hidden" name="option" value="addjournal">
-					    <input type="hidden" name="plan_id" value="<?php echo $plan_id; ?>">
+					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					    <div class="form-group">
-						  <label for="comment">Comments:</label>
-						  <textarea name="comment" class="form-control" rows="5" id="comment"></textarea>
+						  <label for="comments">Date:</label>
+						  <input type="text" name="date" class="form-control" id="date" placeholder="YYYY-MM-DD"></textarea>
+						</div>
+					    <div class="form-group">
+						  <label for="comments">Comments:</label>
+						  <textarea name="comments" class="form-control" rows="5" id="comments"></textarea>
 						</div>
 					  </div>
 					  <button type="submit" class="btn btn-default">Submit</button>
