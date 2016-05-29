@@ -39,7 +39,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 					
 					<img src="uploads/<?php echo $result['name']; ?>" width=500px"/>
 					<?php
-						if($result['public_photo']==0){
+						if($result['public']==0){
 					?>
 						
 					<div style="margin-top:50px">
