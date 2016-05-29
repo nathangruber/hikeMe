@@ -57,13 +57,13 @@ print_r($obj);
 					echo "<h4><b>Day: </b>".substr($obj->list[$i]->dt_txt, 0,10)."</h4>";  //substr - returns part of string from api list
 					echo "<b>Weather description: </b>".$obj->list[$i]->weather[0]->description;
 					echo "<br>";
-					echo "<b>Current Temperature in &#8457: </b>".$obj->list[$i]->main->temp;
+					echo "<b>Current Temperature in &#8457: </b>".$obj->list[$i]->temp->day;
 					echo "<br>";
-					echo "<b>Today's High: </b>".$obj->list[$i]->main->temp_max;
+					echo "<b>Today's High: </b>".$obj->list[$i]->temp->max;
 					echo "<br>";
-					echo "<b>Today's Low: </b>".$obj->list[$i]->main->temp_min;
+					echo "<b>Today's Low: </b>".$obj->list[$i]->temp->min;
 		    		echo "<br>";
-		    		echo "<b>Wind Speed: </b>".$obj->list[$i]->wind->speed;
+		    		echo "<b>Wind Speed: </b>".$obj->list[$i]->speed;
 					echo '<hr>';
 					echo '</div>';
 				}
