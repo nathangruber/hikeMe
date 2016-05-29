@@ -150,7 +150,8 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 						<div class="col-xs-12 col-md-9">
 							<?php
 							echo "<b>Name: </b>".$favorite_hikes[$i]['name'];
-							if($favorite_hikes[$i]['date']!="0000-00-00"){
+							
+							if(($favorite_hikes[$i]['date']!="0000-00-00")&&($favorite_hikes[$i]['hiked_date']=="0000-00-00")){
 							?>
 								<div class="alert alert-info" role="alert" style="margin-top: 20px;">
 									<b style="font-size: 16px;">PLANNED</b><br>
@@ -161,9 +162,12 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 								</div>
 							<?php
 							}
-							if($favorite_hikes[$i]['type']=="HIKED"){
+							if($favorite_hikes[$i]['hiked_date']!="0000-00-00"){
 							?>
-							<span class="label label-success" style="font-size: 15px">Hiked on <?php echo $favorite_hikes[$i]['hiked_day']; ?> - Temperature was: <?php echo $favorite_hikes[$i]['hiked_weather']; ?>&#8457</span>
+								<div class="alert alert-success" role="alert" style="margin-top: 20px;">
+									<b style="font-size: 16px;">HIKED</b><br>
+									<b>Day: </b><?php echo $favorite_hikes[$i]['hiked_date']; ?><br>
+								</div>
 							<?php
 							}
 							
@@ -245,7 +249,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 							
 							
 							<?php
-							if($favorite_hikes[$i]['type']!="HIKED"){	
+							if($favorite_hikes[$i]['hiked_date']=="0000-00-00"){	
 							?>
 							<form method="post" action="hikedone.php">
 							  <div class="form-group">

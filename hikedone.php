@@ -50,7 +50,7 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 				<form method="post" action="hikedone.php">
 					<div class="form-group"> <!-- Date input -->
 					<label class="control-label" for="date">Date</label>
-					<input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+					<input class="form-control" id="date" name="date" placeholder="YYYY-MM-DD" type="text"/>
 					</div>
 					<div class="form-group"> <!-- Submit button -->
 					<button class="btn btn-primary " name="submit" type="submit">Submit</button>
