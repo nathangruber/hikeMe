@@ -121,7 +121,7 @@ class Hike{
 	public function done($hike_id,$user_id,$date){
 		try{
 			$pdo = Database::connect();
-			$sql = "UPDATE  `hike` SET  hiked_date` =  ?, WHERE  `id` =? and user_fk=?;";
+			$sql = "UPDATE  hike SET  hiked_date =  ?, WHERE  `id` =? and user_fk=?;";
 			echo $sql;
 			echo "params are:$date,$hike_id,$user_id ";
 			$q = $pdo->prepare($sql);
