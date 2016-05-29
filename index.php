@@ -183,7 +183,7 @@ require_once 'includes/crud.php';
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
-			<h3>Current Weather:</h3>
+			<h3>Weather forecast:</h3>
 			<?php	    
 				/*echo "<b>Weather description: </b>".$obj->weather[0]->description;
 				echo "<br>";
@@ -194,7 +194,7 @@ require_once 'includes/crud.php';
 				echo "<b>Today's Low: </b>".$obj->main->temp_min;
 	    		echo "<br>";
 	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
-				*/
+				
 				
 				
 				$num_elements = count($obj->list);
@@ -212,10 +212,10 @@ require_once 'includes/crud.php';
 	    		echo "<b>Wind Speed: </b>".$obj->list[0]->wind->speed;
 				echo '<hr>';
 				echo '<h3>Forecast:</h3>';
-			
-			for($i=1;$i<5;$i++){
+			*/
+			for($i=0;$i<5;$i++){
 				
-				echo '<div class="col-xs-12 col-md-2">';
+				echo '<div class="col-xs-12">';
 					
 					$timestamp=$obj->list[$i]->dt;
 					$theday= gmdate("m / d / Y", $timestamp);
