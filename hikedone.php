@@ -49,6 +49,7 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-offset-4">
 				<form method="post" action="hikedone.php">
+					<input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					<div class="form-group"> <!-- Date input -->
 					<label class="control-label" for="date">Date</label>
 					<input class="form-control" id="date" name="date" placeholder="YYYY-MM-DD" type="text"/>
