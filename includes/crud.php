@@ -108,7 +108,9 @@ class Hike{
 	public function plan($hike_id,$user_id,$date,$weather_desc,$weather_temp,$weather_wind){
 		try{
 			$pdo = Database::connect();
-			$sql = "UPDATE  hike SET  (`date` =  ?,`weather_desc` =  ?,`weather_temp` =  ?,`weather_wind` =  ?) where id=? and user_fk=?";
+			$sql = "UPDATE  `hike` SET  `date` =  ?,`weather_desc` =  ?,`weather_temp` =  ?,`weather_wind` =  ? WHERE  `id` =? and user_fk=?;";
+			echo $sql;
+			echo "Params: $date,$weather_desc,$weather_temp,$weather_wind,$hike_id,$user_id)";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($date,$weather_desc,$weather_temp,$weather_wind,$hike_id,$user_id)); //asks db for info array is replacing ?info
 			Database::disconnect();
