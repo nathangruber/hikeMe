@@ -150,7 +150,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 						<div class="col-xs-12 col-md-9">
 							<?php
 							echo "<b>Name: </b>".$favorite_hikes[$i]['name'];
-							if($favorite_hikes[$i]['type']=="PLANNED"){
+							if($favorite_hikes[$i]['date']!="0000-00-00"){
 							?>
 								<span class="label label-info" style="font-size: 16px">PLANNED</span>
 							<?php
