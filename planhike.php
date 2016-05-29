@@ -32,7 +32,6 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 
 
 
-print_r($hike_info);
 
 
 //Get wheather for that city in the next 7 days...
