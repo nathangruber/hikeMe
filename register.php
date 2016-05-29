@@ -5,19 +5,14 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-
 if ( !empty($_POST)) {
 	// keep track validation errors
 	$nameError = null;
-	$birth_dateError = null;
-	$email_addressError = null;
 	$usernameError = null;
 	$passwordError = null;
 
 	// keep track post values
 	$name = $_POST['name'];
-	$birth_date = $_POST['birth_date'];
-	$email_address = $_POST['email_address'];
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
@@ -27,17 +22,6 @@ if ( !empty($_POST)) {
 		$nameError = 'Please enter your Name';
 		$valid = false;
 	}
-	if (empty($birth_date)) {
-		$birth_dateError = 'Please enter your Date of Birth';
-		$valid = false;
-	}
-	if (empty($email_address)) {
-		$email_addressError = 'Please enter a valid Email Address';
-		$valid = false;
-	} else if ( !filter_var($email_address,FILTER_VALIDATE_EMAIL) ) {
-			$email_addressError = 'Please enter a valid Email Address';
-			$valid = false;
-		}
 	if (empty($username)) {
 		$usernameError = 'Please enter your Username';
 		$valid = false;
@@ -50,7 +34,7 @@ if ( !empty($_POST)) {
 	// insert data
 	if ($valid) {
 		$user = new User();
-		if($user->create($name,$birth_date,$email_address,$username,$password)){
+		if($user->create($name,$username,$password)){
 			header("Location: registrationsuccess.php");
 		}else{
 			echo 'validate doesnt exissss';
@@ -85,19 +69,7 @@ if ( !empty($_POST)) {
 					  </div>
 					  
 					  <div class="form-group">
-					    <label for="birth_date">Date of Birth</label>
-					    <input name="birth_date" id="birth_date" type="text" class="form-control" placeholder="Date of birth..." value="<?php echo !empty($birth_date)?$birth_date:'';?>">
-					    <?php if (!empty($birth_dateError)): ?> <span class="help-inline"><?php echo $birth_dateError;?></span> <?php endif;?>
-					  </div>
-					  
-					  <div class="form-group">
-					    <label for="email_address">Email</label>
-					    <input name="email_address" id="email_address" type="email" class="form-control" placeholder="Email..." value="<?php echo !empty($email_address)?$email_address:'';?>">
-					    <?php if (!empty($email_addressError)): ?> <span class="help-inline"><?php echo $email_addressError;?></span> <?php endif;?>
-					  </div>
-					  
-					  <div class="form-group">
-					    <label for="username">User name</label>
+					    <label for="username">Username</label>
 					    <input name="username" id="username" type="text" class="form-control" placeholder="Username..." value="<?php echo !empty($username)?$username:'';?>">
 					    <?php if (!empty($usernameError)): ?> <span class="help-inline"><?php echo $usernameError;?></span> <?php endif;?>
 					  </div>
