@@ -183,9 +183,16 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 								<b>My Trail Journal:</b>
 							</div>
 							<?php
-								for($j=0;$j<count($favorite_hikes[$i]['comments']);$j++){
-									echo "<p>";
-									echo $favorite_hikes[$i]['comments'][$j];
+								
+								$journal = new Journal();
+								$comments = $journal->get($favorite_hikes[$i]['id']);
+								
+								for($j=0;$j<count($comments);$j++){
+									echo "<p><b>Day: </b>";
+									echo $comments[$j]['date'];
+									echo "</p>";
+									echo "<p><b>Comments: </b>";
+									echo $comments[$j]['comments'];
 									echo "</p>";
 								}
 							?>

@@ -260,8 +260,6 @@ class Journal{
 		try{
 			$pdo = Database::connect();
 			$sql = "INSERT INTO journal (hike_fk,date,comments) values(?, ?, ?)";
-			echo $sql;
-			echo "values: $hike_fk,$date,$comments";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($hike_id,$date,$comments)); //asks db for info array is replacing ?info
 			Database::disconnect();
@@ -270,6 +268,27 @@ class Journal{
 			return false;
 		}
 	}
+	
+	public function get($hike_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "SELECT * FROM journal where hike_fk=? order by date asc";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($hike_id)); //asks db for info array is replacing ?info
+			$result=array();
+			while($row = $q->fetch(PDO::FETCH_ASSOC)){
+				$result[]=$row;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	
 }
 
 /*
