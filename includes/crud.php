@@ -232,6 +232,25 @@ class Image{
 		}
 	}
 	
+	public function getPublic($unique_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from image where unique_id=? and public=1";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($unique_id)); //asks db for info array is replacing ?info
+			$result=array();
+			while($row = $q->fetch(PDO::FETCH_ASSOC)){
+				$result[]=$row;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
 	
 }
 

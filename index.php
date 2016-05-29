@@ -121,15 +121,15 @@ require_once 'includes/crud.php';
 					echo "<br>";
 					echo "User's photos:<br>";
 					
-					$plan = new Plan();
-					$public_photos = $plan-> getPublicPhotosOfPlan($place->activities[0]->unique_id); //
+					$image = new Image();
+					$public_images = $image-> getPublic($place->activities[0]->unique_id); //get public images for a given unique_id
 					?>
 					<div class="row">
 					<?php
-					for($p=0;$p<count($public_photos);$p++){
+					for($p=0;$p<count($public_images);$p++){
 						?>
 						<div class="col-xs-12 col-md-3">
-							<img src="uploads/<?php echo $public_photos[$p]['photo_name']; ?>" width="120px"/>
+							<img src="uploads/<?php echo $public_images[$p]['name']; ?>" width="120px"/>
 						</div>
 						<?php
 					}
@@ -185,34 +185,7 @@ require_once 'includes/crud.php';
 		<div class="col-xs-12 col-md-4 text-left">
 			<h3>Weather forecast:</h3>
 			<?php	    
-				/*echo "<b>Weather description: </b>".$obj->weather[0]->description;
-				echo "<br>";
-				echo "<b>Current Temperature in Farenheit: </b>".$obj->main->temp;
-				echo "<br>";
-				echo "<b>Today's High: </b>".$obj->main->temp_max;
-				echo "<br>";
-				echo "<b>Today's Low: </b>".$obj->main->temp_min;
-	    		echo "<br>";
-	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
 				
-				
-				
-				$num_elements = count($obj->list);
-				//echo $num_elements;
-				
-				
-				echo "<b>Weather description: </b>".$obj->list[0]->weather[0]->description;
-				echo "<br>";
-				echo "<b>Current Temperature in &#8457: </b>".$obj->list[0]->main->temp;
-				echo "<br>";
-				echo "<b>Today's High: </b>".$obj->list[0]->main->temp_max;
-				echo "<br>";
-				echo "<b>Today's Low: </b>".$obj->list[0]->main->temp_min;
-	    		echo "<br>";
-	    		echo "<b>Wind Speed: </b>".$obj->list[0]->wind->speed;
-				echo '<hr>';
-				echo '<h3>Forecast:</h3>';
-			*/
 			for($i=0;$i<5;$i++){
 				
 				echo '<div class="col-xs-12">';
