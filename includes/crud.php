@@ -136,6 +136,25 @@ class Hike{
 
 
 
+class Image{
+	public function uploadPhoto($user_id,$photo_name,$hike_id){
+		try{
+			
+			$unique_id = $this->getUniqueId($plan_id);
+			
+			$pdo = Database::connect();
+			$sql = "INSERT INTO images (name,hike_fk,user_fk) values(?, ?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($photo_name,$hike_id,$user_id)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+}
+
+
 
 class Plan{
 	public function addToFavorites($user_id,$city,$state,$name,$unique_id,$description){

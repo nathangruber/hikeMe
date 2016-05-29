@@ -5,10 +5,10 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-$plan_id = $_POST['plan_id'];
+$hike_id = $_POST['hike_id'];
 
 if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
-	$plan_id = $_POST['plan_id'];
+	$hike_id = $_POST['hike_id'];
 	
 	$target_dir = "uploads/";
 	
@@ -58,8 +58,8 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	        //echo '<img src="'.$target_file.'"/>';
 			
 	        
-	        $plan = new Plan();
-	        $plan->uploadPhoto($_SESSION['id'],$new_name_file,$_POST['plan_id']);
+	        $image = new Image();
+	        $image->uploadPhoto($_SESSION['id'],$new_name_file,$_POST['hike_id']);
 	        
 	        header('Location: myhikes.php');
 	        
@@ -96,7 +96,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 					<form method="post" enctype="multipart/form-data">
 					  <div class="form-group">
 					    <input type="hidden" name="option" value="uploadphoto">
-					    <input type="hidden" name="plan_id" value="<?php echo $plan_id; ?>">
+					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					    <input type="file" name="fileToUpload" id="fileToUpload">
 					  </div><button type="submit" class="btn btn-success">Upload Photo</button>
 					</form>
