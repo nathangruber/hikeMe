@@ -229,7 +229,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 							
 							
 							<?php
-							if($favorite_hikes[$i]['type']!="PLANNED"){	
+							if($favorite_hikes[$i]['date']=="0000-00-00"){	
 							?>
 							
 							<form method="post" action="planhike.php">
