@@ -19,6 +19,14 @@
 		<li><a href="contact.php">Contact Us</a></li>
     </ul>
    	<ul class="nav navbar-nav pull-right">
+	   	
+	   	<form method="post" action="index.php">
+		  <div class="form-group">
+		    <input type="search" class="form-control" name="search" placeholder="Search by nearest city to trail...">
+		  </div>
+		  <button type="submit" class="btn btn-default">Search</button>
+		</form>
+	   	
     <?php
 	  if(!$logged){
 		echo '<li><a href="register.php">Register</a></li>';
