@@ -37,7 +37,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					
-					<img src="uploads/<?php echo $result['photo_name']; ?>" width=500px"/>
+					<img src="uploads/<?php echo $result['name']; ?>" width=500px"/>
 					<?php
 						if($result['public_photo']==0){
 					?>
