@@ -184,23 +184,23 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 							<div class="row">
 							<?php
 								
-								if(isset($favorite_hikes[$i]['photos']['id'])){
-									$number_of_photos = count($favorite_hikes[$i]['photos']['id']);
-								}else{
-									$number_of_photos=0;
-								}
+								$image = new Image();
+								$aimages = $image->getPhotos($favorite_hikes[$i]['id']);
+								
+								
+								$number_of_photos = count($aimages);
 								
 							for($j=0;$j<$number_of_photos;$j++){
 								?>
 								
 									<div class="col-xs-12 col-md-2">
 										<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-											<a href="photo.php?photo_id=<?php echo $favorite_hikes[$i]['photos']['id'][$j]; ?>"  >
-												<img src="uploads/<?php echo $favorite_hikes[$i]['photos']['name'][$j]; ?>" width="120px"/>
+											<a href="photo.php?photo_id=<?php echo $aimages[$i]['id']; ?>"  >
+												<img src="uploads/<?php echo $aimages[$i]['name']; ?>" width="120px"/>
 											</a>
 											<div>
 												<?php
-													if($favorite_hikes[$i]['photos']['public_photo'][$j]==1){
+													if($aimages[$i]['public']==1){
 														echo 'public';
 													}
 												?>
