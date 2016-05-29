@@ -154,6 +154,8 @@ class Image{
 		try{
 			$pdo = Database::connect();
 			$sql = "select * from image where hike_id=?";
+			echo $sql;
+			echo "value: $hike_id";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($hike_id)); //asks db for info array is replacing ?info
 			$result=array();
