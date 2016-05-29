@@ -140,7 +140,6 @@ class Image{
 	public function uploadPhoto($user_id,$photo_name,$hike_id){
 		try{
 			
-			$unique_id = $this->getUniqueId($plan_id);
 			
 			$pdo = Database::connect();
 			$sql = "INSERT INTO images (name,hike_fk,user_fk) values(?, ?, ?)";
