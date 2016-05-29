@@ -11,7 +11,8 @@ if(isset($_POST['date'])){
 	$hike = new Hike();
 	
 	$hike_id=$_POST['hike_id'];
-	$user_id=$_SESSION['íd'];
+	$user_id=$_SESSION['id'];
+	$date=$_POST['date'];
 	$weather_desc=$_POST['weather_desc'];
 	$weather_temp=$_POST['weather_temp'];
 	$weather_wind=$_POST['weather_wind'];
