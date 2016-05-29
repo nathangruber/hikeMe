@@ -235,9 +235,7 @@ class Image{
 	public function getPublic($unique_id){
 		try{
 			$pdo = Database::connect();
-			$sql = "SELECT name FROM hike, image WHERE hike.unique_id =  ? AND hike.id = image.hike_fk AND image.public = 1 LIMIT 0 , 30";
-			echo $sql;
-			echo " values: $unique_id";
+			$sql = "SELECT * FROM hike, image WHERE hike.unique_id =  ? AND hike.id = image.hike_fk AND image.public = 1 LIMIT 0 , 30";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($unique_id)); //asks db for info array is replacing ?info
 			$result=array();
