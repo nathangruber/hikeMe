@@ -188,10 +188,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 								$comments = $journal->get($favorite_hikes[$i]['id']);
 								
 								for($j=0;$j<count($comments);$j++){
-									echo "<p><b>Day: </b>";
-									echo $comments[$j]['date'];
-									echo "</p>";
-									echo "<p><b>Comments: </b><i>";
+									echo "<p><b>".$comments[$j]['date'].": </b><i>";
 									echo $comments[$j]['comments'];
 									echo "</i></p>";
 								}
