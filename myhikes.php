@@ -74,8 +74,8 @@ if(isset($_POST['option'])&&($_POST['option']=='setashiked')){
 	
 }
 
-$plan = new Plan();
-$favorite_plans = $plan->getMyFavorites($_SESSION['id']);
+$hike = new Hike();
+$favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,38 +127,38 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 				<div class="fb-share-button right-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" data-layout="button" data-mobile-iframe="true"></div></div>
 
 			<?php
-				for($i=0;$i<count($favorite_plans);$i++){
+				for($i=0;$i<count($favorite_hikes);$i++){
 					?>
 					<div class="row">
 						<div class="col-xs-12 col-md-9">
 							<?php
-							echo "<b>Name: </b>".$favorite_plans[$i]['name'];
-							if($favorite_plans[$i]['type']=="PLANNED"){
+							echo "<b>Name: </b>".$favorite_hikes[$i]['name'];
+							if($favorite_hikes[$i]['type']=="PLANNED"){
 							?>
 								<span class="label label-info" style="font-size: 16px">PLANNED</span>
 							<?php
 							}
-							if($favorite_plans[$i]['type']=="HIKED"){
+							if($favorite_hikes[$i]['type']=="HIKED"){
 							?>
-							<span class="label label-success" style="font-size: 15px">Hiked on <?php echo $favorite_plans[$i]['hiked_day']; ?> - Temperature was: <?php echo $favorite_plans[$i]['hiked_weather']; ?>&#8457</span>
+							<span class="label label-success" style="font-size: 15px">Hiked on <?php echo $favorite_hikes[$i]['hiked_day']; ?> - Temperature was: <?php echo $favorite_hikes[$i]['hiked_weather']; ?>&#8457</span>
 							<?php
 							}
 							
 							
 							echo "<br>";
-							echo "<b>City: </b>".$favorite_plans[$i]['city'];
+							echo "<b>City: </b>".$favorite_hikes[$i]['city'];
 							echo "<br>";
-							echo "<b>State: </b>".$favorite_plans[$i]['state'];
+							echo "<b>State: </b>".$favorite_hikes[$i]['state'];
 							echo "<br>";
-							echo "<b>Description: </b>".$favorite_plans[$i]['description'];
+							echo "<b>Description: </b>".$favorite_hikes[$i]['description'];
 							echo "<br>";
 							?>
 							
 							<div class="row">
 							<?php
 								
-								if(isset($favorite_plans[$i]['photos']['id'])){
-									$number_of_photos = count($favorite_plans[$i]['photos']['id']);
+								if(isset($favorite_hikes[$i]['photos']['id'])){
+									$number_of_photos = count($favorite_hikes[$i]['photos']['id']);
 								}else{
 									$number_of_photos=0;
 								}
@@ -168,12 +168,12 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 								
 									<div class="col-xs-12 col-md-2">
 										<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-											<a href="photo.php?photo_id=<?php echo $favorite_plans[$i]['photos']['id'][$j]; ?>"  >
-												<img src="uploads/<?php echo $favorite_plans[$i]['photos']['name'][$j]; ?>" width="120px"/>
+											<a href="photo.php?photo_id=<?php echo $favorite_hikes[$i]['photos']['id'][$j]; ?>"  >
+												<img src="uploads/<?php echo $favorite_hikes[$i]['photos']['name'][$j]; ?>" width="120px"/>
 											</a>
 											<div>
 												<?php
-													if($favorite_plans[$i]['photos']['public_photo'][$j]==1){
+													if($favorite_hikes[$i]['photos']['public_photo'][$j]==1){
 														echo 'public';
 													}
 												?>
@@ -194,9 +194,9 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 								<b>My Trail Journal:</b>
 							</div>
 							<?php
-								for($j=0;$j<count($favorite_plans[$i]['comments']);$j++){
+								for($j=0;$j<count($favorite_hikes[$i]['comments']);$j++){
 									echo "<p>";
-									echo $favorite_plans[$i]['comments'][$j];
+									echo $favorite_hikes[$i]['comments'][$j];
 									echo "</p>";
 								}
 							?>
@@ -206,13 +206,13 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							
 							
 							<?php
-							if($favorite_plans[$i]['type']!="PLANNED"){	
+							if($favorite_hikes[$i]['type']!="PLANNED"){	
 							?>
 							
 							<form method="post">
 							  <div class="form-group">
 							    <input type="hidden" name="option" value="setasplanned">
-							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
 							  </div>
 							  <button type="submit" class="btn btn-default btn-block">Plan your Hike</button>
 							</form>
@@ -222,13 +222,13 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							
 							
 							<?php
-							if($favorite_plans[$i]['type']!="HIKED"){	
+							if($favorite_hikes[$i]['type']!="HIKED"){	
 							?>
 							<form method="post">
 							  <div class="form-group">
 							    <input type="hidden" name="option" value="setashiked">
-							    <input type="hidden" name="city" value="<?php echo $favorite_plans[$i]['city']; ?>">
-							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							    <input type="hidden" name="city" value="<?php echo $favorite_hikes[$i]['city']; ?>">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
 							  </div>
 							  <button type="submit" class="btn btn-default btn-block">Set as Hiked</button>
 							</form>
@@ -238,14 +238,14 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							
 							<form method="post" action="journal.php">
 							  <div class="form-group">
-							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
 							  </div>
 							  <button type="submit" class="btn btn-default btn-block">Add Trail Journal</button>
 							</form>
 							
 							<form method="post" action="uploadphoto.php">
 							  <div class="form-group">
-							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
 							  </div>
 							  <button type="submit" class="btn btn-default btn-block">Upload Photo</button>
 							</form>
@@ -253,7 +253,7 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 							<form method="post">
 							  <div class="form-group">
 							    <input type="hidden" name="option" value="removefromfavorites">
-							    <input type="hidden" name="plan_id" value="<?php echo $favorite_plans[$i]['id']; ?>">
+							    <input type="hidden" name="plan_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
 							  </div>
 							  <button type="submit" class="btn btn-danger btn-block">Remove Hike</button>
 							</form>

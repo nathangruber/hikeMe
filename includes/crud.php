@@ -62,6 +62,31 @@ class Hike{
 		}
 	}
 	
+	public function getMyFavorites($user_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from hike where user_fk=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($user_id)); //asks db for info array is replacing ?info
+			$result=array();
+			while($row = $q->fetch(PDO::FETCH_ASSOC)){
+	       		//Select all the pictures of that plan
+	       		
+	       		//$row['photos']=$this->getPhotosOfPlan($user_id,$row['id']);
+	       		//$row['comments']=$this->getCommentsOfPlan($user_id,$row['id']);
+	       		
+	       		$result[]=$row;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	
 }
 
 
