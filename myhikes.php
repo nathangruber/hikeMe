@@ -13,9 +13,11 @@ if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form subm
 	$unique_id = $_POST['unique_id'];
 	$description = $_POST['description'];
 	
-	$plan = new Plan();
+	$hike = new Hike();
 	
-	$plan->addToFavorites($_SESSION['id'],$city,$state,$name,$unique_id,$description);
+	
+	$hike->addToFavorites($api_unique_id,$name,$city,$state,$description,$_SESSION['id']);
+	
 	
 	$message_favorites_show = true;
 	$message_favorites_text = "Your hike, ".$name." has been added to your favorites.";
