@@ -231,6 +231,8 @@ require_once 'includes/crud.php';
 		    		echo "<b>Wind Speed: </b>".$obj->list[$i]->speed;
 					echo '<hr>';
 					echo '</div>';
+					
+					
 				
 			}
 			

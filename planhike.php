@@ -6,6 +6,23 @@ require_once 'includes/crud.php';
 
 
 
+
+if(isset($_POST['date'])){
+	$hike = new Hike();
+	
+	$hike_id=$_POST['hike_id'];
+	$user_id=$_SESSION['íd'];
+	$weather_desc=$_POST['weather_desc'];
+	$weather_temp=$_POST['weather_temp'];
+	$weather_wind=$_POST['weather_wind'];
+	$hike->plan($hike_id,$user_id,$date,$weather_desc,$weather_temp,$weather_wind);
+	
+	echo 'planned';
+	
+}
+
+
+
 $hike_id=$_POST['hike_id'];
 
 
@@ -68,6 +85,24 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 		    		echo "<b>Wind Speed: </b>".$obj->list[$i]->speed;
 					echo '<hr>';
 					echo '</div>';
+					
+					?>
+					<form action="planhike.php" method="post">
+						<input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
+						<input type="hidden" name="date" value="<?php echo gmdate("Y-m-d", $timestamp); ?>">
+						<input type="hidden" name="weather_desc" value="<?php echo $obj->list[$i]->weather[0]->description; ?>">
+						<input type="hidden" name="weather_temp" value="<?php echo $obj->list[$i]->temp->day; ?>">
+						<input type="hidden" name="weather_wind" value="<?php echo $obj->list[$i]->speed; ?>">
+						<input type="submit" value="Choose">
+						
+					</form>
+					
+					
+					<?php
+					
+					
+					
+					
 				}
 				?>
 			</div>
