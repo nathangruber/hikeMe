@@ -86,6 +86,25 @@ class Hike{
 		}
 	}
 	
+	public function getHikeInfo($hike_id,$user_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from hike where id=? and user_fk=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($hike_id,$user_id)); //asks db for info array is replacing ?info
+			$result=array();
+			if($row = $q->fetch(PDO::FETCH_ASSOC)){
+	       		$result = $row;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
 	
 }
 

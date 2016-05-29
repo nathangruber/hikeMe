@@ -223,10 +223,10 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
 							if($favorite_hikes[$i]['type']!="PLANNED"){	
 							?>
 							
-							<form method="post">
+							<form method="post" action="planhike.php">
 							  <div class="form-group">
 							    <input type="hidden" name="option" value="setasplanned">
-							    <input type="hidden" name="plan_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
+							    <input type="hidden" name="hike_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
 							  </div>
 							  <button type="submit" class="btn btn-default btn-block">Plan your Hike</button>
 							</form>
