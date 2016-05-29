@@ -113,7 +113,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 					<div class="row">
 						<div class="col-xs-12 col-md-9">
 							<?php
-							echo "<b>Name: </b>".$favorite_hikes[$i]['name'];
+							
 							
 							if(($favorite_hikes[$i]['date']!="0000-00-00")&&($favorite_hikes[$i]['hiked_date']=="0000-00-00")){
 							?>
@@ -135,7 +135,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 							<?php
 							}
 							
-							
+							echo "<b>Name: </b>".$favorite_hikes[$i]['name'];
 							echo "<br>";
 							echo "<b>City: </b>".$favorite_hikes[$i]['city'];
 							echo "<br>";
