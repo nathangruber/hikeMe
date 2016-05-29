@@ -12,7 +12,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$comments = $_POST['comments'];
 	
 	$journal = new Journal();
-	$journal->addComments($hike_fk,$date,$comments);
+	$journal->addComments($hike_id,$date,$comments);
 	
 	//header('Location: myhikes.php');
 }	
