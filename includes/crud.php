@@ -66,6 +66,8 @@ class Hike{
 		try{
 			$pdo = Database::connect();
 			$sql = "DELETE FROM hike where user_fk=? and id=?";
+			echo $sql;
+			echo "params: $user_id,$hike_id";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($user_id,$hike_id)); //asks db for info array is replacing ?info
 			Database::disconnect();
