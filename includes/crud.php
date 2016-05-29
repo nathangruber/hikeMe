@@ -75,19 +75,20 @@ class Hike{
 		}
 	}
 	
-	public function getMyFavorites($user_id){
+	public function getMyFavorites($user_id,$type){
 		try{
 			$pdo = Database::connect();
-			$sql = "select * from hike where user_fk=?";
+			if($type =='planned'){
+				$sql = "select * from hike where user_fk=? and date!='0000-00-00' and hiked_id=='0000-00-00'";
+			}else if($type =='done'){
+				$sql = "select * from hike where user_fk=? and hiked_date!='0000-00-00'";
+			}else{
+				$sql = "select * from hike where user_fk=?";
+			}
 			$q = $pdo->prepare($sql);
 			$q->execute(array($user_id)); //asks db for info array is replacing ?info
 			$result=array();
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
-	       		//Select all the pictures of that plan
-	       		
-	       		//$row['photos']=$this->getPhotosOfPlan($user_id,$row['id']);
-	       		//$row['comments']=$this->getCommentsOfPlan($user_id,$row['id']);
-	       		
 	       		$result[]=$row;
 	       	}
        		

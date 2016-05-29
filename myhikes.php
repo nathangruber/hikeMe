@@ -42,9 +42,10 @@ if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
 }
 
 
+$type = $_GET['show'];
 
 $hike = new Hike();
-$favorite_hikes = $hike->getMyFavorites($_SESSION['id']);
+$favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 ?>
 <!DOCTYPE html>
 <html lang="en">
