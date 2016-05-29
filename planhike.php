@@ -83,8 +83,7 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 					echo "<b>Today's Low: </b>".$obj->list[$i]->temp->min;
 		    		echo "<br>";
 		    		echo "<b>Wind Speed: </b>".$obj->list[$i]->speed;
-					echo '<hr>';
-					echo '</div>';
+					
 					
 					?>
 					<form action="planhike.php" method="post">
@@ -93,14 +92,15 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 						<input type="hidden" name="weather_desc" value="<?php echo $obj->list[$i]->weather[0]->description; ?>">
 						<input type="hidden" name="weather_temp" value="<?php echo $obj->list[$i]->temp->day; ?>">
 						<input type="hidden" name="weather_wind" value="<?php echo $obj->list[$i]->speed; ?>">
-						<input type="submit" value="Choose">
+						<input class="btn btn-default" type="submit" value="Choose">
 						
 					</form>
 					
 					
 					<?php
 					
-					
+					echo '<hr>';
+					echo '</div>';
 					
 					
 				}
