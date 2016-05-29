@@ -78,11 +78,6 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'includes/header.php';?>
-	<meta property="og:http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php"content="http://www.your-domain.com/your-page.html" />
-	<meta property="og:type"          content="website" />
-	<meta property="og:title"         content="Your Website Title" />
-	<meta property="og:description"   content="Your description" />
-	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 <body>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -123,8 +118,6 @@ $favorite_plans = $plan->getMyFavorites($_SESSION['id']);
 			<div class="col-xs-12 text-left">
 				<h3>Trails:</h3>
 				<a data-pin-do="buttonPin" data-pin-count="above" data-pin-round="true" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fec2-54-213-132-61.us-west-2.compute.amazonaws.com%2FhikeMe%2Fcover.php&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_16.png" /></a>
-
-				<div class="left">
 				<div><a href="https://twitter.com/intent/tweet?text=" class="twitter-share-button left-button" data-show-count="false">Tweet</a></div></div><script type="text/javascript">
 				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                 </script>
