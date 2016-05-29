@@ -3,14 +3,14 @@
 
 class User{
 	
-	public $id,$name,$birth_date,$email_address,$username;
+	public $id,$name,$username;
 	
-	public function create($name, $birth_date, $email_address, $username, $password ){
+	public function create($name,$username,$password ){
 		try{
 			$pdo = Database::connect();
-			$sql = "INSERT INTO user (name,birth_date,email_address,username,password) values(?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO user (name,username,password) values(?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$birth_date,$email_address,$username,$password)); //asks db for info array is replacing ?info
+			$q->execute(array($name,$username,$password)); //asks db for info array is replacing ?info
 			Database::disconnect();
 			return true;
 		}catch (PDOException $error){
@@ -29,8 +29,6 @@ class User{
 	       		
 	       		$this->id=$query['id'];
 	       		$this->name=$query['name'];
-	       		$this->birth_date=$query['birth_date'];
-	       		$this->email_address=$query['email_address'];
 	       		$this->username=$query['username'];
 	       		
 	       		$result= true;
