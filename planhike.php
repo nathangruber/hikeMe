@@ -20,7 +20,7 @@ print_r($hike_info);
 
 //Get wheather for that city in the next 7 days...
 $loc=$hike_info['city'];
-$url = "http://api.openweathermap.org/data/2.5/forecast?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
+$url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
 $opts = array(
         'http' => array (
             'method' => 'GET'
