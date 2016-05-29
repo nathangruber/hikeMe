@@ -256,14 +256,14 @@ class Image{
 
 
 class Journal{
-	public function addComments($hike_fk,$date,$comments){
+	public function addComments($hike_id,$date,$comments){
 		try{
 			$pdo = Database::connect();
-			$sql = "INSERT INTO journal (hike_id,date,comments) values(?, ?, ?)";
+			$sql = "INSERT INTO journal (hike_fk,date,comments) values(?, ?, ?)";
 			echo $sql;
 			echo "values: $hike_fk,$date,$comments";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($hike_fk,$date,$comments)); //asks db for info array is replacing ?info
+			$q->execute(array($hike_id,$date,$comments)); //asks db for info array is replacing ?info
 			Database::disconnect();
 			return true;
 		}catch (PDOException $error){
