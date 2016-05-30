@@ -78,9 +78,9 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 		
 		<div>
 			Show: 
-			<a href="myhikes.php?show=all" style="margin-right: 20px">All</a>
-			<a href="myhikes.php?show=planned" style="margin-right: 20px">Planned</a>
-			<a href="myhikes.php?show=done" style="margin-right: 20px">Completed</a>
+			<a href="myhikes.php?show=All" style="margin-right: 20px">All</a>
+			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
+			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Completed</a>
 		</div>
 		
 		<div class="row">
