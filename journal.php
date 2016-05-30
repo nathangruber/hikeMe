@@ -35,10 +35,31 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 					  <div class="form-group">
 					    <input type="hidden" name="option" value="addjournal">
 					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
-					    <div class="form-group">
+						<div class="well">
+						  <div id="datetimepicker2" class="input-append">
+						    <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
+						    <span class="add-on">
+						      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+						      </i>
+						    </span>
+						  </div>
+						</div>
+						<script type="text/javascript">
+						  $(function() {
+						    $('#datetimepicker2').datetimepicker({
+						      language: 'en',
+						      pick12HourFormat: true
+						    });
+						  });
+						</script>
+
+
+
+
+					<!--    <div class="form-group">
 						  <label for="comments">Date:</label>
 						  <input type="text" name="date" class="form-control" id="date" placeholder="YYYY-MM-DD"></textarea>
-						</div>
+						</div>   -->
 					    <div class="form-group">
 						  <label for="comments">Comments:</label>
 						  <textarea name="comments" class="form-control" rows="5" id="comments"></textarea>
