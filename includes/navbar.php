@@ -21,7 +21,7 @@
    
 	<form method="post" action="index.php" class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search..." name="search">
+          <input type="text" class="form-control" placeholder="Search by city..." name="search">
         </div>
         <button type="submit" class="btn btn-default">Search</button>
       </form>
