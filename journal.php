@@ -40,11 +40,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 						    <span class="add-on"><i class="icon-th"></i></span>
 						</div>
 						 
-						<script type="text/javascript">
-						    $(".form_datetime").datetimepicker({
-						        format: "dd MM yyyy - hh:ii"
-						    });
-						</script>            
+						  Enter Date: <div id="datepicker-2"></div>
 
 
 
