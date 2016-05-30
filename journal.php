@@ -40,7 +40,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 						  <input type="text" name="date" class="form-control" id="date" placeholder="YYYY-MM-DD"></textarea>
 						</div>
 					    <div class="form-group">
-						  <label for="comments">Comments:</label>
+						  <label for="comments">Journal:</label>
 						  <textarea name="comments" class="form-control" rows="5" id="comments"></textarea>
 						</div>
 					  </div>

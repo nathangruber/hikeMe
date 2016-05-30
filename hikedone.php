@@ -42,8 +42,8 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 
     <div class="container">
     	<div class="text-center" style="margin-top: 50px;">
-		    <h1>When did you do this hike?</h1>
-			<p>Select the date you did this hike</p>
+		    <h1>When did you hike this trail?</h1>
+			<p>Select the date you hiked it.</p>
 			<br>
 			
 			<div class="row">

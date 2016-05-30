@@ -104,14 +104,6 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 				}
 				?>
 			</div>
-			
-			
-			
-			
-			
-			
-			
-			
 		</div>
     </div>
 <?php require_once 'includes/footer.php'; ?>

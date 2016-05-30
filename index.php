@@ -214,30 +214,14 @@ require_once 'includes/crud.php';
 
 	    	?>
 		</div>
-		
-	
-	
 	</div>
 	
 	
-	
-	
-	
-
-
-
-
-
-
-
-
-
 	<?php  
 	    }
 	?>
-    
 </div>
-    <br>
+<br>
 
 <?php require_once 'includes/footer.php'; ?>
 
