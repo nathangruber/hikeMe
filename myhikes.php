@@ -109,7 +109,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Completed</a>
 		</div> -->
 		
-		<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" data-layout="button_count" data-mobile-iframe="true"></div>
+		<a class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" data-layout="button_count" data-mobile-iframe="true"></a>
 		<a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a><link rel="me" href="https://twitter.com/twitterdev">
 		<a href="https://www.pinterest.com/pin/create/button/"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>		
 				<h3>Trails:</h3>
