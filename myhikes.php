@@ -73,15 +73,16 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
     
     <div style="margin-top: 100px;">
 	    <div class="text-center">
-	    	<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1>
+	    	<!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->
+	    	<h1>My Hikes</h1>
 	    </div>
 		
-		<div>
+		<!--<div>
 			Show: 
 			<a href="myhikes.php?show=All" style="margin-right: 20px">All</a>
 			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
 			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Completed</a>
-		</div>
+		</div> -->
 		
 		<div class="row">
 			<div class="col-xs-12 text-left">
