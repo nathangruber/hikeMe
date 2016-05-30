@@ -4,14 +4,6 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-	<style>
-h3 {
-    color: white;
-    font-family: lato;
-    font-size: 300%;
-}
-
-</style>
 </head>
 <body>
 		<title>hikeMe</title>
@@ -20,7 +12,7 @@ h3 {
 – Walt Whitman</p></center> -->
 	<div class="image">
 		<a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/index.php"><img src="assets/img/away-1356948_1920.jpg" alt="Beautiful Hiking Path"/>
-		<center><h2>hikeME<br><h3>search, plan, remember, and share your hikes</h3></h2></center>
+		<center><h2>hikeME</h2></center>
 		
 	</div>
 </body>
