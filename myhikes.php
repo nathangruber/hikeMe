@@ -84,7 +84,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Completed</a>
 		</div> -->
 		
-		<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-mobile-iframe="true"></div>
+		<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" data-layout="button_count" data-mobile-iframe="true"></div>
 				<h3>Trails:</h3>
 			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){
