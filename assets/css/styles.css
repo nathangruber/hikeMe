@@ -149,4 +149,22 @@ width: 100%;
 height: 450px;
 z-index: -1;
 }
+.tile_div a {
+    display: block;
+    float: left;
+    height: 50px;
+    width: 100px;
+    margin-right: 5px;
+    background-image: url(./images/button_left.png);
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
 
+.title_div a.last {
+    margin-right: 0;
+}
+
+.clear {
+    clear: both;
+}
