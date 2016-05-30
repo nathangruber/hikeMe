@@ -5,9 +5,6 @@
     <meta name="author" content="Nathan Gruber">
     <meta name="description" content="hikeMe">
     
-    <meta name="robots" content="noindex, nofollow"/>
-
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
