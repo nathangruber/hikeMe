@@ -107,26 +107,10 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 			<a href="myhikes.php?show=All" style="margin-right: 20px">All</a>
 			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
 			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Completed</a>
-		</div> 
+		</div> -->
 		<a class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" data-layout="button_count" data-mobile-iframe="true"></a>
 		<a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a><link rel="me" href="https://twitter.com/hikeMe">
 		<a href="https://www.pinterest.com/pin/create/button/"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>		
-			-->	
-<div class="container">
-	<div class="row">
-    <div class="col-md-12">
-		<h2>SOCIAL ICONS WITH NICE EFFECTS and<br /> unusual position</h2>
-                            <div class="col-md-6 .col-md-offset-3">
-                                 <ul class="social">
-                                  <li class="facebook"><a href="http://facebook.com/alterowo"><i class="fa fa-facebook fa-3x"></i></a></li>
-                                  <li class="twitter"><a href="http://twitter.com/Kyokushinowa"><i class="fa fa-twitter fa-3x"></i></a></li>
-                                  <li class="pinterest"><a href="http://www.pinterest.com/beatagibalska/"><i class="fa fa-pinterest-p fa-3x"></i></a></li>
-                                  <li class="behance"><a href="https://www.behance.net/Kurnikowa"><i class="fa fa-behance fa-3x"></i></a></li>
-                                </ul>
-                          </div>
-    </div>
-    </div>
-
 				<h3>Trails:</h3>
 			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){
