@@ -39,8 +39,9 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand"><small>I took a walk in the woods and come out taller than the trees.<br> - Henry David Thoreau</small></h3>
+              <h3 class="masthead-brand"></h3>
               <nav>
+                <p><small>I took a walk in the woods and come out taller than the trees.<br> - Henry David Thoreau</small><p>
               </nav>
             </div>
           </div>
