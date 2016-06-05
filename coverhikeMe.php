@@ -28,6 +28,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+                <p>I took a walk in the woods and come out taller than the trees. - Henry David Thoreau<p>
 
   <body>
 
@@ -41,7 +42,6 @@
             <div class="inner">
               <h3 class="masthead-brand"></h3>
               <nav>
-                <p><small>I took a walk in the woods and come out taller than the trees.<br> - Henry David Thoreau</small><p>
               </nav>
             </div>
           </div>
