@@ -49,7 +49,7 @@
             <h1 class="cover-heading">hikeMe</h1>
             <p class="lead">Search, Plan, Remember, and Share your Hike</p>
             <p class="lead">
-              <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/index.php" class="btn btn-lg btn-stripe">enter hikeMe</a>
+              <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/index.php" class="btn btn-stripe">enter hikeMe</a>
             </p>
           </div>
 
