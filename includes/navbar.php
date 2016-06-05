@@ -23,7 +23,7 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search by city..." name="search">
         </div>
-        <button type="submit" class="btn btn-default">Search</button>
+        <button type="submit" class="btn btn-stripe">Search</button>
       </form>
 	
 	
