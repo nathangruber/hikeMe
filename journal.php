@@ -6,15 +6,28 @@ require_once 'includes/crud.php';
 
 
 $hike_id = $_POST['hike_id'];
+$show_error="";
 
 if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$date = $_POST['date'];
 	$comments = $_POST['comments'];
 	
-	$journal = new Journal();
-	$journal->addComments($hike_id,$date,$comments);
+	//I validate the date MM-DD-YYYY
+	$month=substr($date, 0,2);
+	$day=substr($date, 3,2);
+	$year=substr($date, 6,4);
+	if(checkdate($month,$day,$year)){
+		//I insert the comments
+		$journal = new Journal();
+		$journal->addComments($hike_id,$date,$comments);
+		
+		header('Location: myhikes.php');
+	}else{
+		$show_error="Invalid date, the format must be: MM-DD-YYYY";
+	}
 	
-	header('Location: myhikes.php');
+	
+	
 }	
 ?>
 
@@ -38,6 +51,13 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 					    <div class="form-group">
 						  <label for="comments">Date:</label>
 						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY"></textarea>
+						  <?php
+							if($show_error!=""){
+								?>
+								<div class="text-danger"><?php echo $show_error; ?></div>
+								<?php
+							}  
+						  ?>
 						</div>
 					    <div class="form-group">
 						  <label for="comments">Journal:</label>
