@@ -204,3 +204,8 @@ body {
   background: #e6e6e6;
 }
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+p{
+  color:#fff;
+  text-shadow: 2px 2px 3px #000;
+  font-size: 20px; 
+}
