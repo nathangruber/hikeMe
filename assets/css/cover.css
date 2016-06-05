@@ -68,6 +68,8 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  color:#fff;
+  text-shadow: 2px 2px 3px #000;
 }
 
 .masthead-nav > li {
