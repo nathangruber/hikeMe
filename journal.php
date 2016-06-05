@@ -15,7 +15,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	//I validate the date MM-DD-YYYY
 	$month=substr($date, 0,2);
 	$day=substr($date, 3,2);
-	$year=substr($date, 6,4);
+	$year=substr($date, 6);
 	if(checkdate($month,$day,$year)){
 		//I insert the comments
 		$journal = new Journal();
