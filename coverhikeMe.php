@@ -56,7 +56,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>&copy; 2016 hikeMe. Created by Nathan Gruber. All rights reserved.</p>
             </div>
           </div>
 
