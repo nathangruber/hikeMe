@@ -9,7 +9,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
     </button>
-       <a class="navbar-brand" href="coverhikeMe.php"><img src="assets/img/coollogo_com-20326892.png" alt="hikeMe logo" style="float:left"></a>
+       <a class="navbar-brand" href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/coverhikeMe.php"><img src="assets/img/coollogo_com-20326892.png" alt="hikeMe logo" style="float:left"></a>
    </div>
 
    <div id="navbar" class="collapse navbar-collapse">
