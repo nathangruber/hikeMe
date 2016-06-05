@@ -252,7 +252,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 							    <input type="hidden" name="option" value="removefromfavorites">
 							    <input type="hidden" name="hike_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
 							  </div>
-							  <button type="submit" class="btn btn-danger btn-round">Remove Hike</button>
+							  <button type="submit" class="btn btn-danger btn-block btn-round">Remove Hike</button>
 							</form>
 							
 						</div>
