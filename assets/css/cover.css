@@ -121,12 +121,14 @@ body {
 }
 .cover-heading{
   color:#fff;
-text-shadow: 2px 2px 3px #000;
-
- }
-
+  text-shadow: 2px 2px 3px #000;
+}
+.lead{
+  color:#fff;
+  text-shadow: 2px 2px 3px #000;
+}
 /*
- * Footer
+ Footer
  */
 
 .mastfoot {
@@ -136,7 +138,7 @@ text-shadow: 2px 2px 3px #000;
 
 
 /*
- * Affix and center
+ Affix and center
  */
 
 @media (min-width: 768px) {

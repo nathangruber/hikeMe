@@ -8,7 +8,7 @@
     <meta name="description" content="hikeMe">
     <meta name="author" content="Nathan Gruber">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
-    <title>Cover Template for Bootstrap</title>
+    <title>hikeMe</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/js/bootstrap.min.css" rel="stylesheet">
