@@ -37,7 +37,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					    <div class="form-group">
 						  <label for="comments">Date:</label>
-						  <input type="text" name="date" class="form-control" id="date" placeholder="YYYY-MM-DD"></textarea>
+						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY"></textarea>
 						</div>
 					    <div class="form-group">
 						  <label for="comments">Journal:</label>
