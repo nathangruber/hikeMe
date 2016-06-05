@@ -119,7 +119,7 @@ body {
   padding: 10px 20px;
   font-weight: bold;
 }
-
+.cover-heading{text-shadow: 1px 1px 1px rgba(255,255,255, .5); }
 
 /*
  * Footer
