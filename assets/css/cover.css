@@ -65,10 +65,9 @@ body {
 /*
  * Header
  */
-p {
-  color:#fff;
-  text-shadow: 2px 2px 3px #000;
-  font-size:25px;
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .masthead-nav > li {
@@ -99,6 +98,14 @@ p {
   border-bottom-color: #fff;
 }
 
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
 
 
 /*
