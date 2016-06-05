@@ -177,12 +177,12 @@ body {
 .btn-stripe {
   color: #fff;
   background: #F2F2F2;
-  background-image: -webkit-linear-gradient(top, #000000, #F2F2F2 85%, #bfbfbf);
-  background-image: -moz-linear-gradient(top, #000000, #F2F2F2 85%, #bfbfbf);
-  background-image: -ms-linear-gradient(#000000, #F2F2F2 85%, #bfbfbf);
-  background-image: -o-linear-gradient(#000000, #F2F2F2 85%, #bfbfbf);
-  background-image: linear-gradient(#000000, #F2F2F2 85%, #bfbfbf);     
-  background: linear-gradient(top, #000000, #F2F2F2 85%, #bfbfbf);      
+  background-image: -webkit-linear-gradient(top, #000000, #F2F2F2 85%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #000000, #F2F2F2 85%, #e6e6e6);
+  background-image: -ms-linear-gradient(#000000, #F2F2F2 85%, #e6e6e6);
+  background-image: -o-linear-gradient(#000000, #F2F2F2 85%, #e6e6e6);
+  background-image: linear-gradient(#000000, #F2F2F2 85%, #e6e6e6);     
+  background: linear-gradient(top, #000000, #F2F2F2 85%, #e6e6e6);      
   text-shadow: 0 1px 1px rgba(0,0,0,0.53);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
@@ -201,6 +201,6 @@ body {
   background-position: 0;
 }
 .btn-stripe:active {
-  background: #808080;
+  background: #e6e6e6;
 }
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
