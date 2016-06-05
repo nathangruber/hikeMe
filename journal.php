@@ -7,7 +7,7 @@ require_once 'includes/crud.php';
 
 $hike_id = $_POST['hike_id'];
 $show_error="";
-
+$comments="";
 if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$date = $_POST['date'];
 	$comments = $_POST['comments'];
@@ -61,7 +61,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 						</div>
 					    <div class="form-group">
 						  <label for="comments">Journal:</label>
-						  <textarea name="comments" class="form-control" rows="5" id="comments"></textarea>
+						  <textarea name="comments" class="form-control" rows="5" id="comments"><?php echo $comments; ?></textarea>
 						</div>
 					  </div>
 					  <button type="submit" class="btn btn-default">Submit</button>
