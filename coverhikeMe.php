@@ -48,7 +48,7 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">hikeMe</h1>
-            <p class="lead">Search Trails, Plan your Hike, Remember your Hike, and Share your Hike</p>
+            <p class="lead">Search, Plan, Remember, and Share your Hike</p>
             <p class="lead">
               <a href="http://getbootstrap.com/examples/cover/#" class="btn btn-lg btn-default">enter hikeMe</a>
             </p>
