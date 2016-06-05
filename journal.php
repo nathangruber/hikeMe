@@ -16,10 +16,11 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$month=substr($date, 0,2);
 	$day=substr($date, 3,2);
 	$year=substr($date, 6);
+	
 	if(checkdate($month,$day,$year)){
 		//I insert the comments
 		$journal = new Journal();
-		$journal->addComments($hike_id,$date,$comments);
+		$journal->addComments($hike_id,$year."-".$month."-".$day,$comments);
 		
 		header('Location: myhikes.php');
 	}else{
