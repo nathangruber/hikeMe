@@ -26,6 +26,31 @@ $hike_id=$_POST['hike_id'];
 $hike = new Hike();
 $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 
+$hike_id = $_POST['hike_id'];
+$show_error="";
+$comments="";
+if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
+	$date = $_POST['date'];
+	$comments = $_POST['comments'];
+	
+	//I validate the date MM-DD-YYYY
+	$month=substr($date, 0,2);
+	$day=substr($date, 3,2);
+	$year=substr($date, 6);
+	
+	if(checkdate($month,$day,$year)){
+		//I insert the comments
+		$journal = new Journal();
+		$journal->addComments($hike_id,$year."-".$month."-".$day,$comments);
+		
+		header('Location: myhikes.php');
+	}else{
+		$show_error="Invalid date, the format must be: MM-DD-YYYY";
+	}
+	
+	
+	
+}	
 
 
 	
@@ -52,7 +77,7 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 					<input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					<div class="form-group"> <!-- Date input -->
 					<label class="control-label" for="date">Date</label>
-					<input class="form-control" id="date" name="date" placeholder="YYYY-MM-DD" type="text"/>
+					<input class="form-control" id="date" name="date" placeholder="MM-DD-YYYY" type="text"/>
 					</div>
 					<div class="form-group"> <!-- Submit button -->
 					<button class="btn btn-primary " name="submit" type="submit">Submit</button>
