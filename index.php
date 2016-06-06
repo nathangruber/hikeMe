@@ -70,7 +70,7 @@ require_once 'includes/crud.php';
 					  <div class="form-group">
 					    <input type="search" class="form-control" name="search" placeholder="Search by nearest city to trail...">
 					  </div>
-				  <button type="submit" class="btn btn-default">Search</button>
+				  <button type="submit" class="btn btn-lg btn-success">Search</button>
 				</form>
 				<br>
 			</div>
