@@ -51,6 +51,18 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 <html lang="en">
 <?php require_once 'includes/header.php';?>
 <body>
+	
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	
+	
+
 	<title>hikeMe</title>
      <?php
 	 require_once'includes/navbar.php';?>
@@ -247,7 +259,10 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 								$text_twitter = urlencode('Ey check out this trial: '.$favorite_hikes[$i]['name']);	
 								
 							?>
+							<div style="margin-top: 15px">
 								<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=<?php echo $text_twitter; ?>" data-size="large">Tweet</a>
+								<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/myhikes.php" data-layout="button" data-mobile-iframe="true"></div>
+							</div>
 						</div>
 					</div>
 					<hr>
