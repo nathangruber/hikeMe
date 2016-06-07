@@ -147,8 +147,8 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 									
 										<div class="col-xs-12 col-md-2">
 											<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-												<a href="photo.php?image_id=<?php echo $aimages[$i]['id']; ?>"  >
-													<img src="uploads/<?php echo $aimages[$i]['name']; ?>" width="120px"/>
+												<a href="photo.php?image_id=<?php echo $aimages[$j]['id']; ?>"  >
+													<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
 												</a>
 												<div>
 													<?php
