@@ -247,10 +247,11 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 								$text_twitter = urlencode('asdfqwefqwe');	
 								
 							?>
-							<div>
 								<a class="btn btn-default btn-block" href="https://twitter.com/intent/tweet?text=<?php echo $text_twitter; ?>" data-size="large">Tweet</a>
-							</div>
-							
+								<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Hello%20world"
+  data-size="large">
+Tweet</a>
 						</div>
 					</div>
 					<hr>
