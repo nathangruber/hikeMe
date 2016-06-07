@@ -264,6 +264,9 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 								
 							</div>
 							<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/myhikes.php" data-layout="button" data-mobile-iframe="true"></div>
+							<div style="margin-top: 15px">
+								<a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
+							</div>
 						</div>
 					</div>
 					<hr>
