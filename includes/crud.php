@@ -80,7 +80,7 @@ class Hike{
 			$pdo = Database::connect();
 			if($type =='planned'){
 				$sql = "select * from hike where user_fk=? and date!='0000-00-00' and hiked_date ='0000-00-00'";
-			}else if($type =='done'){
+			}else if($type =='completed'){
 				$sql = "select * from hike where user_fk=? and hiked_date!='0000-00-00'";
 			}else{
 				$sql = "select * from hike where user_fk=?";
