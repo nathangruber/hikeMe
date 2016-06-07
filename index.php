@@ -50,6 +50,7 @@ require_once 'includes/crud.php';
 		    );
 		$context = stream_context_create($opts);   //Creates and returns a stream context with any options supplied in options preset.
 		$file = file_get_contents($url, false, $context);  //read the contents of a file into a string
+		print_r($file);
 		$obj2 = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
 	}
     
