@@ -259,7 +259,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 								$text_twitter = urlencode('Ey check out this trial: '.$favorite_hikes[$i]['name']);	
 								
 							?>
-							<div class="row">
+							<div class="row" style="margin-top: 15px">
 								<div class="col-xs-12 col-md-4">
 									<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=<?php echo $text_twitter; ?>">Tweet</a>
 								</div>
