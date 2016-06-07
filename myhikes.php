@@ -113,59 +113,75 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							echo "<br>";
 							echo "<b>Description: </b>".$favorite_hikes[$i]['description'];
 							echo "<br>";
+							
+							
+							//Photos and journal will only be shown if it is hiked
+							if($favorite_hikes[$i]['hiked_date']!="0000-00-00"){
 							?>
 							
-							<div class="row">
-							<?php
-								
-								$image = new Image();
-								$aimages = $image->getPhotos($favorite_hikes[$i]['id']);
-								
-								$number_of_photos = count($aimages);
-								
-							for($j=0;$j<$number_of_photos;$j++){
-								?>
-								
-									<div class="col-xs-12 col-md-2">
-										<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-											<a href="photo.php?image_id=<?php echo $aimages[$i]['id']; ?>"  >
-												<img src="uploads/<?php echo $aimages[$i]['name']; ?>" width="120px"/>
-											</a>
-											<div>
-												<?php
-													if($aimages[$i]['public']==1){
-														echo 'public';
-													}
-												?>
-												<small><p>click to enlarge<br>or make public</p></small>
-
+							
+							
+							
+							
+								<div class="row">
+								<?php
+									
+									$image = new Image();
+									$aimages = $image->getPhotos($favorite_hikes[$i]['id']);
+									
+									$number_of_photos = count($aimages);
+									
+								for($j=0;$j<$number_of_photos;$j++){
+									?>
+									
+										<div class="col-xs-12 col-md-2">
+											<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
+												<a href="photo.php?image_id=<?php echo $aimages[$i]['id']; ?>"  >
+													<img src="uploads/<?php echo $aimages[$i]['name']; ?>" width="120px"/>
+												</a>
+												<div>
+													<?php
+														if($aimages[$i]['public']==1){
+															echo 'public';
+														}
+													?>
+													<small><p>click to enlarge<br>or make public</p></small>
+	
+												</div>
 											</div>
 										</div>
-									</div>
-								
-								<?php
-							}
-							
-							
-							
-							?>
-							</div>
-							<div style="margin-top: 30px">
-								<b>My Trail Journal:</b>
-							</div>
-							<?php
-								
-								$journal = new Journal();
-								$comments = $journal->get($favorite_hikes[$i]['id']);
-								
-								for($j=0;$j<count($comments);$j++){
-									echo "<p><b>".$comments[$j]['date'].": </b><i>";
-									echo $comments[$j]['comments'];
-									echo "</i></p>";
+									
+									<?php
 								}
+								
+								
+								
+								?>
+								</div>
+								
+								
+								<div style="margin-top: 30px">
+									<b>My Trail Journal:</b>
+								</div>
+								<?php
+									
+									$journal = new Journal();
+									$comments = $journal->get($favorite_hikes[$i]['id']);
+									
+									for($j=0;$j<count($comments);$j++){
+										echo "<p><b>".$comments[$j]['date'].": </b><i>";
+										echo $comments[$j]['comments'];
+										echo "</i></p>";
+									}
+								?>
+								
+								</div>
+							
+							<?php
+							}	
 							?>
 							
-						</div>
+							
 						<div class="col-xs-12 col-md-3">
 							
 							
