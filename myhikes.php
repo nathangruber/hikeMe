@@ -261,8 +261,9 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							?>
 							<div style="margin-top: 15px">
 								<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=<?php echo $text_twitter; ?>" data-size="large">Tweet</a>
-								<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/myhikes.php" data-layout="button" data-mobile-iframe="true"></div>
+								
 							</div>
+							<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/myhikes.php" data-layout="button" data-mobile-iframe="true"></div>
 						</div>
 					</div>
 					<hr>
