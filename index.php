@@ -37,10 +37,11 @@ require_once 'includes/crud.php';
 		
 		$obj = json_decode($file, false);  //Takes a JSON encoded string and converts it into a PHP variable.
 	    
-	    
+	    	    //$url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
+
 	    
 	    //Trail API
-	    $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
+	    $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=milwaukee";
 		$opts = array(
 		        'http' => array (
 		            'method' => 'GET',
