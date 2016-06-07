@@ -136,8 +136,6 @@ class Hike{
 		try{
 			$pdo = Database::connect();
 			$sql = "UPDATE  hike SET  hiked_date =  ? WHERE  id =? and user_fk=?;";
-			echo $sql;
-			echo "    and values:$date,$hike_id,$user_id";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($date,$hike_id,$user_id)); //asks db for info array is replacing ?info
 			Database::disconnect();

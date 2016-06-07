@@ -5,7 +5,7 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 
-
+$show_error="";
 
 if(isset($_POST['date'])){
 	
@@ -69,6 +69,13 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 					<div class="form-group"> <!-- Date input -->
 					<label class="control-label" for="date">Date</label>
 					<input class="form-control" id="date" name="date" placeholder="MM-DD-YYYY" type="text"/>
+					<?php
+						if($show_error!=""){
+							?>
+							<div class="text-danger"><?php echo $show_error; ?></div>
+							<?php
+						}  
+					  ?>
 					</div>
 					<div class="form-group"> <!-- Submit button -->
 					<button class="btn btn-primary " name="submit" type="submit">Submit</button>
