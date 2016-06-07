@@ -140,7 +140,6 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 									
 									$image = new Image();
 									$aimages = $image->getPhotos($favorite_hikes[$i]['id']);
-									print_r($aimages);
 									$number_of_photos = count($aimages);
 									
 								for($j=0;$j<$number_of_photos;$j++){
@@ -153,7 +152,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 												</a>
 												<div>
 													<?php
-														if($aimages[$i]['public']==1){
+														if($aimages[$j]['public']==1){
 															echo 'public';
 														}
 													?>
