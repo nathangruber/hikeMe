@@ -198,8 +198,8 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							}	
 							?>
 							<?php
-								//ask if it is not planned
-							if(!($favorite_hikes[$i]['date']!="0000-00-00")&&($favorite_hikes[$i]['hiked_date']=="0000-00-00")){	
+								//ask if it hiked then show buttons
+							if($favorite_hikes[$i]['hiked_date']!="0000-00-00"){	
 							?>
 							<form method="post" action="journal.php">
 							  <div class="form-group">
