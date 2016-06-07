@@ -13,8 +13,9 @@ if(isset($_POST['date'])){
 	$hike_id=$_POST['hike_id'];
 	$user_id=$_SESSION['id'];
 	$date = $_POST['date'];
+	echo "set as done this: $hike_id,$user_id,$date)";
 	$hike->done($hike_id,$user_id,$date);
-	header('Location: myhikes.php');
+	//header('Location: myhikes.php');
 }
 
 
