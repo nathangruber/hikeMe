@@ -41,7 +41,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-              <p>&copy; 2016 hikeMe. Created by Nathan Gruber. All rights reserved.</p>
+              <p></p>
             </div>
           </div>
 
