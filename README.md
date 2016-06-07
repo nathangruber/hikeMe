@@ -1,5 +1,5 @@
 # hikeMe
-This application is hosted on AWS Linux EC2 web console @http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php
+This application is hosted on AWS Linux EC2 web console @http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php<br>
 A hiking app built for hiking enthusiasts.
 -Search Trails
 -Plan Hikes

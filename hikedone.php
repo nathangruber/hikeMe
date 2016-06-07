@@ -77,7 +77,7 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 					  ?>
 					</div>
 					<div class="form-group"> <!-- Submit button -->
-					<button class="btn btn-primary " name="submit" type="submit">Submit</button>
+					<button class="btn btn-success " name="submit" type="submit">Submit</button>
 					</div>
 				</form>	
 				</div>
