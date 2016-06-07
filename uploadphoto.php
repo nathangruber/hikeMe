@@ -7,6 +7,8 @@ require_once 'includes/crud.php';
 
 $hike_id = $_POST['hike_id'];
 
+$show_error="";
+
 if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	$hike_id = $_POST['hike_id'];
 	
@@ -21,32 +23,32 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	if(isset($_POST["submit"])) {
 	    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 	    if($check !== false) {
-	        echo "File is an image - " . $check["mime"] . ".";
+	        $show_error= "File is an image - " . $check["mime"] . ".";
 	        $uploadOk = 1;
 	    } else {
-	        echo "File is not an image.";
+	        $show_error= "File is not an image.";
 	        $uploadOk = 0;
 	    }
 	}
 	// Check if file already exists
 	if (file_exists($target_file)) {
-	    echo "Sorry, file already exists.";
+	    $show_error= "Sorry, file already exists.";
 	    $uploadOk = 0;
 	}
 	// Check file size
 	if ($_FILES["fileToUpload"]["size"] > 500000) {
-	    echo "Sorry, your file is too large.";
+	    $show_error= "Sorry, your file is too large.";
 	    $uploadOk = 0;
 	}
 	// Allow certain file formats
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 	&& $imageFileType != "gif" ) {
-	    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+	    $show_error= "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 	    $uploadOk = 0;
 	}
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
-	    echo "Your file was not uploaded.";
+	    $show_error= "Your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
 	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -64,7 +66,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	        
 	        
 	    } else {
-	        echo "Sorry, there was an error uploading your photo.";
+	        $show_error= "Sorry, there was an error uploading your photo.";
 	    }
 	}
 }
@@ -96,6 +98,13 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 					    <input type="hidden" name="option" value="uploadphoto">
 					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					    <input type="file" name="fileToUpload" id="fileToUpload">
+					    <?php
+							if($show_error!=""){
+								?>
+								<div class="text-danger"><?php echo $show_error; ?></div>
+								<?php
+							}  
+						  ?>
 					  </div><button type="submit" class="btn btn-success">Upload Photo</button>
 					</form>
 					<br>	
