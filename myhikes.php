@@ -83,7 +83,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 						<div class="col-xs-12 col-md-9">
 							<?php
 							
-							
+							//ask if it is planned
 							if(($favorite_hikes[$i]['date']!="0000-00-00")&&($favorite_hikes[$i]['hiked_date']=="0000-00-00")){
 							?>
 								<div class="alert alert-info" role="alert" style="margin-top: 20px;">
@@ -95,6 +95,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 								</div>
 							<?php
 							}
+							//ask if it is hiked
 							if($favorite_hikes[$i]['hiked_date']!="0000-00-00"){
 							?>
 								<div class="alert alert-success" role="alert" style="margin-top: 20px;">
@@ -196,7 +197,10 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							<?php
 							}	
 							?>
-							
+							<?php
+								//ask if it is not planned
+							if(!($favorite_hikes[$i]['date']!="0000-00-00")&&($favorite_hikes[$i]['hiked_date']=="0000-00-00")){	
+							?>
 							<form method="post" action="journal.php">
 							  <div class="form-group">
 							    <input type="hidden" name="hike_id" value="<?php echo $favorite_hikes[$i]['id']; ?>">
@@ -210,6 +214,10 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							  </div>
 							  <button type="submit" class="btn btn-default btn-block">Upload Photo</button>
 							</form>
+							<?php
+							}	
+							?>
+							
 							
 							<form method="post" action="myhikes.php">
 							  <div class="form-group">
