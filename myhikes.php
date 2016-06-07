@@ -51,39 +51,6 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 <html lang="en">
 <?php require_once 'includes/header.php';?>
 <body>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));</script>
-<script type="text/javascript">
-(function(d){
-    var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
-    p.type = 'text/javascript';
-    p.async = true;
-    p.src = '//assets.pinterest.com/js/pinit.js';
-    f.parentNode.insertBefore(p, f);
-}(document));
-</script>
 	<title>hikeMe</title>
      <?php
 	 require_once'includes/navbar.php';?>
@@ -108,9 +75,6 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'],$type);
 			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
 			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Completed</a>
 		</div>
-		<a class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" data-layout="button_count" data-mobile-iframe="true"></a>
-		<a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a><link rel="me" href="https://twitter.com/hikeMe">
-		<a href="https://www.pinterest.com/pin/create/button/"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>		
 				<h3>Trails:</h3>
 			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){

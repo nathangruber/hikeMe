@@ -5,11 +5,6 @@
     <meta name="author" content="Nathan Gruber">
     <meta name="description" content="hikeMe">
     
-    <meta property="og:url"           content="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/cover.php" />
-    <meta property="og:type"          content="website\\" />
-    <meta property="og:title"         content="hikeMe" />
-    <meta property="og:description"   content="Search, Plan, Remember, and Share your hikes." />
-    <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">

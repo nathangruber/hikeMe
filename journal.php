@@ -12,7 +12,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$date = $_POST['date'];
 	$comments = $_POST['comments'];
 	
-	//I validate the date MM-DD-YYYY
+	//validate the date MM-DD-YYYY
 	$month=substr($date, 0,2);
 	$day=substr($date, 3,2);
 	$year=substr($date, 6);
