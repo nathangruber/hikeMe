@@ -8,14 +8,28 @@ require_once 'includes/crud.php';
 
 
 if(isset($_POST['date'])){
-	$hike = new Hike();
+	
 	
 	$hike_id=$_POST['hike_id'];
 	$user_id=$_SESSION['id'];
 	$date = $_POST['date'];
-	echo "set as done this: $hike_id,$user_id,$date)";
-	$hike->done($hike_id,$user_id,$date);
-	//header('Location: myhikes.php');
+	
+	//validate the date MM-DD-YYYY
+	$month=substr($date, 0,2);
+	$day=substr($date, 3,2);
+	$year=substr($date, 6);
+	
+	if(checkdate($month,$day,$year)){
+		$hike = new Hike();
+		$hike->done($hike_id,$user_id,$year."-".$month."-".$day);
+		
+		header('Location: myhikes.php');
+	}else{
+		$show_error="Invalid date, the format must be: MM-DD-YYYY";
+	}
+	
+	
+	
 }
 
 
