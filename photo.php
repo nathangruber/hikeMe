@@ -41,6 +41,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 					
 					<img src="uploads/"<?php echo $result['name']; ?>" width=500px"/>
 					<?php
+						echo $result['name'];
 						if($result['public']==0){
 					?>
 						
