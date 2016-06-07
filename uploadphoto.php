@@ -14,7 +14,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	
 	$target_dir = "uploads/";
 	
-	$new_name_file = $_SESSION['id']."-".rand(1,9999999) .basename($_FILES["fileToUpload"]["name"]);
+	$new_name_file = $_SESSION['id']."aaa".rand(1,9999999) .basename($_FILES["fileToUpload"]["name"]);
 	$target_file = $target_dir . $new_name_file;
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
