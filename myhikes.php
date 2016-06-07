@@ -174,12 +174,12 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 										echo "</i></p>";
 									}
 								?>
-								
-								</div>
-							
 							<?php
 							}	
-							?>
+							?>	
+						</div>
+							
+							
 							
 							
 						<div class="col-xs-12 col-md-3">
