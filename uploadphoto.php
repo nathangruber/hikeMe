@@ -36,7 +36,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	    $uploadOk = 0;
 	}
 	// Check file size
-	if ($_FILES["fileToUpload"]["size"] > 500000) {
+	if ($_FILES["fileToUpload"]["size"] > 5000000) {
 	    $show_error= "Sorry, your file is too large.";
 	    $uploadOk = 0;
 	}
