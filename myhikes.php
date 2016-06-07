@@ -242,7 +242,14 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							  </div>
 							  <button type="submit" class="btn btn-danger btn-block">Remove Hike</button>
 							</form>
-							<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">Tweet</a>
+							
+							<?php
+								$text_twitter = urlencode('asdfqwefqwe');	
+								
+							?>
+							
+							<a class="btn btn-default btn-block" href="https://twitter.com/intent/tweet?text=<?php echo $text_twitter; ?>" data-size="large">Tweet</a>
+			
 							
 						</div>
 					</div>
