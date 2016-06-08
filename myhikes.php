@@ -81,7 +81,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 	    	<h1>My Hikes</h1>
 	    </div>
 		
-		<div>
+		<div class="show">
 			Hikes: 
 			<a href="myhikes.php?show=All" style="margin-right: 20px">All</a>
 			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
