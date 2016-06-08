@@ -78,15 +78,15 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
     <div style="margin-top: 100px;">
 	    <div class="text-center">
 	    	<!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->
-	    	<h1>My Hikes</h1>
+	    	<h1></h1>
 	    </div>
 		
-		<div class="show">
+		<center><div class="show">
 			Hikes: 
 			<a href="myhikes.php?show=All" style="margin-right: 20px">All</a>
 			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
 			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Hiked</a>
-		</div>
+		</div></center>
 				<h3></h3>
 			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){
