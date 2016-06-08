@@ -37,7 +37,7 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
     <div class="container">
     	<div class="text-center" style="margin-top: 100px;">
 		    <h1>Your Photo</h1>
-			<p>Make your photo public, and it can be viewed in the trail's description.</p>
+			<p>Make your photo public, and everyone can view it when they search and find the trail you hiked!</p>
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					
