@@ -87,7 +87,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
 			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Hiked</a>
 		</div>
-				<h3>Trails:</h3>
+				<h3></h3>
 			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){
 					?>
