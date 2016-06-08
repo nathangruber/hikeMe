@@ -85,7 +85,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 			Show: 
 			<a href="myhikes.php?show=All" style="margin-right: 20px">All</a>
 			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
-			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Completed</a>
+			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Hiked</a>
 		</div>
 				<h3>Trails:</h3>
 			<?php
@@ -255,7 +255,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							</form>
 							
 							<?php
-								$text_twitter = urlencode('Ey check out this trial: '.$favorite_hikes[$i]['name']);	
+								$text_twitter = urlencode('I hiked this trail: '.$favorite_hikes[$i]['name']);	
 								
 							?>
 							<div class="row" style="margin-top: 15px">
