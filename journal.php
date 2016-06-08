@@ -65,7 +65,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 						  <textarea name="comments" class="form-control" rows="5" id="comments"><?php echo $comments; ?></textarea>
 						</div>
 					  </div>
-					  <button type="submit" class="btn btn-default">Submit</button>
+					  <button type="submit" class="btn btn-success">Submit</button>
 					</form>
 					
 				</div>
