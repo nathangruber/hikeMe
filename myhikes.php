@@ -74,14 +74,15 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
     <?php if($message_favorites_show){ ?>
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
-    		   <h1></h1>
-	    	<!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
-		<center><div class="show">
-			My Hikes:&nbsp; 
+			
+  <h1> My Hikes:&nbsp; </h1><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
+	<center>
+		<div class="show">
 			<a href="myhikes.php?show=All" style="margin-right: 20px">All</a>
 			<a href="myhikes.php?show=Planned" style="margin-right: 20px">Planned</a>
 			<a href="myhikes.php?show=Completed" style="margin-right: 20px">Hiked</a>
-		</div></center>
+		</div>
+	</center>
 				<h3></h3>
 			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){
