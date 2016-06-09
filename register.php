@@ -89,7 +89,7 @@ if ( !empty($_POST)) {
             <h3>You are currently logged in, please log out in order to create a new user.</h3><?php  } ?>
 				</div>
 			</div>
-    </div><!-- /container -->
+    </div>
     <?php
 require_once 'includes/footer.php';
 ?>

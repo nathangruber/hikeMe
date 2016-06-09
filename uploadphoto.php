@@ -89,7 +89,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
     <div class="container">
     	<div class="text-center" style="margin-top: 50px;">
 		    <h1>Upload Photos to hikeMe</h1>
-			<p>Make your photo public, and share it in hikeMe's trail search.</p>
+			<p>Make your photo public, and share it in hikeMe's public trail search.</p>
 			<br>
 			<div class="row text-left">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -113,7 +113,5 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 		</div>
     </div>
 <?php require_once 'includes/footer.php'; ?>
-
-
 </body>
 </html>

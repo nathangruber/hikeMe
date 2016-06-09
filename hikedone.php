@@ -84,21 +84,8 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 				</form>	
 				</div>
 			</div>
-			
-			
-
-
-
-
-			
-			
-			
-			
-			
 		</div>
     </div>
 <?php require_once 'includes/footer.php'; ?>
-
-
 </body>
 </html>

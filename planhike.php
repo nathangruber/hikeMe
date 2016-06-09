@@ -21,20 +21,12 @@ if(isset($_POST['date'])){
 	
 }
 
-
-
 $hike_id=$_POST['hike_id'];
-
-
 
 $hike = new Hike();
 $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 
-
-
-
-
-//Get wheather for that city in the next 7 days...
+//Get weather for that city in the next 7 days...
 $loc=$hike_info['city'];
 $url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
 $opts = array(
@@ -107,7 +99,5 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 		</div>
     </div>
 <?php require_once 'includes/footer.php'; ?>
-
-
 </body>
 </html>

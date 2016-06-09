@@ -280,9 +280,6 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 		</div>
 	</div>
     
-    
-   
-    
     <?php
 	    if(isset($_POST['search'])){
 	?>
@@ -334,9 +331,6 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 
 	    	?>
 		</div>
-		
-	
-	
 	</div>
 	
 	
@@ -345,16 +339,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 	<?php  
 	    }
 	?>
-    
- 
-  
-    
-
-
-
-    </div>
+</div>
 <?php require_once 'includes/footer.php'; ?>
-
-
 </body>
 </html>

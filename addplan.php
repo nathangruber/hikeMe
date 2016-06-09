@@ -32,8 +32,6 @@
 				<h3>Activities done:</h3>
 			</div>
 		</div>
-		
-		
 	</div>
     
     
@@ -93,24 +91,8 @@
 
 	    	?>
 		</div>
-		
-	
-	
 	</div>
-	
-	
-	
-	
-	
- 
-  
-    
-
-
-
-    </div>
+</div>
 <?php require_once 'includes/footer.php'; ?>
-
-
 </body>
 </html>

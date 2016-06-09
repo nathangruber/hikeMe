@@ -73,7 +73,5 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 		</div>
     </div>
 <?php require_once 'includes/footer.php'; ?>
-
-
 </body>
 </html>

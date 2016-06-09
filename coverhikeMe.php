@@ -19,11 +19,8 @@
   <body>
 
     <div class="site-wrapper">
-
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
-
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand"></h3>
@@ -44,17 +41,12 @@
               <p></p>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-  
-
+<script src="assets/js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
