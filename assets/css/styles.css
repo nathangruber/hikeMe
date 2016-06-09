@@ -169,8 +169,9 @@ z-index: -1;
     clear: both;
 }
 .show{
-  color: #206020;
+  color: #194d19;
   font-size: 30px;
   font-family: Lato, sans-serif;
 
 }
+a { text-decoration : none; color : #000; }
