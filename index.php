@@ -64,7 +64,9 @@ require_once 'includes/crud.php';
 	<div class="container">
     <div class="text-center">
 	   
-	    <h1>Where do you want to Hike?</h1>
+	    <h1>Where do you want to Hike?
+	    <small>Search, Plan, Remember, and Share your Hikes</small></h1>
+
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3">
