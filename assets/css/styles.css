@@ -174,4 +174,6 @@ z-index: -1;
   font-family: Lato, sans-serif;
 
 }
-a { text-decoration : none; color : #000; }
+a { 
+  text-decoration : none; color : #000; 
+}
