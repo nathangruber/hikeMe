@@ -22,25 +22,25 @@
                 </div>
                      <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
                       <div class="form-group">
-                        <label for="first_name" class="col-sm-2 control-label">First Name&nbsp;</label>
+                        <label for="first_name" class="col-sm-2 control-label">First Name&nbsp;&nbsp;</label>
                         <div class="col-sm-10">
                         <input type="text" class="form-control" name="first_name" placeholder="First Name">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="last_name" class="col-sm-2 control-label">Last Name&nbsp;</label>
+                        <label for="last_name" class="col-sm-2 control-label">Last Name&nbsp;&nbsp;</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="last_name" placeholder="Last Name">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label">Email Address&nbsp;</label>
+                        <label for="email" class="col-sm-2 control-label">Email Address&nbsp;&nbsp;</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="email" placeholder="Email Address">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="last_name" class="col-sm-2 control-label">Phone Number&nbsp;</label>
+                        <label for="last_name" class="col-sm-2 control-label">Phone Number&nbsp;&nbsp;</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="telephone" placeholder="Phone Number">
                         </div>
@@ -48,7 +48,7 @@
                       <div class="form-group">
                         <label for="comments" class="col-sm-2 control-label">Comments<br></label>
                         <div class="col-sm-10">
-                       <p>&nbsp;</p>&nbsp;<textarea class="form-control" rows="3" name="comments"></textarea>
+                       <p>&nbsp;</p><textarea class="form-control" rows="3" name="comments"></textarea>
                         </div>
                       </div>
                       <div class="form-group">
