@@ -23,7 +23,6 @@
 			</div>
 		</div>
 		
-		
 		<div class="row">
 			<div class="col-xs-12 col-md-6">
 				<h3>Activities planned:</h3>
@@ -33,9 +32,6 @@
 			</div>
 		</div>
 	</div>
-    
-    
-   
     
     <?php
 	    if(isset($_POST['search'])){
@@ -65,10 +61,7 @@
 					
 				}
 				
-				
-				
-				
-	    	?>
+			?>
 		</div>
 		
 		<div class="col-xs-12 col-md-4 text-left">
@@ -84,12 +77,7 @@
 	    		echo "<br>";
 	    		echo "<b>Wind Speed: </b>".$obj->wind->speed;
 
-
-
-
-
-
-	    	?>
+			?>
 		</div>
 	</div>
 </div>

@@ -4,9 +4,6 @@ require_once 'includes/sessioncheck.php';
 require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
-
-
-
 if(isset($_POST['date'])){
 	$hike = new Hike();
 	
@@ -39,7 +36,6 @@ $file = file_get_contents($url, false, $context);  //read the contents of a file
 
 $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it into a PHP variable.
 
-	
 ?>
 
 <!DOCTYPE html>

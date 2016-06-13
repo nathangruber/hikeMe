@@ -9,8 +9,6 @@ if(!isset($_GET['show'])){
 	$_GET['show']='all';
 }
 
-
-
 $message_favorites_show=false; //
 if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form submission/isset determines if var is set, not null 
 	$city = $_POST['city'];
@@ -124,13 +122,9 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							echo "<br>";
 							
 							
-							//Photos and journal will only be shown if it is hiked
+							//Photos/journal will only be shown if hiked
 							if($favorite_hikes[$i]['hiked_date']!="0000-00-00"){
 							?>
-							
-							
-							
-							
 							
 								<div class="row">
 								<?php
@@ -186,9 +180,6 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							}	
 							?>	
 						</div>
-							
-							
-							
 							
 						<div class="col-xs-12 col-md-3">
 							
@@ -332,9 +323,6 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 	    	?>
 		</div>
 	</div>
-	
-	
-	
 	
 	<?php  
 	    }

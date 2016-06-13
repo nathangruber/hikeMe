@@ -12,13 +12,13 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$date = $_POST['date'];
 	$comments = $_POST['comments'];
 	
-	//validate the date MM-DD-YYYY
+	//validate date MM-DD-YYYY
 	$month=substr($date, 0,2);
 	$day=substr($date, 3,2);
 	$year=substr($date, 6);
 	
 	if(checkdate($month,$day,$year)){
-		//I insert the comments
+		//insert
 		$journal = new Journal();
 		$journal->addComments($hike_id,$year."-".$month."-".$day,$comments);
 		

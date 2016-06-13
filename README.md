@@ -8,5 +8,5 @@ A hiking app built for hiking enthusiasts.
 
 OpenWeatherApp http://api.openweathermap.org/data/2.5/forecast/daily?q={city name}
 
-marketplace API https://trailapi-trailapi.p.mashape.com/
+Marketplace API https://trailapi-trailapi.p.mashape.com/
   

@@ -1,4 +1,3 @@
-
   <div class="content">hikeMe</div>
   <div class="footer">
     <div class="social">&#62220;</div>
@@ -9,7 +8,6 @@
   <center><p><small>&copy; 2016 hikeMe. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a></small></p></center>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
-
 
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],

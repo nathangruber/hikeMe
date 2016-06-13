@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="hikeMe">
@@ -13,8 +13,7 @@
     <script src="assets/js/ie-emulation-modes-warning.js"></script>
 
   <p>I took a walk in the woods and come out taller than the trees. - Henry David Thoreau<p>
-
-  </head>
+</head>
 
   <body>
 

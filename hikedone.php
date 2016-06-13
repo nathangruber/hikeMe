@@ -32,19 +32,11 @@ if(isset($_POST['date'])){
 	
 }
 
-
-
 $hike_id=$_POST['hike_id'];
-
-
 
 $hike = new Hike();
 $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 
-
-
-
-	
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +70,7 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 						}  
 					  ?>
 					</div>
-					<div class="form-group"> <!-- Submit button -->
+					<div class="form-group">
 					<button class="btn btn-success " name="submit" type="submit">Submit</button>
 					</div>
 				</form>	

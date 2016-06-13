@@ -45,9 +45,6 @@ class User{
 	
 }
 
-
-
-
 class Hike{
 	public function addToFavorites($unique_id,$name,$city,$state,$description,$user_id){
 		try{
@@ -148,8 +145,6 @@ class Hike{
 	
 }
 
-
-
 class Image{
 	public function uploadPhoto($photo_name,$hike_id){
 		try{
@@ -189,7 +184,7 @@ class Image{
 			$pdo = Database::connect();
 			$sql = "select * from image where id=?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($image_id)); //asks db for info array is replacing ?info
+			$q->execute(array($image_id)); 
 			$result=array();
 			if($row = $q->fetch(PDO::FETCH_ASSOC)){
 				
@@ -225,7 +220,7 @@ class Image{
 			$pdo = Database::connect();
 			$sql = "UPDATE  image SET  `public` =  '0' where id=?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($image_id)); //asks db for info array is replacing ?info
+			$q->execute(array($image_id)); 
 			Database::disconnect();
 			return true;
 		}catch (PDOException $error){

@@ -37,8 +37,6 @@ require_once 'includes/crud.php';
 		
 		$obj = json_decode($file, false);  //Takes a JSON encoded string and converts it into a PHP variable.
 	    
-	    	    //$url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
-
 	    
 	    //Trail API
 	    $url = "https://trailapi-trailapi.p.mashape.com/?q[city_cont]=$loc";
@@ -53,17 +51,14 @@ require_once 'includes/crud.php';
 		//print_r($file);
 		$obj2 = json_decode($file);    //Takes a JSON encoded string and converts it into a PHP variable.
 	}
-    
-    
-    
-    ?>
-    <div class="jumbotron">
-	</div>
-	<div class="container">
-	</div>
-	<div class="container">
-    <div class="text-center">
-	   
+?>
+	    <div class="jumbotron">
+		</div>
+		<div class="container">
+		</div>
+		<div class="container">
+	    <div class="text-center">
+		   
 	    <h1>Where do you want to Hike?<br>
 	    <small>Search, Plan, Remember, and Share your Hikes</small></h1>
 
@@ -97,7 +92,7 @@ require_once 'includes/crud.php';
 				<h4><b>Trails found: </b><?php echo $total; ?></h4>    
 			<?php 
 				
-				if($page==1){       //pagination ==equal
+				if($page==1){       //pagination 
 				 	$init = 0;
 				 	$end = 5;
 				}else{
@@ -110,9 +105,7 @@ require_once 'includes/crud.php';
 					$end=$total;
 				}
 				
-				
-			    
-			    for($i=$init;$i<$end;$i++){
+				for($i=$init;$i<$end;$i++){
 					$place = $obj2->places[$i];
 					
 					echo "<b>".($i+1).".</b>";
@@ -138,12 +131,8 @@ require_once 'includes/crud.php';
 						<?php
 					}
 					
-					
-					
-					
 					?>
 					</div>
-					
 					
 					
 					<form method="post" action="myhikes.php">
@@ -213,10 +202,7 @@ require_once 'includes/crud.php';
 				
 			}
 			
-			
-			
-
-	    	?>
+			?>
 		</div>
 	</div>
 	
@@ -226,7 +212,6 @@ require_once 'includes/crud.php';
 	?>
 </div>
 <br>
-
 <?php require_once 'includes/footer.php'; ?>
 </body>
 </html>

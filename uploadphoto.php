@@ -48,7 +48,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 	}
 	// Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
-	    //$show_error= "Your file was not uploaded.";
+	//$show_error= "Your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
 	    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
