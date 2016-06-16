@@ -144,7 +144,7 @@ require_once 'includes/crud.php';
 					    <input type="hidden" name="unique_id" value="<?php echo $place->activities[0]->unique_id;?>">
 					    <input type="hidden" name="description" value="<?php echo $place->activities[0]->description;?>">
 					  </div>
-					  <button type="submit" class="btn btn-default">Add to my Favorites</button>
+					  <button type="submit" class="btn btn-default">Add to My Hikes</button>
 					</form>
 					<?php
 					echo "<hr>";
