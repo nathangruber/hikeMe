@@ -82,6 +82,14 @@ if($hike_info['hiked_date']!="0000-00-00"){
 	<?php
 	}else if($type_hike=='planned'){
 	?>
+		<div class="alert alert-info" role="alert" style="margin-top: 20px;">
+			<b style="font-size: 16px;">PLANNED</b><br>
+			<b>Day: </b><?php echo $hike_info['date']; ?><br>
+			<b>Weather Temperature: </b><?php echo $hike_info'weather_temp']; ?><br>
+			<b>Weather Wind: </b><?php echo $hike_info['weather_wind']; ?><br>
+			<b>Weather Description: </b><?php echo $hike_info['weather_desc']; ?><br>
+		</div>
+		
 		<div class="row" style="margin-bottom: 30px">
 		  	<div class="col-xs-12 col-md-3">
 				<form method="post" action="hikedone.php">
