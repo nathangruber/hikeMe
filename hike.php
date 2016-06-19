@@ -48,15 +48,45 @@ print_r($hike_info);
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
 			
-  <center><h1>My Hikes</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
-	<center>
-		<div class="show">
-			 
-			<a href="list.php?show=All" style="text-decoration margin-right: 20px">All&nbsp;-</a>
-			<a href="list.php?show=Planned" style="text-decoration margin-right: 20px">Planned&nbsp;-</a>
-			<a href="list.php?show=Completed" style="text-decoration margin-right: 20px">Hiked</a>
-		</div>
-	</center>
+  <center><h1>Hike</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
+  
+  
+  <div class="row">
+	  
+	  <div class="col-xs-12 col-md-4">
+		  <h2>Information</h2>
+		  <?php
+			echo "<b>Name: </b>".$hike_info['name'];
+			echo "<br>";
+			echo "<b>City: </b>".$hike_info['city'];
+			echo "<br>";
+			echo "<b>State: </b>".$hike_info['state'];
+			echo "<br>";
+			echo "<b>Description: </b>".$hike_info['description'];
+			echo "<br>";
+			?>
+		  
+	  </div>
+	  <div class="col-xs-12 col-md-4">
+		  <h2>Photos</h2>
+		  
+	  </div>
+	  <div class="col-xs-12 col-md-4">
+		  <h2>Journal</h2>
+		  
+	  </div>
+	  
+	  
+	  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
 			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){
 					?>
