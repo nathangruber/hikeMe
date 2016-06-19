@@ -116,6 +116,25 @@ class Hike{
 		}
 	}
 	
+	public function getHikeInfoPublic($hike_id){
+		try{
+			$pdo = Database::connect();
+			$sql = "select * from hike where id=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($hike_id)); //asks db for info array is replacing ?info
+			$result=array();
+			if($row = $q->fetch(PDO::FETCH_ASSOC)){
+	       		$result = $row;
+	       	}
+       		
+       		Database::disconnect();
+       		return $result;
+			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
 	public function plan($hike_id,$user_id,$date,$weather_desc,$weather_temp,$weather_wind){
 		try{
 			$pdo = Database::connect();
