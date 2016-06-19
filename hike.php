@@ -66,7 +66,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 				    <input type="hidden" name="option" value="setasplanned">
 				    <input type="hidden" name="hike_id" value="<?php echo $hike_info['id']; ?>">
 				  </div>
-				  <button type="submit" class="btn btn-default btn-block"><span class="glyphicon glyphicon-time">Plan your Hike</button>
+				  <button type="submit" class="btn btn-default btn-block"><i style="font-size: 30px"  class="glyphicon glyphicon-time"></i><br>Plan your Hike</button>
 				</form>
 		  	</div>
 		  	<div class="col-xs-12 col-md-3">
