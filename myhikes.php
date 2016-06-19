@@ -63,9 +63,24 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 						<div class="col-xs-12">
 							<?php
 							
+							//Type of the hike
+							$type_hike='';
+							if(($favorite_hikes[$i]['date']!="0000-00-00")&&($favorite_hikes[$i]['hiked_date']=="0000-00-00")){
+								$type_hike='planned';
+							}
 							
+							if($favorite_hikes[$i]['hiked_date']!="0000-00-00"){
+								$type_hike='hiked';
+							}
 							
-							echo "<h3><a href='hike.php?id=".$favorite_hikes[$i]['id']."'>".$favorite_hikes[$i]['name']."</a></h3>";
+							echo "<h3><a href='hike.php?id=".$favorite_hikes[$i]['id']."'>".$favorite_hikes[$i]['name']."</a>";
+							if($type_hike=='planned'){
+								echo "<i class='text-info glyphicon glyphicon-time'></i>";
+							}else if($type_hike=='hiked'){
+								echo "<i class='text-success glyphicon glyphicon-ok'></i>";
+							}
+							
+							echo "</h3>";
 							echo "<br>";
 							echo "<b>City: </b>".$favorite_hikes[$i]['city'];
 							echo "<br>";
