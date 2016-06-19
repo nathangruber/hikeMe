@@ -14,7 +14,12 @@ $id=$_GET['id'];
 $hike = new Hike();
 $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 
+echo "hike v:";
 print_r($hike_info);
+
+if($hike_info==false){
+	echo 'is false';
+}
 
 
 //Type of the hike
