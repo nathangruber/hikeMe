@@ -10,6 +10,16 @@ if(!isset($_GET['show'])){
 }
 
 
+if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
+	$hike_id = $_POST['hike_id'];
+	
+	$hike = new hike();
+	$hike->removeFromFavorites($_SESSION['id'],$hike_id);
+	
+	$message_favorites_show = true;
+	$message_favorites_text = "You removed your hike from your favorites.";
+	
+}
 
 
 $type = $_GET['show'];
