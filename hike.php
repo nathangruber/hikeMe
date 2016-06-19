@@ -4,7 +4,7 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 if($logged==false){
-	//if not logged or not owner of the hike->redirect to public hike info	
+	//if it is not logged  hike->redirect to public hike info	
 	header('Location: hike-public.php?id='.$_GET['id']);
 }
 
@@ -14,11 +14,11 @@ $id=$_GET['id'];
 $hike = new Hike();
 $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 
-echo "hike v:";
-print_r($hike_info);
+
 
 if($hike_info==false){
-	echo 'is false';
+	//if it is false, because it is logged but is not the owner of the hike, so go to public-hike
+	header('Location: hike-public.php?id='.$_GET['id']);
 }
 
 
