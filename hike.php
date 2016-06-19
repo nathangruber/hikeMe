@@ -53,7 +53,7 @@ $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
   <div class="row">
 	  
 	  <div class="col-xs-12 col-md-4">
-		  <div style="font-size:18px"><b>Information</b></div>
+		  <div style="font-size:18px;margin-botton:20px"><b>Information</b></div>
 		  <?php
 			echo "<b>Name: </b>".$hike_info['name'];
 			echo "<br>";
@@ -67,11 +67,45 @@ $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 		  
 	  </div>
 	  <div class="col-xs-12 col-md-4">
-		  <h2>Photos</h2>
+		  <div style="font-size:18px;margin-botton:20px"><b>Photos</b></div>
+		  <div class="row">
+			<?php
+				
+				$image = new Image();
+				$aimages = $image->getPhotos($hike_info['id']);
+				$number_of_photos = count($aimages);
+				
+			for($j=0;$j<$number_of_photos;$j++){
+				?>
+				
+					<div class="col-xs-12 col-md-2">
+						<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
+							<a href="photo.php?image_id=<?php echo $aimages[$j]['id']; ?>"  >
+								<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
+							</a>
+							<div>
+								<?php
+									if($aimages[$j]['public']==1){
+										echo 'public';
+									}
+								?>
+								<small><p>click to enlarge<br>or make public</p></small>
+
+							</div>
+						</div>
+					</div>
+				
+				<?php
+			}
+			
+			
+			
+			?>
+			</div>
 		  
 	  </div>
 	  <div class="col-xs-12 col-md-4">
-		  <h2>Journal</h2>
+		  <div style="font-size:18px;margin-botton:20px"><b>Journal</b></div>
 		  
 	  </div>
 	  
