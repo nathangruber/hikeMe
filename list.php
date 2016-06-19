@@ -82,7 +82,6 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 			<a href="myhikes.php?show=Completed" style="text-decoration margin-right: 20px">Hiked</a>
 		</div>
 	</center>
-				<h3></h3>
 			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){
 					?>
@@ -92,7 +91,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							
 							
 							
-							echo "<h4><a href='hike.php?id=".$favorite_hikes[$i]['id']."'>".$favorite_hikes[$i]['name']."</a></h4>";
+							echo "<h3><a href='hike.php?id=".$favorite_hikes[$i]['id']."'>".$favorite_hikes[$i]['name']."</a></h3>";
 							echo "<br>";
 							echo "<b>City: </b>".$favorite_hikes[$i]['city'];
 							echo "<br>";
