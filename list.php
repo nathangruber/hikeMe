@@ -92,7 +92,7 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							
 							
 							
-							echo "<b>Name: </b><h4><a href='hike.php?id=".$favorite_hikes[$i]['id']."'>".$favorite_hikes[$i]['name']."</a></h4>";
+							echo "<h4><a href='hike.php?id=".$favorite_hikes[$i]['id']."'>".$favorite_hikes[$i]['name']."</a></h4>";
 							echo "<br>";
 							echo "<b>City: </b>".$favorite_hikes[$i]['city'];
 							echo "<br>";
@@ -100,67 +100,11 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 							echo "<br>";
 							echo "<b>Description: </b>".$favorite_hikes[$i]['description'];
 							echo "<br>";
+						?>	
 							
-							
-							//Photos/journal will only be shown if hiked
-							if($favorite_hikes[$i]['hiked_date']!="0000-00-00"){
-							?>
-							
-								<div class="row">
-								<?php
-									
-									$image = new Image();
-									$aimages = $image->getPhotos($favorite_hikes[$i]['id']);
-									$number_of_photos = count($aimages);
-									
-								for($j=0;$j<$number_of_photos;$j++){
-									?>
-									
-										<div class="col-xs-12 col-md-2">
-											<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-												<a href="photo.php?image_id=<?php echo $aimages[$j]['id']; ?>"  >
-													<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
-												</a>
-												<div>
-													<?php
-														if($aimages[$j]['public']==1){
-															echo 'public';
-														}
-													?>
-													<small><p>click to enlarge<br>or make public</p></small>
-	
-												</div>
-											</div>
-										</div>
-									
-									<?php
-								}
 								
-								
-								
-								?>
-								</div>
-								
-								
-								<div style="margin-top: 30px">
-									<b>My Trail Journal:</b>
-								</div>
-								<?php
-									
-									$journal = new Journal();
-									$comments = $journal->get($favorite_hikes[$i]['id']);
-									
-									for($j=0;$j<count($comments);$j++){
-										echo "<p><b>".$comments[$j]['date'].": </b><i>";
-										echo $comments[$j]['comments'];
-										echo "</i></p>";
-									}
-								?>
-							<?php
-							}	
-							?>	
 						</div>
-											</div>
+					</div>
 					<hr>
 					
 				<?php
