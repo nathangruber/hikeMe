@@ -13,7 +13,6 @@ $hike = new Hike();
 $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 
 
-print_r($hike_info);
 
 
 
@@ -54,7 +53,7 @@ print_r($hike_info);
   <div class="row">
 	  
 	  <div class="col-xs-12 col-md-4">
-		  <h2>Information</h2>
+		  <div style="font-size:18px"><b>Information</b></div>
 		  <?php
 			echo "<b>Name: </b>".$hike_info['name'];
 			echo "<br>";
