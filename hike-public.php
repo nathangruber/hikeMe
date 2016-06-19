@@ -110,7 +110,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 								<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
 							</a>
 							<div>
-							<small><p>click to enlarge<br>or make public</p></small>
+							<small><p>click to enlarge</p></small>
 
 							</div>
 						</div>
