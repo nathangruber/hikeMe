@@ -13,8 +13,15 @@ $hike = new Hike();
 $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 
 
+//Type of the hike
+$type_hike='';
+if(($hike_info['date']!="0000-00-00")&&($hike_info['hiked_date']=="0000-00-00")){
+	$type_hike='planned';
+}
 
-
+if($hike_info['hiked_date']!="0000-00-00"){
+	$type_hike='hiked';
+}
 
 
 
@@ -49,6 +56,33 @@ $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 			
   <center><h1>Hike</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
   
+  <?php
+	if($type_hike==''){
+	?>
+		<div class="row">
+		  	<div class="col-xs-12 col-md-4">
+				<form method="post" action="planhike.php">
+				  <div class="form-group">
+				    <input type="hidden" name="option" value="setasplanned">
+				    <input type="hidden" name="hike_id" value="<?php echo $hike_info['id']; ?>">
+				  </div>
+				  <button type="submit" class="btn btn-default btn-block">Plan your Hike</button>
+				</form>
+		  	</div>
+		  	<div class="col-xs-12 col-md-4">
+			  	<form method="post" action="myhikes.php">
+				  <div class="form-group">
+				    <input type="hidden" name="option" value="removefromfavorites">
+				    <input type="hidden" name="hike_id" value="<?php echo $hike_info['id']; ?>">
+				  </div>
+				  <button type="submit" class="btn btn-danger btn-block">Remove Hike</button>
+				</form>
+		  	</div>
+		</div>
+	<?php
+	}  
+  ?>
+  
   
   <div class="row">
 	  
@@ -78,7 +112,7 @@ $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 			for($j=0;$j<$number_of_photos;$j++){
 				?>
 				
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-md-6">
 						<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
 							<a href="photo.php?image_id=<?php echo $aimages[$j]['id']; ?>"  >
 								<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
