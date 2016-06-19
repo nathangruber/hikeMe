@@ -3,7 +3,10 @@ require_once 'includes/session.php';
 require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
-
+if($logged==false){
+	//if not logged or not owner of the hike->redirect to public hike info	
+	header('Location: hike-public.php?id='.$_GET['id']);
+}
 
 
 
