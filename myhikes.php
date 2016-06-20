@@ -9,6 +9,23 @@ if(!isset($_GET['show'])){
 	$_GET['show']='all';
 }
 
+$message_favorites_show=false; //
+if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form submission/isset determines if var is set, not null 
+	$city = $_POST['city'];
+	$state = $_POST['state'];
+	$name = $_POST['name'];
+	$unique_id = $_POST['unique_id'];
+	$description = $_POST['description'];
+	
+	$hike = new Hike();
+	
+	
+	$hike->addToFavorites($unique_id,$name,$city,$state,$description,$_SESSION['id']);
+	
+	
+	$message_favorites_show = true;
+	$message_favorites_text = "Your hike, ".$name." has been added to your favorites.";
+}
 
 if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
 	$hike_id = $_POST['hike_id'];
