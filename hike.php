@@ -149,7 +149,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 				    <input type="hidden" name="option" value="removefromfavorites">
 				    <input type="hidden" name="hike_id" value="<?php echo $hike_info['id']; ?>">
 				  </div>
-				  <button type="submit" class="btn btn-danger btn-block" style="font-size: 20px"><i style="font-size: 40px"  class="glyphicon glyphicon-remove"></i><br>Remove Hike</button>
+				  <button type="submit" class="btn btn-danger btn-block" style="font-size: 20px"><i style="font-size: 40px"  class="glyphicon glyphicon-remove"></i><br><br><br><br><br>Remove Hike</button>
 				</form>
 		  	</div>
 		</div>
