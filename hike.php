@@ -4,7 +4,7 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
 
 if($logged==false){
-	//if it is not logged  hike->redirect to public hike info	
+	//if not logged  hike->redirect to public hike info	
 	header('Location: hike-public.php?id='.$_GET['id']);
 }
 
@@ -17,12 +17,12 @@ $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 
 
 if($hike_info==false){
-	//if it is false, because it is logged but is not the owner of the hike, so go to public-hike
+	//if false, it is logged, but is not the owner of the hike, so redirect to public-hike
 	header('Location: hike-public.php?id='.$_GET['id']);
 }
 
 
-//Type of the hike
+//type of hike
 $type_hike='';
 if(($hike_info['date']!="0000-00-00")&&($hike_info['hiked_date']=="0000-00-00")){
 	$type_hike='planned';
