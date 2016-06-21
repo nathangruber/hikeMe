@@ -144,7 +144,6 @@ if($hike_info['hiked_date']!="0000-00-00"){
 				</form>
 		  	</div>
 		  	<div class="col-xs-12 col-md-3">
-		  		<div class="pull-right">
 			  	<form method="post" action="myhikes.php">
 				  <div class="form-group">
 				    <input type="hidden" name="option" value="removefromfavorites">
