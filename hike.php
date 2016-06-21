@@ -143,7 +143,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 				  <button type="submit" class="btn btn-default btn-block" style="font-size: 20px"><i style="font-size: 40px"  class="glyphicon glyphicon-camera"></i><br>Upload Photo</button>
 				</form>
 		  	</div>
-		  	<div class="pull-right">
+		  	<div class="col-xs-12 col-md-3" "pull-right">
 			  	<form method="post" action="myhikes.php">
 				  <div class="form-group">
 				    <input type="hidden" name="option" value="removefromfavorites">
