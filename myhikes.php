@@ -24,7 +24,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addtofavorites')){   //form subm
 	
 	
 	$message_favorites_show = true;
-	$message_favorites_text = "Your hike, ".$name." has been added to your Hikes.";
+	$message_favorites_text = "Your hike, ".$name." has been added to your hikes list.";
 }
 
 if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
@@ -34,7 +34,7 @@ if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
 	$hike->removeFromFavorites($_SESSION['id'],$hike_id);
 	
 	$message_favorites_show = true;
-	$message_favorites_text = "You removed your hike from your hikes.";
+	$message_favorites_text = "You removed your hike from your hike list.";
 	
 }
 
