@@ -63,7 +63,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
 			
-  <center><h1>Hike</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
+  <center><h1>hikeMe</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
   
   <?php
 	if($type_hike==''){
