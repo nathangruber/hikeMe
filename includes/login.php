@@ -18,4 +18,6 @@ if(!empty($_POST['username']) && !empty($_POST['password'])){
     }else{
 	    header('Location: ../loginpage.php?result=error');
     }
+}else{
+	header('Location: ../loginpage.php?result=error');
 }
