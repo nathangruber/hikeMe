@@ -120,6 +120,8 @@ if($hike_info['hiked_date']!="0000-00-00"){
 				$number_of_photos = count($aimages);
 				
 			for($j=0;$j<$number_of_photos;$j++){
+				if($aimages[$j]['public']==1){
+				
 				?>
 				
 					<div class="col-xs-12 col-md-6">
@@ -131,6 +133,20 @@ if($hike_info['hiked_date']!="0000-00-00"){
 					</div>
 				
 				<?php
+				}else if($ismyhike){
+				?>
+				
+					<div class="col-xs-12 col-md-6">
+						<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
+							<a href="uploads/<?php echo $aimages[$j]['id']; ?>"  >
+								<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
+							</a>
+						</div>
+					</div>
+				
+				<?php
+					
+				}
 			}
 			
 			
