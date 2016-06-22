@@ -24,7 +24,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 		$journal = new Journal();
 		$journal->addComments($hike_id,$year."-".$month."-".$day,$comments);
 		
-		header('Location: myhikes.php');
+		header('Location: hike-edit.php?id='.$hike_id);
 	}else{
 		$show_error="Invalid date, the format must be: MM-DD-YYYY";
 	}
