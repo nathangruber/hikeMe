@@ -71,7 +71,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 	 ?>
   <div class="row">
 	  <div class="col-xs-12">
-		  <a href="hike-edit.php?id=<?php echo $id;?>" class="btn btn-default btn-block" style="font-size: 20px;max-width: 100px"><i style="font-size: 40px"  class="glyphicon glyphicon-cog"></i><br>Edit hike</a>
+		  <a href="hike-edit.php?id=<?php echo $id;?>" class="btn btn-default btn-block pull-right" style="font-size: 20px;max-width: 100px"><i style="font-size: 20px"  class="glyphicon glyphicon-cog"></i> Edit hike</a>
 	  </div>
   </div>
   <?php
