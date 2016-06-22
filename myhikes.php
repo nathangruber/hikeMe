@@ -90,15 +90,23 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
 						<div class="col-xs-12">
 							<?php
 							
-							//Type of the hike
+							
+							
+							//type of hike
 							$type_hike='';
-							if(($favorite_hikes[$i]['date']!="0000-00-00")&&($favorite_hikes[$i]['hiked_date']=="0000-00-00")){
+							if($favorite_hikes[$i]['date']!="0000-00-00"){
 								$type_hike='planned';
+								
+								$current_date=date('Y-m-d');
+								
+								//compare if the date planned is in the past (then hiked)
+								if($favorite_hikes[$i]['date']<$current_date){
+									$type_hike='hiked';
+								}
+								
 							}
 							
-							if($favorite_hikes[$i]['hiked_date']!="0000-00-00"){
-								$type_hike='hiked';
-							}
+							
 							
 							echo "<h3><a style='padding-right: 10px' class='text-info' href='hike.php?id=".$favorite_hikes[$i]['id']."'>".$favorite_hikes[$i]['name']."</a>";
 							if($type_hike=='planned'){
