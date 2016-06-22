@@ -9,6 +9,7 @@ $image_id = $_GET['image_id'];
 //get the photo details
 $image = new Image();
 $result = $image->getInfo($image_id);
+print_r($result);
 //not my photo then redirect
 if($result==false){
 	header('Location: myhikes.php');
