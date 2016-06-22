@@ -33,7 +33,6 @@ if($hike_info['date']!="0000-00-00"){
 	if($hike_info['date']<$current_date){
 		$type_hike='hiked';
 	}
-	
 }
 
 
