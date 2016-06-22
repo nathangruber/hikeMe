@@ -61,7 +61,7 @@ if(isset($_POST['option'])&&($_POST['option']=='uploadphoto')){
 			
 	        $image = new Image();
 	        $image->uploadPhoto($new_name_file,$_POST['hike_id']);
-	        header('Location: myhikes.php');
+	        header('Location: hike-edit.php?id='.$hike_id);
 	        
 	        
 	        
