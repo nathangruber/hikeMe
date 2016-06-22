@@ -24,13 +24,18 @@ if($hike_info==false){
 
 //type of hike
 $type_hike='';
-if(($hike_info['date']!="0000-00-00")&&($hike_info['hiked_date']=="0000-00-00")){
+if($hike_info['date']!="0000-00-00"){
 	$type_hike='planned';
+	
+	$current_date=date('Y-m-d');
+	
+	//compare if the date planned is in the past (then hiked)
+	if($hike_info['date']<$current_date){
+		$type_hike='hiked';
+	}
+	
 }
 
-if($hike_info['hiked_date']!="0000-00-00"){
-	$type_hike='hiked';
-}
 
 
 
