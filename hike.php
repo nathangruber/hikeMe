@@ -123,7 +123,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 				
 					<div class="col-xs-12 col-md-6">
 						<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-							<a href="uploads/<?php echo $aimages[$j]['id']; ?>"  >
+							<a href="uploads/<?php echo $aimages[$j]['name']; ?>"  >
 								<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
 							</a>
 						</div>
@@ -135,7 +135,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 				
 					<div class="col-xs-12 col-md-6">
 						<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-							<a href="uploads/<?php echo $aimages[$j]['id']; ?>"  >
+							<a href="uploads/<?php echo $aimages[$j]['name']; ?>"  >
 								<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
 							</a>
 						</div>
