@@ -92,6 +92,36 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 				}
 				?>
 			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<b>Looking for another day?</b>
+					<br>
+					
+					
+					<form action="planhike.php" method="post">
+						<input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
+						<input type="hidden" name="date" value="<?php echo gmdate("Y-m-d", $timestamp); ?>">
+						<input type="hidden" name="weather_desc" value="n/a">
+						<input type="hidden" name="weather_temp" value="n/a">
+						<input type="hidden" name="weather_wind" value="n/a">
+						<div class="form-group">
+						  <label for="comments">Date:</label>
+						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY" value=""/>
+						  <?php
+							if($show_error!=""){
+								?>
+								<div class="text-danger"><?php echo $show_error; ?></div>
+								<?php
+							}  
+						  ?>
+						</div>
+						<input class="btn btn-default" type="submit" value="Choose">
+						
+					</form>
+					
+					
+				</div>
+			</div>
 		</div>
     </div>
 <?php require_once 'includes/footer.php'; ?>
