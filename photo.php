@@ -24,6 +24,11 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 	$result = $image->getInfo($image_id);
 	header('Location: myhikes.php');
 }
+
+if(isset($_GET['option'])&&($_GET['option']=='deletephoto')){
+	$image->delete($image_id);
+	header('Location: myhikes.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -60,6 +65,9 @@ if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 						}	
 						
 					?>
+					<div style="margin-top:50px">
+						<a href="photo.php?image_id=<?php echo $_GET['image_id']; ?>&option=deletephoto" class="btn btn-danger">Delete photo</a>
+					</div>
 					<br>
 				</div>
 			</div>
