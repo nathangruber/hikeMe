@@ -269,7 +269,7 @@ class Image{
 	public function delete($unique_id){
 		try{
 			$pdo = Database::connect();
-			$sql = "DELETE FROM image WHERE where id=?";
+			$sql = "DELETE FROM image WHERE  id=?";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($unique_id)); //asks db for info array is replacing ?info
 			
