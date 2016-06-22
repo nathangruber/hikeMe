@@ -145,7 +145,7 @@ if($hike_info['date']!="0000-00-00"){
 	?>
 		<div class="alert alert-success" role="alert" style="margin-top: 20px;">
 			<b style="font-size: 16px;">HIKED</b><br>
-			<b>Day: </b><?php echo $hike_info['hiked_date']; ?><br>
+			<b>Day: </b><?php echo $hike_info['date']; ?><br>
 		</div>
 		
 		<div class="row" style="margin-bottom: 30px">
