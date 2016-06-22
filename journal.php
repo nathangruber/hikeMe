@@ -58,7 +58,7 @@ if($date==''){
 					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					    <div class="form-group">
 						  <label for="comments">Date:</label>
-						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY"><?php echo $date; ?></input>
+						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY" value="<?php echo $date; ?>"/>
 						  <?php
 							if($show_error!=""){
 								?>
