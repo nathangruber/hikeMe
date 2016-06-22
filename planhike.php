@@ -93,7 +93,7 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 				?>
 			</div>
 			<div class="row">
-				<div class="col-xs-12 col-md-4 col-md-offset-">
+				<div class="col-xs-12 col-md-4 col-md-offset-4">
 					<b>Looking for another day?</b>
 					<br>
 					
