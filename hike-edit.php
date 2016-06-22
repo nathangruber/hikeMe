@@ -192,22 +192,6 @@ if($hike_info['date']!="0000-00-00"){
 			echo "<br>";
 			echo "<b>Description: </b>".$hike_info['description'];
 			echo "<br>";
-			
-			if($type_hike=='hiked'){
-			?>
-				<div class="row" style="margin-top: 15px">
-					<div class="col-xs-12 col-md-4">
-						<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=<?php echo $text_twitter; ?>">Tweet</a>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/myhikes.php" data-layout="button" data-mobile-iframe="true"></div>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
-					</div>
-				</div>
-			<?php
-			}
 			?>
 		  
 	  </div>
