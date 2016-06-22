@@ -65,13 +65,13 @@ if($hike_info['hiked_date']!="0000-00-00"){
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
 			
-  <center><h1>hikeMe</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
+  <center><h1>View Hike</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
   <?php
 	if(($logged)&&($ismyhike)){
 	 ?>
   <div class="row">
 	  <div class="col-xs-12">
-		  <a href="hike-edit.php?id=<?php echo $id;?>" class="btn btn-default btn-block pull-right" style="font-size: 20px;max-width: 100px"><i style="font-size: 20px"  class="glyphicon glyphicon-cog"></i> Edit hike</a>
+		  <a href="hike-edit.php?id=<?php echo $id;?>" class="btn btn-default btn-block pull-right" style="font-size: 20px;max-width: 200px"><i style="font-size: 20px"  class="glyphicon glyphicon-cog"></i> Edit hike</a>
 	  </div>
   </div>
   <?php
@@ -81,7 +81,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
   <div class="row">
 	  
 	  <div class="col-xs-12">
-		  <div style="font-size:18px;margin-bottom:20px"><b>Information</b></div>
+		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Information</b></div>
 		  <?php
 			echo "<b>Name: </b>".$hike_info['name'];
 			echo "<br>";
@@ -95,13 +95,13 @@ if($hike_info['hiked_date']!="0000-00-00"){
 			if($type_hike=='hiked'){
 			?>
 				<div class="row" style="margin-top: 15px">
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-md-1">
 						<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=<?php echo $text_twitter; ?>">Tweet</a>
 					</div>
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-md-1">
 						<div class="fb-share-button" data-href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/myhikes.php" data-layout="button" data-mobile-iframe="true"></div>
 					</div>
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-md-1">
 						<a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
 					</div>
 				</div>
@@ -111,7 +111,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 		  
 	  </div>
 	  <div class="col-xs-12">
-		  <div style="font-size:18px;margin-bottom:20px"><b>Photos</b></div>
+		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Photos</b></div>
 		  <div class="row">
 			<?php
 				
@@ -124,18 +124,9 @@ if($hike_info['hiked_date']!="0000-00-00"){
 				
 					<div class="col-xs-12 col-md-6">
 						<div style="margin-right:25px;margin-top:25px;margin-bottom:45px">
-							<a href="photo.php?image_id=<?php echo $aimages[$j]['id']; ?>"  >
+							<a href="uploads/<?php echo $aimages[$j]['id']; ?>"  >
 								<img src="uploads/<?php echo $aimages[$j]['name']; ?>" width="120px"/>
 							</a>
-							<div>
-								<?php
-									if($aimages[$j]['public']==1){
-										echo 'public';
-									}
-								?>
-								<small><p>click to enlarge<br>or make public</p></small>
-
-							</div>
 						</div>
 					</div>
 				
@@ -149,7 +140,7 @@ if($hike_info['hiked_date']!="0000-00-00"){
 		  
 	  </div>
 	  <div class="col-xs-12 col-md-4">
-		  <div style="font-size:18px;margin-bottom:20px"><b>Journal</b></div>
+		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Journal</b></div>
 		  <?php
 									
 			$journal = new Journal();
