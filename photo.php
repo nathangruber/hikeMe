@@ -9,26 +9,23 @@ $image_id = $_GET['image_id'];
 //get the photo details
 $image = new Image();
 $result = $image->getInfo($image_id);
-print_r($result);
 //not my photo then redirect
 if($result==false){
 	header('Location: myhikes.php');
 }
 if(isset($_GET['option'])&&($_GET['option']=='setaspublic')){
 	$image->setAsPublic($image_id);
-	$result = $image->getInfo($image_id);
-	header('Location: myhikes.php');
+	header('Location: hike-edit.php?id='.$result['hike_fk']);
 }
 
 if(isset($_GET['option'])&&($_GET['option']=='setasprivate')){
 	$image->setAsPrivate($image_id);
-	$result = $image->getInfo($image_id);
-	header('Location: myhikes.php');
+	header('Location: hike-edit.php?id='.$result['hike_fk']);
 }
 
 if(isset($_GET['option'])&&($_GET['option']=='deletephoto')){
 	$image->delete($image_id);
-	header('Location: myhikes.php');
+	header('Location: hike-edit.php?id='.$result['hike_fk']);
 }
 ?>
 
