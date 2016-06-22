@@ -3,6 +3,7 @@ require_once 'includes/session.php';
 require_once 'includes/sessioncheck.php';
 require_once 'includes/database.php';
 require_once 'includes/crud.php';
+$show_error="";
 
 if(isset($_POST['date'])){
 	$hike = new Hike();
@@ -15,6 +16,33 @@ if(isset($_POST['date'])){
 	$weather_wind=$_POST['weather_wind'];
 	$hike->plan($hike_id,$user_id,$date,$weather_desc,$weather_temp,$weather_wind);
 	header('Location: myhikes.php');
+	
+}else if(isset($_POST['customdate'])){
+	$date=$_POST['customdate'];
+	
+	//validate date MM-DD-YYYY
+	$month=substr($date, 0,2);
+	$day=substr($date, 3,2);
+	$year=substr($date, 6);
+	
+	
+	if(checkdate($month,$day,$year)){
+		$hike = new Hike();
+	
+		$hike_id=$_POST['hike_id'];
+		$user_id=$_SESSION['id'];
+		
+		$weather_desc=$_POST['weather_desc'];
+		$weather_temp=$_POST['weather_temp'];
+		$weather_wind=$_POST['weather_wind'];
+		$hike->plan($hike_id,$user_id,$date,$weather_desc,$weather_temp,$weather_wind);
+		header('Location: myhikes.php');
+	}else{
+		$show_error="Invalid date, the format must be: MM-DD-YYYY";
+	}
+	
+	
+	
 	
 }
 
@@ -100,7 +128,7 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 					
 					<form action="planhike.php" method="post">
 						<input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
-						<input type="hidden" name="date" value="<?php echo gmdate("Y-m-d", $timestamp); ?>">
+						<input type="hidden" name="customdate" value="<?php echo gmdate("Y-m-d", $timestamp); ?>">
 						<input type="hidden" name="weather_desc" value="n/a">
 						<input type="hidden" name="weather_temp" value="n/a">
 						<input type="hidden" name="weather_wind" value="n/a">
