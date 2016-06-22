@@ -128,13 +128,12 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 					
 					<form action="planhike.php" method="post">
 						<input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
-						<input type="hidden" name="customdate" value="<?php echo gmdate("Y-m-d", $timestamp); ?>">
 						<input type="hidden" name="weather_desc" value="n/a">
 						<input type="hidden" name="weather_temp" value="n/a">
 						<input type="hidden" name="weather_wind" value="n/a">
 						<div class="form-group">
-						  <label for="comments">Date:</label>
-						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY" value=""/>
+						  <label for="customdate">Date:</label>
+						  <input type="text" name="customdate" class="form-control" id="customdate" placeholder="MM-DD-YYYY" value=""/>
 						  <?php
 							if($show_error!=""){
 								?>
