@@ -162,6 +162,7 @@ class Hike{
 	}
 	
 	
+	
 }
 
 class Image{

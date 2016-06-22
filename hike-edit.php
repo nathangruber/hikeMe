@@ -101,7 +101,13 @@ if($hike_info['hiked_date']!="0000-00-00"){
 		
 		<div class="row" style="margin-bottom: 30px">
 		  	<div class="col-xs-12 col-md-3">
-			  	<a href="change-planned-date.php?id=<?php echo $hike_info['id']; ?>" class="btn btn-default btn-block" style="font-size: 20px;margin-top:15px"><i style="font-size: 40px"  class="glyphicon glyphicon-calendar"></i><br>Change date</a>
+				<form method="post" action="planhike.php">
+				  <div class="form-group">
+				    <input type="hidden" name="option" value="setasplanned">
+				    <input type="hidden" name="hike_id" value="<?php echo $hike_info['id']; ?>">
+				  </div>
+				  <button type="submit" class="btn btn-default btn-block" style="font-size: 20px"><i style="font-size: 40px"  class="glyphicon glyphicon-time"></i><br>Change date</button>
+				</form>
 		  	</div>
 		  	<div class="col-xs-12 col-md-3">
 				<form method="post" action="hikedone.php">
