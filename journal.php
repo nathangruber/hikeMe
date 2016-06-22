@@ -18,6 +18,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$day=substr($date, 3,2);
 	$year=substr($date, 6);
 	
+	
 	if(checkdate($month,$day,$year)){
 		//insert
 		$journal = new Journal();
