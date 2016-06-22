@@ -8,6 +8,7 @@ require_once 'includes/crud.php';
 $hike_id = $_POST['hike_id'];
 $show_error="";
 $comments="";
+$date='';
 if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	$date = $_POST['date'];
 	$comments = $_POST['comments'];
@@ -29,7 +30,13 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 	
 	
 	
-}	
+}
+
+if($date==''){
+	$date=date("m-d-Y");
+}
+
+	
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +58,7 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					    <div class="form-group">
 						  <label for="comments">Date:</label>
-						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY"></textarea>
+						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY"><?php echo $date; ?></textarea>
 						  <?php
 							if($show_error!=""){
 								?>
