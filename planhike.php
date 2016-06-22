@@ -15,7 +15,7 @@ if(isset($_POST['date'])){
 	$weather_temp=$_POST['weather_temp'];
 	$weather_wind=$_POST['weather_wind'];
 	$hike->plan($hike_id,$user_id,$date,$weather_desc,$weather_temp,$weather_wind);
-	header('Location: myhikes.php');
+	header('Location: hike-edit.php?id='.$hike_id);
 	
 }else if(isset($_POST['customdate'])){
 	$date=$_POST['customdate'];
@@ -38,7 +38,7 @@ if(isset($_POST['date'])){
 		$weather_wind=$_POST['weather_wind'];
 		
 		$hike->plan($hike_id,$user_id,$date,$weather_desc,$weather_temp,$weather_wind);
-		//header('Location: myhikes.php');
+		header('Location: hike-edit.php?id='.$hike_id);
 	}else{
 		$show_error="Invalid date, the format must be: MM-DD-YYYY";
 	}
