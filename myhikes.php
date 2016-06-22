@@ -75,8 +75,8 @@ $favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
   <center><h1>My Hikes</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->	
   <div class="row">
 	  <div class="col-xs-12">
-		  <div class="pull-right">
-			  <i class='text-success glyphicon glyphicon-ok'> Hiked </i><i class='text-info glyphicon glyphicon-time'> Planned </i>
+		  <div class="pull-right" style="font-size: 18px">
+			  <i class='text-success glyphicon glyphicon-ok'> Hiked </i><i class='text-info glyphicon glyphicon-time' style="padding-left:20px"> Planned </i>
 		  </div>
 	  </div>
   </div>	
