@@ -14,7 +14,7 @@ $hike_info = $hike->getHikeInfo($id,$_SESSION['id']);
 
 
 if($hike_info==false){
-	//if false, it is logged, but is not the owner of the hike, so we get public info
+	//if false, it is logged, but is not the owner of the hike, get public info
 	$hike_info = $hike->getHikeInfoPublic($id);
 }else{
 	$ismyhike=true;
@@ -22,14 +22,14 @@ if($hike_info==false){
 
 
 
-//type of hike
+	//type of hike
 $type_hike='';
 if($hike_info['date']!="0000-00-00"){
 	$type_hike='planned';
 	
 	$current_date=date('Y-m-d');
 	
-	//compare if the date planned is in the past (then hiked)
+	//compare to see if the date planned has passed(then hiked)
 	if($hike_info['date']<$current_date){
 		$type_hike='hiked';
 	}
@@ -66,13 +66,13 @@ if($hike_info['date']!="0000-00-00"){
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
 			
-  <center><h1>View Hike</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
+  <center><h1>Edit your Hike</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
   <?php
 	if(($logged)&&($ismyhike)){
 	 ?>
   <div class="row">
 	  <div class="col-xs-12">
-		  <a href="hike-edit.php?id=<?php echo $id;?>" class="btn btn-default btn-block pull-right" style="font-size: 20px;max-width: 200px"><i style="font-size: 20px"  class="glyphicon glyphicon-cog"></i> Edit hike</a>
+		  <a href="hike-edit.php?id=<?php echo $id;?>" class="btn btn-default btn-block pull-right" style="font-size: 20px;max-width: 200px"><i style="font-size: 20px"  class="glyphicon glyphicon-cog"></i>Edit Hike</a>
 	  </div>
   </div>
   <?php

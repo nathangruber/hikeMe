@@ -1,6 +1,6 @@
   <div class="content">hikeMe</div>
   <div class="footer">
-    <a href="twitter.com"> <div class="social">&#62220;</div></a>
+  <a href="https://www.facebook.com"><div class="social">&#62220;</div></a>
     <div class="social">&#62217;</div>
     <div class="social">&#62223;</div>
     <div class="social">&#62226;</div>

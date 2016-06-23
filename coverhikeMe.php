@@ -12,7 +12,7 @@
     <link href="assets/css/cover.css" rel="stylesheet">
     <script src="assets/js/ie-emulation-modes-warning.js"></script>
 
-  <p>I took a walk in the woods and come out taller than the trees. - Henry David Thoreau<p>
+  <p>I took a walk in the woods and came out taller than the trees. - Henry David Thoreau<p>
 </head>
 
   <body>
