@@ -64,7 +64,7 @@ class Hike{
 			$pdo = Database::connect();
 			$sql = "DELETE FROM hike where user_fk=? and id=?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($user_id,$hike_id)); //asks db for info array is replacing ?info
+			$q->execute(array($user_id,$hike_id)); 
 			Database::disconnect();
 			return true;
 		}catch (PDOException $error){
@@ -253,7 +253,7 @@ class Image{
 			$pdo = Database::connect();
 			$sql = "SELECT * FROM hike, image WHERE hike.unique_id =  ? AND hike.id = image.hike_fk AND image.public = 1 LIMIT 0 , 30";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($unique_id)); //asks db for info array is replacing ?info
+			$q->execute(array($unique_id)); 
 			$result=array();
 			while($row = $q->fetch(PDO::FETCH_ASSOC)){
 				$result[]=$row;
@@ -293,7 +293,7 @@ class Journal{
 			$pdo = Database::connect();
 			$sql = "INSERT INTO journal (hike_fk,date,comments) values(?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($hike_id,$date,$comments)); //asks db for info array is replacing ?info
+			$q->execute(array($hike_id,$date,$comments));
 			Database::disconnect();
 			return true;
 		}catch (PDOException $error){

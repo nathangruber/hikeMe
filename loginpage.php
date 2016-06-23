@@ -39,7 +39,7 @@
 					  </div>
 					</form>
 		        <div>
-		            <center><p>No Account? Register below</p></center>
+		            <center><p>No Account? Register Below</p></center>
 		            <center><a href="register.php" class="btn btn-default">Register</a></center>
 		            <br>
 		        </div>
