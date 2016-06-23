@@ -67,7 +67,7 @@ if($hike_info['date']!="0000-00-00"){
     <?php } ?>
 	
 	<center><h1>Hike Editor<br>
-	    <small>Journal your Hike, Upload Photos, and Share</small></h1></center>	
+	    <small>Plan your Hike, Add a Trail Journal, Upload Photos, and Share</small></h1></center>	
 <!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
   <?php
 	if(($logged)&&($ismyhike)){
