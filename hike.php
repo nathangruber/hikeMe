@@ -66,13 +66,13 @@ if($hike_info['date']!="0000-00-00"){
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
 			
-  <center><h1>Edit your Hike</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
+  <center><h1>Hike Editor</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
   <?php
 	if(($logged)&&($ismyhike)){
 	 ?>
   <div class="row">
 	  <div class="col-xs-12">
-		  <a href="hike-edit.php?id=<?php echo $id;?>" class="btn btn-default btn-block pull-right" style="font-size: 20px;max-width: 200px"><i style="font-size: 20px"  class="glyphicon glyphicon-cog"></i>Edit Hike</a>
+		  <a href="hike-edit.php?id=<?php echo $id;?>" class="btn btn-default btn-block pull-right" style="font-size: 20px;max-width: 200px"><i style="font-size: 20px"  class="glyphicon glyphicon-cog"></i>Hike Editor</a>
 	  </div>
   </div>
   <?php
