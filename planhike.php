@@ -78,7 +78,6 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 
     <div class="container">
     	<div class="text-center" style="margin-top: 50px;">
-			<img id="banner" src="assets/img/stairway-1149473_1280.jpg" alt="Photographer Banner Image">
 			<p>Choose your day:</p>
 			<br>
 			
