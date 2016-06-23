@@ -65,7 +65,9 @@ if($hike_info['date']!="0000-00-00"){
     <?php if($message_favorites_show){ ?>
     <div class="alert alert-success" role="alert"><?php echo $message_favorites_text; ?></div>
     <?php } ?>
-			
+	
+	<h1>Hike Editor<br>
+	    <small>fdkjlsjfl;dfj</small></h1>		
   <center><h1>Hike Editor</h1></center><!--<h1><?php echo $_GET['show'];?>&nbsp;Hikes</h1> -->		
   <?php
 	if(($logged)&&($ismyhike)){
