@@ -104,7 +104,7 @@ if($hike_info['date']!="0000-00-00"){
   <div class="row">
 	  
 	  <div class="col-xs-12">
-		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Information</b></div>
+		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Information:</b></div>
 		  <?php
 			echo "<b>Name: </b>".$hike_info['name'];
 			echo "<br>";
@@ -119,7 +119,7 @@ if($hike_info['date']!="0000-00-00"){
 		  
 	  </div>
 	  <div class="col-xs-12">
-		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Photos</b></div>
+		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Photos:</b></div>
 		  <div class="row">
 			<?php
 				
@@ -164,7 +164,7 @@ if($hike_info['date']!="0000-00-00"){
 		  
 	  </div>
 	  <div class="col-xs-12 col-md-4">
-		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Journal</b></div>
+		  <div style="font-size:18px;margin-bottom:20px;margin-top:50px"><b>Journal:</b></div>
 		  <?php
 									
 			$journal = new Journal();
@@ -185,12 +185,7 @@ if($hike_info['date']!="0000-00-00"){
   
   
   
-  
-  
-  
-  
-  
-			<?php
+  			<?php
 				for($i=0;$i<count($favorite_hikes);$i++){
 					?>
 					<div class="row">

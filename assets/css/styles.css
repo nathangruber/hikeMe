@@ -185,7 +185,7 @@ a {
 }
 b{
   font-family: Lato, sans-serif;
-  text-shadow: 0 1px 3px rgba(0,0,0,.4);
+  text-shadow: 0 1px 3px rgba(0,0,0,.3);
   color:#000000;
 }
 .content{
