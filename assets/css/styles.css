@@ -183,3 +183,8 @@ a {
   background-color: #546b46;
   border:#546b46;
 }
+b{
+  font-family: Lato, sans-serif;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  color:#FFFFFF;
+}
