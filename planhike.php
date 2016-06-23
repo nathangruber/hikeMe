@@ -78,9 +78,7 @@ $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it
 
     <div class="container">
     	<div class="text-center" style="margin-top: 50px;">
-			<p>Choose your day:</p>
-			<br>
-			
+		    <h1>Choose your day:</h1>
 			<div class="row">
 				<?php
 				for($i=0;$i<6;$i++){
