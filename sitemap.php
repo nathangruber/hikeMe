@@ -7,7 +7,7 @@
             <div class="col-md-4">
                 <br>
                 <h1>Site Map</h1>
-                <p><a href="cover.php">Cover Page</a></p>
+                <p><a href="coverhikeMe.php">Cover Page</a></p>
 
                 <p><a href="index.php">Home Page</a></p>
 
