@@ -42,7 +42,7 @@ if(isset($_POST['option'])&&($_POST['option']=='removefromfavorites')){
 $type = $_GET['show'];
 
 $hike = new Hike();
-$favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type));
+$favorite_hikes = $hike->getMyFavorites($_SESSION['id'], strtolower($type)); //strtolower-make a string lowercase
 ?>
 <!DOCTYPE html>
 <html lang="en">

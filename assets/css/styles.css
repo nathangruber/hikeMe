@@ -13,7 +13,6 @@ body {
 body {
   background: #ddd;
 }
-
 .content {
   padding: 30px;
   font: 300 40px Lato, sans-serif;
@@ -21,13 +20,11 @@ body {
   color: #999;
   background: #eee;
 }
-
 .footer {
   padding: 20px 0;
   text-align: center;
 
 }
-
 .social {
   display: inline-block;
   width: 70px;
@@ -247,13 +244,4 @@ b{
   font-family: Lato, sans-serif;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   color:#FFFFFF;
-}
-#banner-1{
-position:static;
-top: 10px;
-left: 0px;
-right: 0px;
-width: 100%;
-height: 300px;
-z-index: -1;
 }
