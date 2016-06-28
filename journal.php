@@ -14,15 +14,11 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 
 	
 	
-		//insert
+		//save journal
 		$journal = new Journal();
 		$journal->saveJournal($hike_id,$comments);
 		
-		//header('Location: hike-edit.php?id='.$hike_id);
-
-	
-	
-	
+		header('Location: hike-edit.php?id='.$hike_id);
 }
 
 $journal = new Journal();
