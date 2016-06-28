@@ -28,8 +28,11 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 $journal = new Journal();
 $results = $journal->get($hike_id);
 
-echo "journal results are: ";
-print_r($result);
+if($results!=false){
+	$comments = $results['comments'];
+}else{
+	$comments="";
+}
 
 	
 ?>
@@ -53,7 +56,7 @@ print_r($result);
 					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
 					    <div class="form-group">
 						  <label for="comments">Journal:</label>
-						  <textarea name="comments" class="form-control" rows="20" id="comments"><?php echo $results['comments']; ?></textarea>
+						  <textarea name="comments" class="form-control" rows="20" id="comments"><?php echo $comments; ?></textarea>
 						</div>
 					  </div>
 					  <button type="submit" class="btn btn-success">Submit</button>
