@@ -330,7 +330,11 @@ class Journal{
 			$q->execute(array($hike_id,$comments));
 			$count = $q->rowCount();
 			if($count==0){//Wasn't possible to insert so update it
-				echo "update ittttt";
+				$sql = "UPDATE  journal SET  `comments` =  ? where hike_fk=?";
+				$q = $pdo->prepare($sql);
+				$q->execute(array($comments,$hike_id));
+				Database::disconnect();
+				return true;
 			}
 			
 			Database::disconnect();
