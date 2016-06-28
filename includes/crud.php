@@ -305,6 +305,7 @@ class Journal{
 		try{
 			$pdo = Database::connect();
 			$sql = "SELECT * FROM journal where hike_fk=? order by date asc";
+			echo $sql;
 			$q = $pdo->prepare($sql);
 			$q->execute(array($hike_id)); //asks db for info array is replacing ?info
 			$result=array();
