@@ -55,7 +55,8 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 
 //Get weather for that city in the next 7 days...
 $loc=$hike_info['city'];
-$url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=$loc&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
+$loc_encoded=urlencode($loc);
+$url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=$loc_encoded&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
 echo $url;
 $opts = array(
         'http' => array (
