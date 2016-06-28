@@ -162,7 +162,7 @@ if($journal_result==''){
 				  <div class="form-group">
 				    <input type="hidden" name="hike_id" value="<?php echo $hike_info['id']; ?>">
 				  </div>
-				  <button type="submit" class="btn btn-default btn-block" style="font-size: 20px"><i style="font-size: 40px"  class="glyphicon glyphicon-pencil"></i><br>Add Trail Journal</button>
+				  <button type="submit" class="btn btn-default btn-block" style="font-size: 20px"><i style="font-size: 40px"  class="glyphicon glyphicon-pencil"></i><br><?php echo $button_name; ?></button>
 				</form>
 		  	</div>
 		  	<div class="col-xs-12 col-md-3">
