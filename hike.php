@@ -170,13 +170,10 @@ if($hike_info['date']!="0000-00-00"){
 		  <?php
 									
 			$journal = new Journal();
-			$comments = $journal->get($hike_info['id']);
+			$journal_result = $journal->get($hike_info['id']);
 			
-			for($j=0;$j<count($comments);$j++){
-				echo "<p><i>";
-				echo $comments[$j]['comments'];
-				echo "</i></p>";
-			}
+			echo $journal_result['comments'];
+	
 		?>
 		  
 	  </div>
