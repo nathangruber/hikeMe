@@ -172,7 +172,7 @@ if($hike_info['date']!="0000-00-00"){
 			$journal = new Journal();
 			$journal_result = $journal->get($hike_info['id']);
 			
-			echo $journal_result['comments'];
+			echo nl2br($journal_result['comments']);
 	
 		?>
 		  
