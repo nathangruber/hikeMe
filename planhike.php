@@ -66,7 +66,8 @@ $file = file_get_contents($url, false, $context);  //read the contents of a file
 
 $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it into a PHP variable.
 
-echo $file;
+echo "File information is: ".$file;
+echo "Object information is: ".$obj;
 
 ?>
 
