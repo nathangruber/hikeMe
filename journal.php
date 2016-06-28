@@ -8,34 +8,24 @@ require_once 'includes/crud.php';
 $hike_id = $_POST['hike_id'];
 $show_error="";
 $comments="";
-$date='';
 if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
-	$date = $_POST['date'];
 	$comments = $_POST['comments'];
 	
-	//validate date MM-DD-YYYY
-	$month=substr($date, 0,2);
-	$day=substr($date, 3,2);
-	$year=substr($date, 6);
+
 	
 	
-	if(checkdate($month,$day,$year)){
 		//insert
 		$journal = new Journal();
-		$journal->addComments($hike_id,$year."-".$month."-".$day,$comments);
+		$journal->saveJournal($hike_id,$comments);
 		
-		header('Location: hike-edit.php?id='.$hike_id);
-	}else{
-		$show_error="Invalid date, the format must be: MM-DD-YYYY";
-	}
+		//header('Location: hike-edit.php?id='.$hike_id);
+
 	
 	
 	
 }
 
-if($date==''){
-	$date=date("m-d-Y");
-}
+
 
 	
 ?>
@@ -57,17 +47,6 @@ if($date==''){
 					  <div class="form-group">
 					    <input type="hidden" name="option" value="addjournal">
 					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
-					    <div class="form-group">
-						  <label for="comments">Date:</label>
-						  <input type="text" name="date" class="form-control" id="date" placeholder="MM-DD-YYYY" value="<?php echo $date; ?>"/>
-						  <?php
-							if($show_error!=""){
-								?>
-								<div class="text-danger"><?php echo $show_error; ?></div>
-								<?php
-							}  
-						  ?>
-						</div>
 					    <div class="form-group">
 						  <label for="comments">Journal:</label>
 						  <textarea name="comments" class="form-control" rows="5" id="comments"><?php echo $comments; ?></textarea>

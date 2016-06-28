@@ -288,7 +288,7 @@ class Image{
 
 
 class Journal{
-	public function addComments($hike_id,$date,$comments){
+	/*public function addComments($hike_id,$date,$comments){
 		try{
 			$pdo = Database::connect();
 			$sql = "INSERT INTO journal (hike_fk,date,comments) values(?, ?, ?)";
@@ -300,7 +300,7 @@ class Journal{
 			return false;
 		}
 	}
-	
+	*/
 	public function get($hike_id){
 		try{
 			$pdo = Database::connect();
@@ -315,6 +315,24 @@ class Journal{
        		Database::disconnect();
        		return $result;
 			
+		}catch (PDOException $error){
+			return false;
+		}
+	}
+	
+	public function saveJournal($hike_id,$comments){
+		try{
+			$pdo = Database::connect();
+			$sql = "INSERT INTO journal (hike_fk,comments) values(?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($hike_id,$comments));
+			$count = $q->rowCount();
+			if($count==0){//Wasn't possible to insert so update it
+				echo "update ittttt";
+			}
+			
+			Database::disconnect();
+			return true;
 		}catch (PDOException $error){
 			return false;
 		}
