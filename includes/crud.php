@@ -304,13 +304,14 @@ class Journal{
 	public function get($hike_id){
 		try{
 			$pdo = Database::connect();
-			$sql = "SELECT * FROM journal where hike_fk=? order by date asc";
-			echo $sql;
+			$sql = "SELECT * FROM journal where hike_fk=?";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($hike_id)); //asks db for info array is replacing ?info
-			$result=array();
-			while($row = $q->fetch(PDO::FETCH_ASSOC)){
-				$result[]=$row;
+			if($row = $q->fetch(PDO::FETCH_ASSOC)){
+				$result=$row;
+	       	}else{
+		       	Database::disconnect();
+		       	return false;
 	       	}
        		
        		Database::disconnect();
