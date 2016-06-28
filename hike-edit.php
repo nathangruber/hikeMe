@@ -37,6 +37,15 @@ if($hike_info['date']!="0000-00-00"){
 
 
 
+//Get Journal
+$journal = new Journal();
+$journal_result = $journal->get($hike_info['id']);
+if($journal_result==''){
+	$button_name = 'Add Journal';
+}else{
+	$button_name = 'Edit Journal';
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -118,7 +127,7 @@ if($hike_info['date']!="0000-00-00"){
 				  <div class="form-group">
 				    <input type="hidden" name="hike_id" value="<?php echo $hike_info['id']; ?>">
 				  </div>
-				  <button type="submit" class="btn btn-default btn-block" style="font-size: 20px"><i style="font-size: 40px"  class="glyphicon glyphicon-pencil"></i><br>Add Trail Journal</button>
+				  <button type="submit" class="btn btn-default btn-block" style="font-size: 20px"><i style="font-size: 40px"  class="glyphicon glyphicon-pencil"></i><br><?php echo $button_name; ?></button>
 				</form>
 		  	</div>
 		  	<div class="col-xs-12 col-md-3">
@@ -237,8 +246,7 @@ if($hike_info['date']!="0000-00-00"){
 		  <div style="font-size:18px;margin-bottom:20px"><b>Journal:</b></div>
 		  <?php
 									
-			$journal = new Journal();
-			$journal_result = $journal->get($hike_info['id']);
+			
 			//this function change new line to br in html <br>
 			echo nl2br($journal_result['comments']);
 		?>
