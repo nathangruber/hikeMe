@@ -28,6 +28,8 @@ if(isset($_POST['option'])&&($_POST['option']=='addjournal')){
 $journal = new Journal();
 $results = $journal->get($hike_id);
 
+echo "journal results are: ";
+print_r($result);
 
 	
 ?>
