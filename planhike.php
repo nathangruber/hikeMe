@@ -57,7 +57,6 @@ $hike_info = $hike->getHikeInfo($hike_id,$_SESSION['id']);
 $loc=$hike_info['city'];
 $loc_encoded=urlencode($loc);
 $url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=$loc_encoded&APPID=2bd428fa9cf856303ff450f01f4a97de&units=imperial";
-echo $url;
 $opts = array(
         'http' => array (
             'method' => 'GET'
@@ -68,8 +67,6 @@ $file = file_get_contents($url, false, $context);  //read the contents of a file
 
 $obj = json_decode($file, false);  //Takes a JSON encoded string and converts it into a PHP variable.
 
-echo "File information is: ".$file;
-echo "Object information is: ".$obj;
 
 ?>
 
