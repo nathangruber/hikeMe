@@ -239,8 +239,8 @@ if($hike_info['date']!="0000-00-00"){
 									
 			$journal = new Journal();
 			$journal_result = $journal->get($hike_info['id']);
-			
-			echo $journal_result['comments'];
+			//this function change new line to br in html <br>
+			echo nl2br($journal_result['comments']);
 		?>
 		  
 	  </div>
