@@ -47,12 +47,12 @@ if($results!=false){
 			<div class="row text-left">
 				<div class="col-xs-12 col-md-6 col-md-offset-3">
 					<form method="post" enctype="multipart/form-data">
-					  <div class="form-group">
+					  <div class="paper">
 					    <input type="hidden" name="option" value="addjournal">
 					    <input type="hidden" name="hike_id" value="<?php echo $hike_id; ?>">
-					    <div class="form-group">
+					    <div class="paper-content">
 						  <label for="comments">Journal:</label>
-						  <textarea name="comments" class="form-control" rows="20" id="comments"><?php echo $comments; ?></textarea>
+						  <textarea autofocus name="comments" class="form-control" rows="20" id="comments"><?php echo $comments; ?></textarea>
 						</div>
 					  </div>
 					  <button type="submit" class="btn btn-success">Submit</button>
