@@ -55,7 +55,7 @@ if($results!=false){
 						  <textarea autofocus name="comments" class="form-control" rows="20" id="comments"><?php echo $comments; ?></textarea>
 						</div>
 					  </div>
-					  <button type="submit" class="btn btn-success">Submit</button>
+					  <center><button type="submit" class="btn btn-success">Submit</button></center>
 					</form>
 					
 				</div>
