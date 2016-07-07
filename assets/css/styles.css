@@ -272,7 +272,7 @@ b {
 
 body {
     margin: 40px 0 0;
-    background: #91D1D3;
+    background: #DDD;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -283,7 +283,7 @@ body {
     min-width: 400px;
     height: 390px;
     margin: 0 auto;
-    background: #ddd;
+    background: #fafafa;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
     overflow: hidden;
