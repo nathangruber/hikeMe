@@ -9,7 +9,7 @@ class Database
     
     
     //To play in Amazon:
-    private static $dbUserPassword = 'blake811';
+    private static $dbUserPassword = 'Blake8118';
     
     //To play in localhost:
     //private static $dbUserPassword = 'root';
