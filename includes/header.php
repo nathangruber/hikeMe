@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" type="text/styles" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
      <title>hikeMe</title>
 </head>

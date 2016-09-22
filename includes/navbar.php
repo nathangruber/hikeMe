@@ -7,7 +7,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/coverhikeMe.php"><img src="assets/img/coollogo_com-20326892.png" alt="hikeMe logo" style="float:left"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/hikeMe/coverhikeMe.php"><img class="mylogo" src="assets/img/coollogo_com-20326892.png" alt="hikeMe logo" id="navlogo"></a>
             </div>
 
             <div id="navbar" class="collapse navbar-collapse">
